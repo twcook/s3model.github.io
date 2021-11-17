@@ -1,0 +1,17 @@
+*pyc
+*pyo
+*~
+*.bak
+*.zip
+*.sh
+
+# Protege catalog file
+catalog-v001.xml
+
+#Sphinx
+build/
+
+
+# editor
+.vscode/
+S3Model.xpr
