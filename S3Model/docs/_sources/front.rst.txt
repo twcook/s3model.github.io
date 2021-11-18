@@ -14,7 +14,7 @@ The goal of S3Model is to be Minimalistic, Sustainable, Implementable AND Intero
 Error Reporting
 ---------------
 
-Please report all issues `here. <https://github.com/s3model/ReferenceImplementation/issues>`_
+Please report all issues `here. <https://github.com/twcook/S3Model/issues>`_
 
 Compliance
 ----------
