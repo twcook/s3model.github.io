@@ -1,4 +1,0 @@
-Image attributions
-
-DE_DS_roles.PNG - https://www.astronomer.io/blog/why-every-data-scientist-needs-a-data-engineer/
-

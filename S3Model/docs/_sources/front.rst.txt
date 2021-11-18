@@ -4,7 +4,7 @@ Documentation Overview
 
 *Turning data into information*
 
-**Copyright 2009 - 2019 Data Insights, Inc. - All Rights Reserved.**
+**Copyright 2009 - 2021 Timothy W. Cook - All Rights Reserved.**
 
 Use the Table of Contents on the left for navigation.
 
