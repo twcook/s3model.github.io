@@ -28,7 +28,7 @@ Constraint Definitions
 ----------------------
 Shareable Data Models (DMs) can be created using an XML Schema editor or even a plain text editor. However, this is not a recommended approach. Realistic DMs can be several hundred and up to thousands of lines long. They also require `CUIDs <https://github.com/ericelliott/cuid>`_ to be created as complexType and element names. These CUIDs should be machine generated.
 
-Data Insights, Inc. has a Data Model Generator as part of the `Infotropic Tools Suite <http://datainsights.tech/infotropictools/>`_. 
+Timothy W. Cook has a Data Model Generator as part of the `Infotropic Tools Suite <http://datainsights.tech/infotropictools/>`_. 
 
 Simple models can also be generated directly from CSV files using `Kunteksto <https://datainsights.tech/Kunteksto/index.html>`_
 
@@ -38,7 +38,7 @@ The root element of a DM and all complexType and global elements use `CUIDs <htt
 
 The filename of a DM may use any format specified by the DM author. The DM author must be aware that the `metadata section <rm.html#dmtype>`_ of the DM must contain the correct RDF:about URI with this filename. 
 
-As a matter of consistency and to avoid any possible name clashes, the DMs created by the Data Insights tools also use the DM ID (dm-<cuid>.xsd). 
+As a matter of consistency and to avoid any possible name clashes, the DMs created by the tools also use the DM ID (dm-<cuid>.xsd). 
 
 To be a viable DM for validation purposes, the DM should use the W3C assigned extension of '.xsd.' Many tools may still process the artifact as an XML Schema without the standard file extension. However, it is best practice to follow standard conventions.
 
@@ -73,6 +73,6 @@ For this reason, the semantic links for RMCs are directly expressed in an xs:app
 
 In this example the subject is *s3m:mc-3a54417d-d1d6-4294-b868-e7a9ab28f8c4* the predicate is *rdfs:isDefinedBy* and the object is *http://purl.obolibrary.org/obo/RO_0002371*
 
-Every *xs:appinfo* section must begin with the *rdf:Description* element and have the *rdf:about* attribute to define the subject, as the containing complexType. Those elements are followed by one or more predicate/object components. The predicates can be from any vocabulary/terminology. Just be sure that the namespace prefix is correctly defined in the DM header. The Data Insights tools include common namespaces by default, but others may be added as needed. Also be sure that any URLs are correctly encoded so that they are valid inside the DM.
+Every *xs:appinfo* section must begin with the *rdf:Description* element and have the *rdf:about* attribute to define the subject, as the containing complexType. Those elements are followed by one or more predicate/object components. The predicates can be from any vocabulary/terminology. Just be sure that the namespace prefix is correctly defined in the DM header. The tools include common namespaces by default, but others may be added as needed. Also be sure that any URLs are correctly encoded so that they are valid inside the DM.
 
 RDF triples are a cornerstone of the semantic web and linked data processing. For more information see this tutorial. Of particular interest here is the section titled; Introducing RDF/XML. RDF/XML is one of the syntaxes used to describe semantic links, and it is what we use in S3Model.
