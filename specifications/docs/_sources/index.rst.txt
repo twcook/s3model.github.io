@@ -9,7 +9,7 @@ Specifications
 
 Release - 3.1.0
 
-*Copyright 2009 - 2019 Data Insights, Inc. - All Rights Reserved.*
+*Copyright 2009 - 2022, Timothy W. Cook - All Rights Reserved.*
 
 Contents:
 

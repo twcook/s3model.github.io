@@ -100,4 +100,4 @@ To reduce the learning curve for working with S3Model data in your Linked Data e
 
 The open source tool `Kunteksto <https://datainsights.tech/Kunteksto/index.html>`_ is used to transform flat CSV data in semantically enriched linked data.
 
-The Python implementation is the foundation of the `training materials <https://datainsights.tech/training>`_ and also available as an `open source library <https://pypi.org/project/S3MPython/>`_.
+The Python implementation is the foundation of the `training materials <https://www.linkedin.com/in/timothywaynecook>`_ and also available as an `open source library <https://pypi.org/project/S3MPython/>`_.

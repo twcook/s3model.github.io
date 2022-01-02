@@ -16,7 +16,7 @@ A **data first** strategy based on thoughtful modeling for reuse in the future m
 
 In today's world where data warehouses and data marts are too slow and rigid and data lakes too permissive and messy; S3Model is the Goldilocks solution. It is just right. S3Model provides the ability to model, semantically, the data you know you need in a manner that can be useful in the future.  You will then know how and where it came from and be able to machine process it instead of manually cleaning and re-purposing something of dubious quality.
 
-We provide complete `training <https://datainsights.tech/training>`_ and `tooling <https://datainsights.tech>`_ to make your transition from a legacy application-centric business to modern linked data, AI-driven enterprise. 
+We provide complete `training <https://www.linkedin.com/in/timothywaynecook>`_ and `tooling <https://datainsights.tech>`_ to make your transition from a legacy application-centric business to modern linked data, AI-driven enterprise. 
 
 
   
