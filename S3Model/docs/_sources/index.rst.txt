@@ -10,7 +10,7 @@ Reference Implementation
 
 Release - 3.1.0
 
-*Copyright 2009 - 2021 Timothy W. Cook - All Rights Reserved.*
+*Copyright 2009 - 2022 Timothy W. Cook - All Rights Reserved.*
 
 Contents:
 

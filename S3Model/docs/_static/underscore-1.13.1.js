@@ -9,7 +9,7 @@
 }(this, (function () {
   //     Underscore.js 1.13.1
   //     https://underscorejs.org
-  //     (c) 2009-2021 Jeremy Ashkenas, Julian Gonggrijp, and DocumentCloud and Investigative Reporters & Editors
+  //     (c) 2009-2022 Jeremy Ashkenas, Julian Gonggrijp, and DocumentCloud and Investigative Reporters & Editors
   //     Underscore may be freely distributed under the MIT license.
 
   // Current version.
@@ -912,7 +912,7 @@
 
     var argument = settings.variable;
     if (argument) {
-      // Insure against third-party code injection. (CVE-2021-23358)
+      // Insure against third-party code injection. (CVE-2022-23358)
       if (!bareIdentifier.test(argument)) throw new Error(
         'variable is not a bare identifier: ' + argument
       );
