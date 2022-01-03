@@ -8,7 +8,7 @@ Documentation Overview
 
 Use the Table of Contents on the left for navigation.
 
-The goal of S3Model is to be Minimalistic, Sustainable, Implementable AND Interoperable.
+The goal of S3Model is to be Minimalistic, Sustainable, Interoperable **AND** Implementable.
 
 
 Error Reporting

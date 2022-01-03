@@ -17,7 +17,7 @@ Diagramatic documentation of the Reference Model schema can be reviewed at the l
 
 .. raw:: html
 
-  <p><a href='rm/index.html' target='_blank'>Reference Model Technical Schema Docs</a></p>
+  <p><a href='https://s3model.com/specifications/docs/rm/index.html' target='_blank'>Reference Model Technical Schema Docs</a></p>
 
 
 Distribution Layout
