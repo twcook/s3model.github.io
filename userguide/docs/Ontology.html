@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Ontology &mdash; S3Model User Guide</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial Setup" href="Setup.html" />
+    <link rel="prev" title="The Reference Model" href="ReferenceModel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> User Guide
+            <img src="_static/SmallLogo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                3.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="S3Model.html">What is S3Model?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">S3Model Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Approach.html">The Multi-Level Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ReferenceModel.html">The Reference Model</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Ontology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glossary-of-terms-in-the-ontology">Glossary of Terms in the Ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Setup.html">Tutorial Setup</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">User Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>The Ontology</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Ontology.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="the-ontology">
+<h1>The Ontology<a class="headerlink" href="#the-ontology" title="Permalink to this headline">¶</a></h1>
+<p>The S3Model ontology is an upper ontology defining the components of the reference model and constraint models.</p>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>The S3Model ontology is quite simple but serves to connect model components in RDF stores.</p>
+<p>The images below show the classes and object properties of the ontology.</p>
+<p>See the [technical documentation(<a class="reference external" href="https://s3model.com/specifications/docs/abstract_model.html">https://s3model.com/specifications/docs/abstract_model.html</a>) for definitions for each of the classes and properties.</p>
+<p>Further information is in the Advanced Course on using linked data.</p>
+</section>
+<section id="glossary-of-terms-in-the-ontology">
+<h2>Glossary of Terms in the Ontology<a class="headerlink" href="#glossary-of-terms-in-the-ontology" title="Permalink to this headline">¶</a></h2>
+<p><strong>CMC Core Model Component</strong> A component model contained in a reference model. A CMC represents a specific core type of component that further includes elements with base datatypes and other CMCs to define its structure.</p>
+<p><strong>CMS Core Model Symbol</strong> A CMS represents a CMC in instance data. In practice, it is usually substituted for by a Replaceable Model Symbol (RMS). This substitution is because constraints are expressed in a Replaceable Model Component (RMC) which is then represented by an RMS.</p>
+<p><strong>DataInstance</strong> A set of data items that report via the isInstanceOf property that it conforms to a DM. In this state, it has not been tested for validation.</p>
+<p><strong>DataInstanceError</strong> Subclass of DataInstance. A set of data items that DOES NOT conform to the DM it represents, OR it contains invalid data and does not contain one or more children of an Exception. If there are no noted Exceptions in the Data Instance, then it should be considered suspect and discarded.</p>
+<p><strong>DataInstanceInvalid</strong> Subclass of DataInstance. A set of data items that conforms to a DM to represent an instance of that concept AND at least some of the data values are NOT valid according to the DM constraints. An Invalid Data Instance must contain one or more children of an Exception.</p>
+<p><strong>DataInstanceValid</strong> Subclass of DataInstance. A set of data items that conforms to a DM to represent an instance of that concept AND all of the data values are valid according to the DM constraints.</p>
+<p><strong>DM Data Model</strong> A set of selected RMCs that are constraints on the RM components (CMCs) to represent a domain concept. In the implementation language, there may be additional syntactic conventions required. Caution: Not to be confused with Data Instance.</p>
+<p><strong>Exception</strong> Exceptions indicate that a data instance may be invalid when validated against its model. However, the exceptional value may be explainable and provide valuable contextual information. A specific Exception subclass instance included in the data instance will provide that additional information.</p>
+<p><strong>RM Reference Model</strong> A set of components called Core Concept Models (CMCs) that provide structural integrity for a domain concept. Some CMCs are mandatory in DMs, and some are optional. Optionality is defined in each versioned, RM implementation.</p>
+<p><strong>RMC Reusable Model Component</strong> The name RMC is given to a CMC that has been constrained for use in a DM. Through the constraints, an RMC defines a single concept based on syntactic data constraints as well as specified semantics. It is reusable because it can be reused in multiple DMs.</p>
+<p><strong>Reusable Model Symbol</strong> The RMS represents an RMC in instance data. Can be considered as a data container for the components of an RMC. All of the RMSs, from a given DM, are contained in a DataInstance when in transit.</p>
+<p><strong>S3Model</strong> Sometimes abbreviated as S3M in the documentation. The root concept. This is the source of the abstract idea of the Shareable, Structured, Semantic Model. All of the S3Model classes are related to this class through partOf.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ReferenceModel.html" class="btn btn-neutral float-left" title="The Reference Model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Setup.html" class="btn btn-neutral float-right" title="Tutorial Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
