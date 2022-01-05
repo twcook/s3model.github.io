@@ -24,7 +24,8 @@ S3Model User Guide
    ReferenceModel
    Ontology
    Setup
-
+   Glossary
+   
 
 Indices and tables
 ==================
