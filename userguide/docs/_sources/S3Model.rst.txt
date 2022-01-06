@@ -2,7 +2,7 @@
 What is S3Model?
 ================
 
-A system to solve cross-domain :ref:`semantic interoperability <sem-int>` with full data validation and compliance.
+The **SHAREABLE-STRUCTURED-SEMANTIC MODEL** :ref:`(S3Model) <s3model>` is a system based on a standardized reference model, to solve cross-domain :ref:`semantic interoperability <sem-int>` with full data validation and compliance. S3Model is **not** a data storage application. That said, the tools built around S3Model do create data in :ref:`XML <xml>`, :ref:`JSON <json>` or :ref:`RDF <rdf>` and allow for storing data in :ref:`SQL databases <sqldb>`, :ref:`XML databases <xmldb>`, or :ref:`graph repositories <graphdb>`. 
 
 Target Audience
 ===============
@@ -36,7 +36,7 @@ Step 3 above is especially onerous for several reasons. A recent (2020) survey b
 Data Science
 ------------
 
-Data scientists use probability, statistics, mathematics, and computer science to make predictions about complex systems. A data scientist will typically be more involved with designing *data modeling* processes, creating algorithms and :ref:`predictive models <pred-models>`. Therefore, data scientists may spend more time designing tools, automation systems and data frameworks than analyzing data.
+Data scientists use probability, statistics, mathematics, and computer science to make predictions about complex systems. A data scientist will typically be more involved with designing :ref:`data modeling <data-modeling>` processes, creating algorithms and :ref:`predictive models <pred-models>`. Therefore, data scientists may spend more time designing tools, automation systems and data frameworks than analyzing data.
 
 Use your favorite search engine to further discover the similarities and differences between a data analyst and a data scientist. 
 
@@ -52,9 +52,6 @@ Data Analysis/Science
 When we can extract :ref:`contextual <contextual>` meaning from data, it empowers us to make better decisions. The context of the data is at the point of capture. When the capture context is unknown it can easily lead to poor or improper analysis results. 
 
 The use of :ref:`ontologies <ontologies>` to define meaning across domains is growing. These ontologies are typically built by or with direct input from :ref:`domain experts <domain-experts>`. The Web Ontology Language :ref:`(*OWL*) <owl>` is often used to instantiate and exchange an ontology. An ontology may also be expressed in the Resource Description Framework :ref:`(*RDF*) <rdf>`.
-
-
-
 
 
 * S3Model provides a means to add context to data in both a machine processable and human-readable manner.
