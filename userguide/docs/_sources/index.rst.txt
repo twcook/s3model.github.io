@@ -8,7 +8,7 @@ Shareable, Structured, Semantic Model (S3Model)
 ===============================================
 
 
-**The Esperanto of Information Management.**
+**The :ref:`Esperanto <esperanto>` of Information Management.**
 
 
 S3Model User Guide
