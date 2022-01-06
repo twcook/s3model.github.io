@@ -2,7 +2,12 @@
 What is S3Model?
 ================
 
-A system to solve cross-domain *semantic interoperability* with full data validation and compliance.
+A system to solve cross-domain `:ref: semantic interoperability <sem-int>` with full data validation and compliance.
+
+Target Audience
+===============
+
+The concepts, implemntations and tools are intended for domain experts, data scientists and data analysts. 
 
 The Current Problem(s)
 ======================
@@ -33,7 +38,7 @@ Data Science
 
 Data scientists use probability, statistics, mathematics, and computer science to make predictions about complex systems. A data scientist will typically be more involved with designing *data modeling* processes, creating algorithms and *predictive models*. Therefore, data scientists may spend more time designing tools, automation systems and data frameworks than analyzing data.
 
-Use your favorite search engine to discover the similarities and differences between a data analyst and a data scientist. 
+Use your favorite search engine to further discover the similarities and differences between a data analyst and a data scientist. 
 
 For our purposes, the problems and the solutions are similar.
 
