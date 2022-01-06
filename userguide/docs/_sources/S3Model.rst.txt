@@ -36,9 +36,9 @@ In Step 4 above:
 
 - What if the analyst didn't fully understand the context in which the data was captured? For example, there are differences in the way blood pressure is measured via an arm cuff and an aterial sensor. Or the various tools used to measure atmospheric temperature can mean different values for the same location.  
   
-What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? During the data cleaning phase it is quite common to remove missing or null data points. The meer fact that the data is missing can be meaningful. As well as why the data is missing. For example in a healthcare record; was the information just not available or did the patient refuse to answer the question? 
+- What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? During the data cleaning phase it is quite common to remove missing or null data points. The meer fact that the data is missing can be meaningful. As well as why the data is missing. For example in a healthcare record; was the information just not available or did the patient refuse to answer the question? 
 
-S3Model helps application developers solve these issues by providing a more robust approach to data modeling. 
+**S3Model** helps application developers solve these issues by providing a more robust approach to data modeling. Then providing the ability to share these :ref:`computable models <computable-models>` across an organization, an industry or with the public at large. 
 
 
 Data Science

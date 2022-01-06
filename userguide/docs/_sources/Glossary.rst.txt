@@ -8,7 +8,11 @@ An area of computer science that deals with giving machines the ability to seem 
 
 .. _compliance:
 
+**Data compliance** is the practice of following regulations set forth by corporate governance, industry organizations, and governments. These regulations set forth protocols for how sensitive data is collected, used, stored, and managed, among other requirements.
 
+.. _computable-models:
+
+**Computable models** in this context, are data models that can be used to validate data and insure data compliance based on the structure and rules contained within the data model.
 
 .. _contextual:
 
@@ -72,7 +76,7 @@ An area of computer science that deals with giving machines the ability to seem 
 
 .. _validation:
 
-
+**Data validation** means checking the accuracy and quality of source data before using, importing or otherwise processing data. Different types of validation can be performed depending on destination constraints or objectives. For example, you could use data validation to make sure a value is a number between 1 and 6, make sure a date occurs in the next 30 days, or make sure a text entry is less than 25 characters.
 
 .. _xml:
 
