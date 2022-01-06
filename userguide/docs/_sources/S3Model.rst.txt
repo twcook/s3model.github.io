@@ -2,7 +2,7 @@
 What is S3Model?
 ================
 
-A system to solve cross-domain `:ref: semantic interoperability <sem-int>` with full data validation and compliance.
+A system to solve cross-domain :ref:`semantic interoperability <sem-int>` with full data validation and compliance.
 
 Target Audience
 ===============
