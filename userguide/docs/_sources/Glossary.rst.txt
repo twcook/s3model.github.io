@@ -2,6 +2,14 @@
 Glossary
 ========
 
+.. _ai:
+
+An area of computer science that deals with giving machines the ability to seem like they have human intelligence. Also, the power of a machine to copy intelligent human behavior.
+
+.. _compliance:
+
+
+
 .. _contextual:
 
 **Contextual** - Contextual means to view information as a whole- both the facts and where they came from.
@@ -61,6 +69,10 @@ Glossary
 .. _sqldb:
 
 **SQL** stands for Structured Query Language. It's used for relational databases. A SQL database is a collection of tables that stores a specific set of structured data.
+
+.. _validation:
+
+
 
 .. _xml:
 
