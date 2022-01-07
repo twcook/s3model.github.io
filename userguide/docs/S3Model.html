@@ -53,6 +53,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#the-solution">The Solution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#data-analysis-science">Data Analysis/Science</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -63,6 +64,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Ontology.html">The Ontology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Setup.html">Tutorial Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
 </ul>
 
         </div>
@@ -91,36 +93,36 @@
              
   <section id="what-is-s3model">
 <h1>What is S3Model?<a class="headerlink" href="#what-is-s3model" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>SHAREABLE-STRUCTURED-SEMANTIC MODEL</strong> <a class="reference internal" href="Glossary.html#s3model"><span class="std std-ref">(S3Model)</span></a> is a system based on a standardized reference model, to solve cross-domain <a class="reference internal" href="Glossary.html#sem-int"><span class="std std-ref">semantic interoperability</span></a> with full data <a class="reference internal" href="Glossary.html#validation"><span class="std std-ref">validation</span></a> and <a class="reference internal" href="Glossary.html#compliance"><span class="std std-ref">compliance</span></a>. S3Model is <strong>not</strong> a data storage application. That said, the tools built around S3Model do create data in <a class="reference internal" href="Glossary.html#xml"><span class="std std-ref">XML</span></a>, <a class="reference internal" href="Glossary.html#json"><span class="std std-ref">JSON</span></a> or <a class="reference internal" href="Glossary.html#rdf"><span class="std std-ref">RDF</span></a> and allow for storing data in <a class="reference internal" href="Glossary.html#sqldb"><span class="std std-ref">SQL databases</span></a>, <a class="reference internal" href="Glossary.html#xmldb"><span class="std std-ref">XML databases</span></a>, or <a class="reference internal" href="Glossary.html#graphdb"><span class="std std-ref">graph repositories</span></a>.</p>
+<p>The <strong>SHAREABLE-STRUCTURED-SEMANTIC MODEL</strong> <a class="reference internal" href="Glossary.html#s3model"><span class="std std-ref">(S3Model)</span></a> is a system based on a standardized reference model, to solve cross-domain <a class="reference internal" href="Glossary.html#sem-int"><span class="std std-ref">semantic interoperability</span></a> with full data <a class="reference internal" href="Glossary.html#validation"><span class="std std-ref">validation</span></a> and <a class="reference internal" href="Glossary.html#compliance"><span class="std std-ref">compliance</span></a>. S3Model is <strong>not</strong> a data storage application. That said, the tools built around S3Model do create data in <a class="reference internal" href="Glossary.html#xml"><span class="std std-ref">XML</span></a>, <a class="reference internal" href="Glossary.html#json"><span class="std std-ref">JSON</span></a> or <a class="reference internal" href="Glossary.html#rdf"><span class="std std-ref">RDF</span></a> and allow for storing data in <a class="reference internal" href="Glossary.html#sqldb"><span class="std std-ref">SQL databases</span></a>, <a class="reference internal" href="Glossary.html#xmldb"><span class="std std-ref">XML databases</span></a>, or <a class="reference internal" href="Glossary.html#graphdb"><span class="std std-ref">graph databases</span></a>.</p>
 <section id="target-audience">
 <h2>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">¶</a></h2>
 <p>The concepts, implemntations and tools are intended for <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>, <a class="reference internal" href="Glossary.html#data-scientists"><span class="std std-ref">data scientists</span></a> and <a class="reference internal" href="Glossary.html#data-analyst"><span class="std std-ref">data analysts</span></a>.</p>
 </section>
 <section id="the-current-problem-s">
 <h2>The Current Problem(s)<a class="headerlink" href="#the-current-problem-s" title="Permalink to this headline">¶</a></h2>
-<p>Current approaches to data modeling and processing do not allow for machine processable context to be associated with the data, at the point of capture, in order to supply algorithms with enough meaninful, computable information.</p>
+<p>Current data modeling and processing approaches do not allow for machine-processable context to be associated with the data at the point of capture to supply algorithms with sufficient contextual information.</p>
 <section id="data-analysis">
 <h3>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h3>
-<p>The majority of data used in data analysis, machine learning and Artificial Intelligence <a class="reference internal" href="Glossary.html#ai"><span class="std std-ref">(AI)</span></a> applications require manual cleaning and processing. At best, a bespoke pipeline must be created for each use case.</p>
+<p>Most data used in data analysis, machine learning, and Artificial Intelligence <a class="reference internal" href="Glossary.html#ai"><span class="std std-ref">(AI)</span></a> applications require manual cleaning and processing. At best, a bespoke pipeline will be created for each use case.</p>
 <p>A data analyst typically goes through these steps:</p>
 <ol class="arabic simple">
 <li><p>Identify one or more business questions that need to be answered.</p></li>
-<li><p>The identification and collection of the raw data set needed to answer the identified question.</p></li>
-<li><p>Then <em>clean</em> the data to prepare it for the analysis tools. This usually requires; purging duplicate and anomalous data, reconciling inconsistencies, standardizing the data structure, and dealing with syntax errors, erroneous white space, and formatting inconsistencies.</p></li>
-<li><p>Now the analyst can actually use tools to do the analysis and interpret the results.</p></li>
+<li><p>Identifying and collecting the raw data set needed to answer the identified question.</p></li>
+<li><p>Then <em>clean</em> the data to prepare it for the analysis tools. The cleaning process usually requires; purging duplicate and anomalous data, reconciling inconsistencies, standardizing the data structure, and dealing with syntax errors, erroneous white space, and formatting inconsistencies.</p></li>
+<li><p>Now, the analyst can use tools to analyze the data and interpret the results.</p></li>
 </ol>
-<p>Step 3 above is especially onerous for several reasons. A recent (2020) survey by data science platform company <a class="reference external" href="https://www.anaconda.com/">Anaconda</a> found that approximately 45% of data analysts/data scientists time is spent on this one step. Many find this step to be tedious, boring and error-prone.</p>
+<p>Step 3 above is especially onerous for several reasons. A recent (2020) survey by data science platform company <a class="reference external" href="https://www.anaconda.com/">Anaconda</a> found that approximately 45% of data analysts/data scientists’ time is spent on this one step. Many find this step to be tedious, dull, and error-prone.</p>
 <p>In Step 4 above:</p>
 <ul class="simple">
-<li><p>What if the analyst didn’t fully understand the context in which the data was captured? For example, there are differences in the way blood pressure is measured via an arm cuff and an aterial sensor. Or the various tools used to measure atmospheric temperature can mean different values for the same location.</p></li>
-<li><p>What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? During the data cleaning phase it is quite common to remove missing or null data points. The meer fact that the data is missing can be meaningful. As well as why the data is missing. For example in a healthcare record; was the information just not available or did the patient refuse to answer the question?</p></li>
+<li><p>What if the analyst did not fully understand the context in which the data was captured? For example, there are differences in how blood pressure is measured via an arm cuff and an aterial sensor. Alternatively, the various tools used to measure atmospheric temperature can mean different values for the same location.</p></li>
 </ul>
-<p><strong>S3Model</strong> helps application developers solve these issues by providing a more robust approach to data modeling. Then providing the ability to share these <a class="reference internal" href="Glossary.html#computable-models"><span class="std std-ref">computable models</span></a> across an organization, an industry or with the public at large.</p>
+<p>It is pretty common to remove missing or null data points during the data cleaning phase. The fact that the data is missing can be meaningful, and why the data is missing should be known.* What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? For example, was the information just not available in a healthcare record, or did the patient refuse to answer the question?</p>
+<p><strong>S3Model</strong> helps application developers solve these issues by providing a more robust approach to data modeling, then providing the ability to share these <a class="reference internal" href="Glossary.html#computable-models"><span class="std std-ref">computable models</span></a> across an organization, an industry, or with the public at large.</p>
 </section>
 <section id="data-science">
 <h3>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h3>
-<p>Data scientists use probability, statistics, mathematics, and computer science to make predictions about complex systems. A data scientist will typically be more involved with designing <a class="reference internal" href="Glossary.html#data-modeling"><span class="std std-ref">data modeling</span></a> processes, creating algorithms and <a class="reference internal" href="Glossary.html#pred-models"><span class="std std-ref">predictive models</span></a>. Therefore, data scientists may spend more time designing tools, automation systems and data frameworks than analyzing data.</p>
-<p>Use your favorite search engine to further discover the similarities and differences between a data analyst and a data scientist.</p>
+<p>Data scientists use probability, statistics, mathematics, and computer science to predict outcomes from complex systems. A data scientist will typically be more involved with designing <a class="reference internal" href="Glossary.html#data-modeling"><span class="std std-ref">data modeling</span></a> processes, creating algorithms and <a class="reference internal" href="Glossary.html#pred-models"><span class="std std-ref">predictive models</span></a>. Therefore, data scientists may spend more time designing tools, automation systems, and data frameworks than analyzing data.</p>
+<p>The reader should use their favorite search engine to discover the similarities and differences between a data analyst and a data scientist.</p>
 <p>For our purposes, the problems and the solutions are similar.</p>
 </section>
 </section>
@@ -128,13 +130,18 @@
 <h2>The Solution<a class="headerlink" href="#the-solution" title="Permalink to this headline">¶</a></h2>
 <section id="data-analysis-science">
 <h3>Data Analysis/Science<a class="headerlink" href="#data-analysis-science" title="Permalink to this headline">¶</a></h3>
-<p>When we can extract <a class="reference internal" href="Glossary.html#contextual"><span class="std std-ref">contextual</span></a> meaning from data, it empowers us to make better decisions. The context of the data is at the point of capture. When the capture context is unknown it can easily lead to poor or improper analysis results.</p>
-<p>The use of <a class="reference internal" href="Glossary.html#ontologies"><span class="std std-ref">ontologies</span></a> to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>. The Web Ontology Language <a class="reference internal" href="Glossary.html#owl"><span class="std std-ref">(*OWL*)</span></a> is often used to instantiate and exchange an ontology. An ontology may also be expressed in the Resource Description Framework <a class="reference internal" href="Glossary.html#rdf"><span class="std std-ref">(*RDF*)</span></a>.</p>
+<p>The context of the data at the capture point is of utmost importance. When we extract <a class="reference internal" href="Glossary.html#contextual"><span class="std std-ref">contextual</span></a> meaning from data, it empowers us to make better decisions. When the capture context is unknown, it can easily lead to poor or improper analysis results.</p>
+<p>The use of <a class="reference internal" href="Glossary.html#ontologies"><span class="std std-ref">ontologies</span></a> to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>. The Web Ontology Language <a class="reference internal" href="Glossary.html#owl"><span class="std std-ref">(*OWL*)</span></a> is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology:ref:<cite>(*RDF*) &lt;rdf&gt;</cite>.</p>
+<p>Globally useful ontologies such as those growing out of the Semantic Web work are becoming more stable and permanent.</p>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>S3Model provides a means to add context to data in both a machine processable and human-readable manner.</p></li>
-<li><p>S3Model provides a consistent data structure to ease query processing across multiple domains of information.</p></li>
-<li><p>S3Model provides a consistent approach to go from document/tree structured data to Linked Data without loss of contextual fidelity.</p></li>
-<li><p>S3Model is provided under a business friendly open source license. Begin your introduction to the future of data modeling for AGI.</p></li>
+<li><p>S3Model provides a means to add context to data in a machine-processable and human-readable manner.</p></li>
+<li><p>S3Model provides a consistent data structure to ease query processing across multiple information domains.</p></li>
+<li><p>S3Model provides a consistent approach to go from document/tree-structured data to Linked Data without loss of contextual fidelity.</p></li>
+<li><p>Some of the tools being produced under the S3Model project demonstrate not only how S3Model can be used in your business applications. However, they are also helpful as model design and creation tools.</p></li>
+<li><p>S3Model and the tools are provided under a business-friendly open source license.</p></li>
 </ul>
 </section>
 </section>
@@ -152,7 +159,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 06, 2022.
+      <span class="lastupdated">Last updated on Jan 07, 2022.
       </span></p>
   </div>
 

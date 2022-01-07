@@ -2,23 +2,20 @@
 S3Model Introduction
 ====================
 
+Getting Started with S3Model
+----------------------------
+
+A gentle introduction to S3Model is provided by a set of `Jupyter notebooks <https://jupyter.org/install>`_ that import the `Python <https://www.python.org/>`_ implementation of S3Model named `S3M_Python <https://github.com/twcook/S3M_Python>`_. 
+
+Each notebook will guide the user through a logical sequence to become familiar with S3Model components and use the library in applications to build semantically rich, coherent data models.
+
+For complete details of each model component, see the official `reference model documentation <https://s3model.com/specifications/docs/index.html>`_, specifically the `technical documentation <https://s3model.com/specifications/docs/rm/>`_.
 
 Using the tutorials
 -------------------
 
-There are some great things about notebooks and some drawbacks. It is important to realize that using S3Model in a notebook is not the recommended approach. You should write an appropriate application to build a model and accept the input data.
+There are some great things about Jupyter notebooks and some drawbacks. Using S3Model in a notebook is not the recommended approach for building S3Model based tools. However, Jupyter notebooks are valuable for building familiarity with the S3Model Reference Model components.
 
-When executing the tutorials, you must always run the cells in the sequence from top to bottom. Anything else is precarious. If you want to experiment with changing values in a cell, then be sure to use the Cell->Run All Above option from the menu.
+The user must always run the cells in the sequence from top to bottom when executing the tutorials. Anything else is precarious. When experimenting with changing values in a cell, be sure to use the **Cell->Run All Above** option from the menu.
 
-Getting Started with S3Model
-----------------------------
-
-For a glossary of terms and abbreviations see the ontology lesson.
-
-Each notebook will guide you through a logical sequence for you to become familiar with S3Model components and how to use the library in your applications to build semantically rich, coherent data models.
-
-For complete details (attribute types, cardinality, etc.) of each model component see the official reference model documentation specifically the technical documentation.
-
-This tutorial provides only an introduction.
-
-The Translator course will give you a foundation in moving existing data to the S3Model platform. This tool can be used in a pipeline so that you can start with S3Model today; no rip & replace is required. Translator is open source and available from PyPi.
+For complete installation and setup instructions go to the :ref:`Tutorial Setup <setup>` page. 

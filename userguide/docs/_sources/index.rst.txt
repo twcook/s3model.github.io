@@ -25,7 +25,7 @@ S3Model User Guide
    Ontology
    Setup
    Glossary
-   
+   LICENSE
 
 Indices and tables
 ==================

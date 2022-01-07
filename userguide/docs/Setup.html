@@ -54,6 +54,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
 </ul>
 
         </div>
@@ -81,40 +82,49 @@
            <div itemprop="articleBody">
              
   <section id="tutorial-setup">
-<h1>Tutorial Setup<a class="headerlink" href="#tutorial-setup" title="Permalink to this headline">¶</a></h1>
-<p>Setup the prerequisites for the interactive sessions.</p>
+<span id="setup"></span><h1>Tutorial Setup<a class="headerlink" href="#tutorial-setup" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Install the prerequisites for the interactive sessions.</p></li>
+</ul>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>To get started learning about S3Model using the Jupyter notebook exercises, you will first need to install Anaconda for your system. Be sure to use the version for <strong>Python 3.7 or later</strong>.</p>
+<p>To learn about the S3Model Reference Model using the Jupyter notebook exercises, the user will first need to install <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> for their operating system. Be sure to use the version for <strong>Python 3.7 or later</strong>. Unless the user is an expert Python developer and can install the prerequisites manually, Anaconda is by far the best way to install the basic prerequisites for this tutorial. When installing Anaconda, the non-expert user should allow Anaconda to set the system Python interpreter during installation.</p>
 <p>Anaconda now offers to install the <em>VS Code</em> editor. Unless you already have a preferred text editor, this is a good choice.</p>
-<p>Open a terminal window and create a conda environment.</p>
-<p>On Windows, you should use an Anaconda Prompt terminal from the Anaconda menu. On Mac/Linux use a terminal window.</p>
-<p>Navigate to your home directory and issue this command:</p>
-<ul class="simple">
-<li><p>conda create -p S3MTraining jupyterlab</p></li>
-</ul>
+<p>Open a terminal window:</p>
+<p>On Windows, use an Anaconda Prompt terminal from the Anaconda menu. On Mac or Linux, use a terminal window. <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-navigator">Detailed instructions</a>.</p>
+<p>In the terminal window the prompt should start with <strong>(base)</strong>. Indicating that Anaconda has set the system wide Python environment.</p>
+<p>Install the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">Jupyterlab</a>  interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span>
+</pre></div>
+</div>
+<p>Navigate to a convienent directory for installing the tutorial and issue this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">p</span> <span class="n">S3MTraining</span> <span class="n">jupyterlab</span>
+</pre></div>
+</div>
+<p>The above command creates a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">conda environment</a> named <strong>S3MTraining</strong>.</p>
 <p>Activate the environment according to the instructions shown by Anaconda in the terminal window.</p>
 <p>Change to the new directory:</p>
-<ul class="simple">
-<li><p>cd S3MTraining</p></li>
-</ul>
-<p>Install the S3Model Python implementation with this command:</p>
-<ul class="simple">
-<li><p>pip install S3MPython</p></li>
-</ul>
-<p>Test the installation by starting the Jupyter Notebooks server.</p>
-<ul class="simple">
-<li><p>jupyter notebook</p></li>
-</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">S3MTraining</span>
+</pre></div>
+</div>
+<p>Install the <a class="reference external" href="https://pypi.org/manage/project/S3MPython/releases/">S3Model Python</a> implementation with this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">S3MPython</span>
+</pre></div>
+</div>
+<p>Test the installation by starting the Jupyter Notebooks server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
+</pre></div>
+</div>
 <p>Create a new notebook and enter the following code into the first cell:</p>
-<ul class="simple">
-<li><p>from S3MPython.dm import DMType</p></li>
-<li><p>help(DMType)</p></li>
-</ul>
-<p>When you run this cell, you should see a display of the elements and their descriptions for the Data Model (DM) wrapper.</p>
-<p>Select the Notebooks lesson for a link to get the notebooks and how to install them. The Notebooks lesson and the notebooks are part of the paid course.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">S3MPython.dm</span> <span class="kn">import</span> <span class="n">DMType</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">DMType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>After running this cell, the elements and descriptions for the Data Model (DM) wrapper will be displayed.</p>
+<p>Select the Notebooks link to get the notebooks and instructions on installing them.</p>
 <p><strong>Congratulations!</strong></p>
-<p>You are now ready to explore the lessons using Jupyter notebooks where you will interactively learn how to build data models using the <strong>S3Model</strong> approach.</p>
+<p>The user is now ready to explore the lessons using Jupyter notebooks, where the user will interactively learn how to build data models using the <strong>S3Model</strong> approach.</p>
 </section>
 </section>
 
@@ -130,7 +140,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 06, 2022.
+      <span class="lastupdated">Last updated on Jan 07, 2022.
       </span></p>
   </div>
 

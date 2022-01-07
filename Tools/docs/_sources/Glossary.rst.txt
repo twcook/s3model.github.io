@@ -2,7 +2,7 @@
 Glossary
 ========
 
-While many terms have more than one definition. The definitions presented here are in the context of managing data, especially in the S3Model context.
+while many terms have more than one definition. The definitions presented here are in the context of managing data, especially in the S3Model context.
 
 
 .. _ai:
