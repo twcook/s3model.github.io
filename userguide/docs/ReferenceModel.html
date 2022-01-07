@@ -50,11 +50,13 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The Reference Model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#cardinality">Cardinality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-model-overview">Reference Model Overview</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Ontology.html">The Ontology</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Setup.html">Tutorial Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
 </ul>
 
         </div>
@@ -83,22 +85,30 @@
              
   <section id="the-reference-model">
 <h1>The Reference Model<a class="headerlink" href="#the-reference-model" title="Permalink to this headline">¶</a></h1>
-<p>Defines the types and structures available.</p>
+<p>This document defines the types and structures available.</p>
 <section id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
-<p>The S3Model Reference Model (RM) is the foundation of validation.</p>
-<p>S3Model may be implemented in most any programming or data definition language. The reference implementation provided here is in XML Schema 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML we chose XML as the canonical serialization format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.</p>
-<p>The canonical RDF/XML serialization format can be converted to other RDF formats such as Turtle, N-Triples, JSON-LD, etc. as required for local operations. A host of tools and online resources are available for these conversions.</p>
-<p>The components of the RM are sufficient to model any datatype to include temporal, spatial and ontological contexts. Not all of this functionality is required in all modeling situations. But they are available for those that need it.</p>
+<p>The S3Model Reference Model <a class="reference internal" href="Glossary.html#rm"><span class="std std-ref">(RM)</span></a> is the foundation of <a class="reference internal" href="Glossary.html#validation"><span class="std std-ref">validation</span></a>.</p>
+<p>S3Model may be implemented in almost any programming or <a class="reference external" href="https://techterms.com/definition/ddl">data definition language</a>. The reference implementation provided here is in <a class="reference external" href="https://www.w3schools.com/xml/schema_intro.asp">XML Schema</a> 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the canonical serialization format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.</p>
+<p>The canonical RDF/XML serialization format can be converted to other RDF formats such as Turtle, N-Triples, JSON-LD, etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.</p>
+<p>The components of the RM are sufficient to model any datatype to include temporal, spatial, and ontological contexts. Not all of this functionality is required in all modeling situations. But they are available for those that need them.</p>
 </section>
 <section id="cardinality">
 <h2>Cardinality<a class="headerlink" href="#cardinality" title="Permalink to this headline">¶</a></h2>
 <p>A minimum and maximum occurrences of each data element/attribute are assigned in the RM.</p>
-<p>For example, if a minimum occurrence is set to ‘1’, then this attribute is required in every data model.</p>
-<p>If the maximum occurrences are set to ‘1’, then there can never be more than one of these attributes in the data model.</p>
-<p>In some cases, the maximum occurrences may be unbounded allowing any number of instances in the data.</p>
-<p>The hands-on, jupyter notebook exercises cover how to determine and set cardinality constraints.</p>
-<p>The full documentation can is available here.</p>
+<p>For example, if a minimum occurrence is set to ‘1’, this attribute is required in every data model.</p>
+<p>If the maximum occurrences are set to ‘1’, there can never be more than one of these attributes in the data model.</p>
+<p>In some cases, the maximum occurrences may be unbounded, allowing any number of instances in the data.</p>
+<p>The hands-on, <a class="reference external" href="https://s3model.com/userguide/docs/Setup.html">Jupyter notebook exercises</a> cover determining and setting cardinality constraints.</p>
+<p>The complete documentation is available <a class="reference external" href="https://s3model.com/specifications/docs/index.html">here</a>.</p>
+</section>
+<section id="reference-model-overview">
+<h2>Reference Model Overview<a class="headerlink" href="#reference-model-overview" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://s3model.com/specifications/docs/abstract_model.html">abstract reference model</a> consists of a collection of components for defining common data elements for applications. A developer will consider strings, integers, decimals, etc. Additionally, more complex ideas such as files and links are accommodated. These structures all descend from a parent type similar to the “Any type” (<a class="reference external" href="https://s3model.com/specifications/docs/rm.html#xdanytype">XdAnyType</a>) found in many programming languages.</p>
+<p>The distinction is that in S3Model, the developer can provide for the application user to tag each data point with additional <a class="reference external" href="https://www.igi-global.com/dictionary/advanced-model-of-complex-information-system/41735">semantic information</a> such as the beginning and ending times that a data value is valid. The time the data value was recorded and modified. The capability exists to add an Access Control flag for sensitive information. For missing or erroneous data, the reason it is in error may be added using Exceptional Value codes (expanded from <a class="reference external" href="https://www.iso.org/standard/35646.html">ISO 21090</a>). Location data is often essential, for example, in air quality sensor data. Location data can be recorded as <a class="reference external" href="http://wiki.gis.com/wiki/index.php/Decimal_degrees">latitude and longitude decimal values</a>. These capabilities expand the meaning of the data points and transfer helpful context to the end-users of the data.</p>
+<p>S3Model allows for well-defined <a class="reference external" href="https://www.testing.com/articles/laboratory-test-reference-ranges/">reference ranges</a> for ordered types such as decimals, integers, floats, and temporals.</p>
+<p>Beyond the expansion of semantics on the simple types, S3Model Data Models can contain models representing who or what organization participated in the data collection, or activity, described by the model. There are also facilities to capture <a class="reference external" href="https://www.merriam-webster.com/dictionary/attestation">attestation</a> of the data and downstream <a class="reference external" href="https://www.merriam-webster.com/dictionary/audit">auditing</a> records.</p>
+<p>The Data Model also accommodates <a class="reference external" href="https://techterms.com/definition/metadata">metadata</a> that describes attributes about the creation of the model. Elements of the <a class="reference external" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">Dublin Core Metadata Standard</a> are used to identify details such as; title, author, description, license information, relationship to other models, geographical or domain coverage, and a unique identifier (<cite>CUID &lt;https://github.com/ericelliott/cuid&gt;</cite>).</p>
 </section>
 </section>
 
@@ -114,7 +124,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 06, 2022.
+      <span class="lastupdated">Last updated on Jan 07, 2022.
       </span></p>
   </div>
 

@@ -49,4 +49,6 @@ Using tools like the S3Model Tool Suite makes this easy to do. As a simple examp
 Summary
 -------
 
-This page has been a very high-level introduction to S3Model. For further details and implementation is important to refer to the `Reference Model documentation <https://s3model.com/specifications/docs/rm>`_ and the `Reference implementation documentation <https://s3model.com/S3Model/docs/index.html>`_.
+This page has been a very high-level introduction to S3Model. A slighlty more technical overview can be found in the Reference Model chapter of this User Guide.
+
+For further details and implementation information it is important to refer to the `Reference Model Specifications <https://s3model.com/S3Model/docs/index.html>`_ and the `Reference implementation technical documentation <https://s3model.com/specifications/docs/rm>`_.
