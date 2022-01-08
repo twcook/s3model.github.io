@@ -90,25 +90,28 @@
 <li><p>You <strong>MUST</strong> know how to navigate directories/folders in your terminal.</p></li>
 </ul>
 <p><em>If you do not know how to do these things there are tutorials available for all operating systems on the Internet.</em></p>
-<ul class="simple">
-<li><p>Install the prerequisites for the interactive sessions.</p></li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We <strong>RECOMMEND</strong> opening external links from this page in a new tab on your browser. That way you can look for the S3M logo and return here to continue the tutorial steps.</p>
+</div>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>To learn about the S3Model Reference Model using the Jupyter notebook exercises, the user will first need to install <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> for their operating system. Be sure to use the version for <strong>Python 3.7 or later</strong>. Unless the user is an expert Python developer and can install the prerequisites manually, Anaconda is by far the best way to install the basic prerequisites for this tutorial. When installing Anaconda, the non-expert user should allow Anaconda to set the system Python interpreter during installation.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Anaconda now offers to install the <em>VS Code</em> editor. Unless you already have a preferred text editor, this is a good choice.</p>
-</div>
 <p>Open a terminal window:</p>
-<p>On Windows, use an Anaconda Prompt terminal from the Anaconda menu. On Mac or Linux, use a terminal window. <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-navigator">Detailed instructions</a>.</p>
-<p>In the terminal window the prompt should start with <strong>(base)</strong>. Indicating that Anaconda has set the system wide Python environment.</p>
-<p>Install the <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">Jupyterlab</a>  interface:</p>
+<ul class="simple">
+<li><p>On Windows, use an Anaconda Prompt terminal from the Anaconda menu.</p></li>
+<li><p>On Mac or Linux, use a terminal window. <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-navigator">Detailed instructions</a>.</p></li>
+</ul>
+<p>In the terminal window the prompt should start with <strong>(base)</strong>. Indicating that Anaconda has set the  Python environment.</p>
+<p>Install <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html">Jupyterlab</a>  interface:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span>
 </pre></div>
 </div>
 <p>Navigate to a convienent directory in the terminal, for installing the tutorial.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p><strong>REMEMBER</strong> this directory/folder. We certainly don’t recommend putting these files in the root directory. If you can’t think of a better place then do this in the <em>Documents</em> folder.</p>
+</div>
 <p>Issue this command in the terminal window:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">p</span> <span class="n">S3MTraining</span> <span class="n">jupyterlab</span>
 </pre></div>

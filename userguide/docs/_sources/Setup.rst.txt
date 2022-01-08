@@ -10,30 +10,32 @@ Tutorial Setup
 
 *If you do not know how to do these things there are tutorials available for all operating systems on the Internet.*
 
-* Install the prerequisites for the interactive sessions.
+.. note::
+
+    We **RECOMMEND** opening external links from this page in a new tab on your browser. That way you can look for the S3M logo and return here to continue the tutorial steps.
 
 Prerequisites
 -------------
 
 To learn about the S3Model Reference Model using the Jupyter notebook exercises, the user will first need to install `Anaconda <https://www.anaconda.com/products/individual>`_ for their operating system. Be sure to use the version for **Python 3.7 or later**. Unless the user is an expert Python developer and can install the prerequisites manually, Anaconda is by far the best way to install the basic prerequisites for this tutorial. When installing Anaconda, the non-expert user should allow Anaconda to set the system Python interpreter during installation. 
 
-.. note::
-
-    Anaconda now offers to install the *VS Code* editor. Unless you already have a preferred text editor, this is a good choice.
-
 Open a terminal window: 
 
-On Windows, use an Anaconda Prompt terminal from the Anaconda menu. On Mac or Linux, use a terminal window. `Detailed instructions <https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-navigator>`_. 
+* On Windows, use an Anaconda Prompt terminal from the Anaconda menu. 
+* On Mac or Linux, use a terminal window. `Detailed instructions <https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-navigator>`_. 
 
-In the terminal window the prompt should start with **(base)**. Indicating that Anaconda has set the system wide Python environment.
+In the terminal window the prompt should start with **(base)**. Indicating that Anaconda has set the  Python environment.
 
-Install the `Jupyterlab <https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html>`_  interface::
+Install `Jupyterlab <https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html>`_  interface::
 
     conda install -c conda-forge jupyterlab
 
 Navigate to a convienent directory in the terminal, for installing the tutorial.
 
-**REMEMBER** this directory/folder. We certainly don't recommend putting these files in the root directory. If you can't think of a better place then do this in the *Documents* folder. 
+.. warning::
+
+    **REMEMBER** this directory/folder. We certainly don't recommend putting these files in the root directory. If you can't think of a better place then do this in the *Documents* folder. 
+
 
 Issue this command in the terminal window::
 
