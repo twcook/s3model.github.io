@@ -7,12 +7,12 @@ The **SHAREABLE-STRUCTURED-SEMANTIC MODEL** :ref:`(S3Model) <s3model>` is a syst
 Target Audience
 ===============
 
-The concepts, implemntations and tools are intended for :ref:`domain experts <domain-experts>`, :ref:`data scientists <data-scientists>` and :ref:`data analysts <data-analyst>`. 
+The concepts, implementations and tools are intended for :ref:`business decision makers <bdm>`, :ref:`domain experts <domain-experts>`, :ref:`data scientists <data-scientists>` and :ref:`data analysts <data-analyst>`. 
 
 The Current Problem(s)
 ======================
 
-Current data modeling and processing approaches do not allow for machine-processable context to be associated with the data at the point of capture to supply algorithms with sufficient contextual information.
+Current data modeling and processing approaches do not allow for machine-processable context to be associated with the data at the point of capture to supply downstream analysts with sufficient contextual information to make fully qualified decisions. A lot of manual analysis, reflection, investigation, and time consuming meetings are required to figure out the real meaning of the data points.
 
 
 Data Analysis
@@ -36,7 +36,7 @@ In Step 4 above:
 
 * What if the analyst did not fully understand the context in which the data was captured? For example, there are differences in how blood pressure is measured via an arm cuff and an aterial sensor. Alternatively, the various tools used to measure atmospheric temperature can mean different values for the same location.  
   
-It is pretty common to remove missing or null data points during the data cleaning phase. The fact that the data is missing can be meaningful, and why the data is missing should be known.* What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? For example, was the information just not available in a healthcare record, or did the patient refuse to answer the question? 
+* It is pretty common to remove missing or null data points during the data cleaning phase. The fact that the data is missing can be meaningful, and why the data is missing should be known.* What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? For example, was the information just not available in a healthcare record, or did the patient refuse to answer the question? 
 
 **S3Model** helps application developers solve these issues by providing a more robust approach to data modeling, then providing the ability to share these :ref:`computable models <computable-models>` across an organization, an industry, or with the public at large. 
 
@@ -46,7 +46,9 @@ Data Science
 
 Data scientists use probability, statistics, mathematics, and computer science to predict outcomes from complex systems. A data scientist will typically be more involved with designing :ref:`data modeling <data-modeling>` processes, creating algorithms and :ref:`predictive models <pred-models>`. Therefore, data scientists may spend more time designing tools, automation systems, and data frameworks than analyzing data.
 
-The reader should use their favorite search engine to discover the similarities and differences between a data analyst and a data scientist. 
+.. note::
+
+    The reader should use their favorite search engine to discover the similarities and differences between a data analyst and a data scientist. 
 
 For our purposes, the problems and the solutions are similar.
 
@@ -59,9 +61,14 @@ Data Analysis/Science
 
 The context of the data at the capture point is of utmost importance. When we extract :ref:`contextual <contextual>` meaning from data, it empowers us to make better decisions. When the capture context is unknown, it can easily lead to poor or improper analysis results. 
 
-The use of :ref:`ontologies <ontologies>` to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from :ref:`domain experts <domain-experts>`. The Web Ontology Language :ref:`(*OWL*) <owl>` is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology:ref:`(*RDF*) <rdf>`.
+The use of :ref:`ontologies <ontologies>` to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from :ref:`domain experts <domain-experts>`. The Web Ontology Language :ref:`(*OWL*) <owl>` is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology :ref:`(*RDF*) <rdf>`.
 
-Globally useful ontologies such as those growing out of the Semantic Web work are becoming more stable and permanent. 
+Globally useful ontologies such as those growing out of the :ref:`Semantic Web <semweb>` work are becoming more useful, stable and permanent. Some examples of these ontologies that can be used to express semantics in S3Model data models are; `Schema.org <https://schema.org/>`_, `BioPortal <https://bioportal.bioontology.org/>`_, `Simple Knowledge Organization System <https://www.w3.org/2004/02/skos/>`_, `Socially Interconnected Online Communities <http://sioc-project.org/>`_, `Good Relations <http://www.heppnetz.de/projects/goodrelations/>`_, `The Music Ontology <http://musicontology.com/>`_, `Open Energy Ontology <https://openenergy-platform.org/ontology/>`_, `The Business Ontology <https://www.globaluniversityalliance.org/research/business-ontology/>`_, and many other domain specific ontologies. The decision to build your own for internal use or use an industry standard is up to you. `Forbes published an article <https://www.forbes.com/sites/cognitiveworld/2019/05/07/ontologies-borrow-build-or-buy/>`_ on this process.  
+
+
+More recently, there is a movement towards what is called `Web3 <https://web3.foundation/about/>`_. Web3 advances the concepts of the Semantic Web (Web 2.0) in order to decentralize content and enhance privacy, security, and control. S3Model is a perfect fit for Web3 due to the nature of decentralized data model definitions while still providing for sharability. 
+
+
 
 Summary
 -------
@@ -70,9 +77,9 @@ Summary
 
 * S3Model provides a consistent data structure to ease query processing across multiple information domains.
 
-* S3Model provides a consistent approach to go from document/tree-structured data to Linked Data without loss of contextual fidelity.
+* S3Model provides a consistent approach to go from document/tree-structured data to :ref:`Linked Data <linked-data>` without loss of contextual fidelity.
 
-* Some of the tools being produced under the S3Model project demonstrate not only how S3Model can be used in your business applications. However, they are also helpful as model design and creation tools. 
+* Some of the tools being produced under the S3Model project demonstrate not only how S3Model can be used in your business applications; they are also helpful as model design and creation tools. 
 
 * S3Model and the tools are provided under a business-friendly open source license. 
 

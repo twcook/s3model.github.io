@@ -96,11 +96,11 @@
 <p>The <strong>SHAREABLE-STRUCTURED-SEMANTIC MODEL</strong> <a class="reference internal" href="Glossary.html#s3model"><span class="std std-ref">(S3Model)</span></a> is a system based on a standardized reference model, to solve cross-domain <a class="reference internal" href="Glossary.html#sem-int"><span class="std std-ref">semantic interoperability</span></a> with full data <a class="reference internal" href="Glossary.html#validation"><span class="std std-ref">validation</span></a> and <a class="reference internal" href="Glossary.html#compliance"><span class="std std-ref">compliance</span></a>. S3Model is <strong>not</strong> a data storage application. That said, the tools built around S3Model do create data in <a class="reference internal" href="Glossary.html#xml"><span class="std std-ref">XML</span></a>, <a class="reference internal" href="Glossary.html#json"><span class="std std-ref">JSON</span></a> or <a class="reference internal" href="Glossary.html#rdf"><span class="std std-ref">RDF</span></a> and allow for storing data in <a class="reference internal" href="Glossary.html#sqldb"><span class="std std-ref">SQL databases</span></a>, <a class="reference internal" href="Glossary.html#xmldb"><span class="std std-ref">XML databases</span></a>, or <a class="reference internal" href="Glossary.html#graphdb"><span class="std std-ref">graph databases</span></a>.</p>
 <section id="target-audience">
 <h2>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">¶</a></h2>
-<p>The concepts, implemntations and tools are intended for <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>, <a class="reference internal" href="Glossary.html#data-scientists"><span class="std std-ref">data scientists</span></a> and <a class="reference internal" href="Glossary.html#data-analyst"><span class="std std-ref">data analysts</span></a>.</p>
+<p>The concepts, implementations and tools are intended for <a class="reference internal" href="Glossary.html#bdm"><span class="std std-ref">business decision makers</span></a>, <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>, <a class="reference internal" href="Glossary.html#data-scientists"><span class="std std-ref">data scientists</span></a> and <a class="reference internal" href="Glossary.html#data-analyst"><span class="std std-ref">data analysts</span></a>.</p>
 </section>
 <section id="the-current-problem-s">
 <h2>The Current Problem(s)<a class="headerlink" href="#the-current-problem-s" title="Permalink to this headline">¶</a></h2>
-<p>Current data modeling and processing approaches do not allow for machine-processable context to be associated with the data at the point of capture to supply algorithms with sufficient contextual information.</p>
+<p>Current data modeling and processing approaches do not allow for machine-processable context to be associated with the data at the point of capture to supply downstream analysts with sufficient contextual information to make fully qualified decisions. A lot of manual analysis, reflection, investigation, and time consuming meetings are required to figure out the real meaning of the data points.</p>
 <section id="data-analysis">
 <h3>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h3>
 <p>Most data used in data analysis, machine learning, and Artificial Intelligence <a class="reference internal" href="Glossary.html#ai"><span class="std std-ref">(AI)</span></a> applications require manual cleaning and processing. At best, a bespoke pipeline will be created for each use case.</p>
@@ -115,14 +115,17 @@
 <p>In Step 4 above:</p>
 <ul class="simple">
 <li><p>What if the analyst did not fully understand the context in which the data was captured? For example, there are differences in how blood pressure is measured via an arm cuff and an aterial sensor. Alternatively, the various tools used to measure atmospheric temperature can mean different values for the same location.</p></li>
+<li><p>It is pretty common to remove missing or null data points during the data cleaning phase. The fact that the data is missing can be meaningful, and why the data is missing should be known.* What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? For example, was the information just not available in a healthcare record, or did the patient refuse to answer the question?</p></li>
 </ul>
-<p>It is pretty common to remove missing or null data points during the data cleaning phase. The fact that the data is missing can be meaningful, and why the data is missing should be known.* What about ignoring missing data values when the absence of the data points may have real meaning in the context of the question? For example, was the information just not available in a healthcare record, or did the patient refuse to answer the question?</p>
 <p><strong>S3Model</strong> helps application developers solve these issues by providing a more robust approach to data modeling, then providing the ability to share these <a class="reference internal" href="Glossary.html#computable-models"><span class="std std-ref">computable models</span></a> across an organization, an industry, or with the public at large.</p>
 </section>
 <section id="data-science">
 <h3>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h3>
 <p>Data scientists use probability, statistics, mathematics, and computer science to predict outcomes from complex systems. A data scientist will typically be more involved with designing <a class="reference internal" href="Glossary.html#data-modeling"><span class="std std-ref">data modeling</span></a> processes, creating algorithms and <a class="reference internal" href="Glossary.html#pred-models"><span class="std std-ref">predictive models</span></a>. Therefore, data scientists may spend more time designing tools, automation systems, and data frameworks than analyzing data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The reader should use their favorite search engine to discover the similarities and differences between a data analyst and a data scientist.</p>
+</div>
 <p>For our purposes, the problems and the solutions are similar.</p>
 </section>
 </section>
@@ -131,16 +134,17 @@
 <section id="data-analysis-science">
 <h3>Data Analysis/Science<a class="headerlink" href="#data-analysis-science" title="Permalink to this headline">¶</a></h3>
 <p>The context of the data at the capture point is of utmost importance. When we extract <a class="reference internal" href="Glossary.html#contextual"><span class="std std-ref">contextual</span></a> meaning from data, it empowers us to make better decisions. When the capture context is unknown, it can easily lead to poor or improper analysis results.</p>
-<p>The use of <a class="reference internal" href="Glossary.html#ontologies"><span class="std std-ref">ontologies</span></a> to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>. The Web Ontology Language <a class="reference internal" href="Glossary.html#owl"><span class="std std-ref">(*OWL*)</span></a> is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology:ref:<cite>(*RDF*) &lt;rdf&gt;</cite>.</p>
-<p>Globally useful ontologies such as those growing out of the Semantic Web work are becoming more stable and permanent.</p>
+<p>The use of <a class="reference internal" href="Glossary.html#ontologies"><span class="std std-ref">ontologies</span></a> to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from <a class="reference internal" href="Glossary.html#domain-experts"><span class="std std-ref">domain experts</span></a>. The Web Ontology Language <a class="reference internal" href="Glossary.html#owl"><span class="std std-ref">(*OWL*)</span></a> is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology <a class="reference internal" href="Glossary.html#rdf"><span class="std std-ref">(*RDF*)</span></a>.</p>
+<p>Globally useful ontologies such as those growing out of the <a class="reference internal" href="Glossary.html#semweb"><span class="std std-ref">Semantic Web</span></a> work are becoming more useful, stable and permanent. Some examples of these ontologies that can be used to express semantics in S3Model data models are; <a class="reference external" href="https://schema.org/">Schema.org</a>, <a class="reference external" href="https://bioportal.bioontology.org/">BioPortal</a>, <a class="reference external" href="https://www.w3.org/2004/02/skos/">Simple Knowledge Organization System</a>, <a class="reference external" href="http://sioc-project.org/">Socially Interconnected Online Communities</a>, <a class="reference external" href="http://www.heppnetz.de/projects/goodrelations/">Good Relations</a>, <a class="reference external" href="http://musicontology.com/">The Music Ontology</a>, <a class="reference external" href="https://openenergy-platform.org/ontology/">Open Energy Ontology</a>, <a class="reference external" href="https://www.globaluniversityalliance.org/research/business-ontology/">The Business Ontology</a>, and many other domain specific ontologies. The decision to build your own for internal use or use an industry standard is up to you. <a class="reference external" href="https://www.forbes.com/sites/cognitiveworld/2019/05/07/ontologies-borrow-build-or-buy/">Forbes published an article</a> on this process.</p>
+<p>More recently, there is a movement towards what is called <a class="reference external" href="https://web3.foundation/about/">Web3</a>. Web3 advances the concepts of the Semantic Web (Web 2.0) in order to decentralize content and enhance privacy, security, and control. S3Model is a perfect fit for Web3 due to the nature of decentralized data model definitions while still providing for sharability.</p>
 </section>
 <section id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>S3Model provides a means to add context to data in a machine-processable and human-readable manner.</p></li>
 <li><p>S3Model provides a consistent data structure to ease query processing across multiple information domains.</p></li>
-<li><p>S3Model provides a consistent approach to go from document/tree-structured data to Linked Data without loss of contextual fidelity.</p></li>
-<li><p>Some of the tools being produced under the S3Model project demonstrate not only how S3Model can be used in your business applications. However, they are also helpful as model design and creation tools.</p></li>
+<li><p>S3Model provides a consistent approach to go from document/tree-structured data to <a class="reference internal" href="Glossary.html#linked-data"><span class="std std-ref">Linked Data</span></a> without loss of contextual fidelity.</p></li>
+<li><p>Some of the tools being produced under the S3Model project demonstrate not only how S3Model can be used in your business applications; they are also helpful as model design and creation tools.</p></li>
 <li><p>S3Model and the tools are provided under a business-friendly open source license.</p></li>
 </ul>
 </section>
@@ -159,7 +163,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 07, 2022.
+      <span class="lastupdated">Last updated on Jan 08, 2022.
       </span></p>
   </div>
 

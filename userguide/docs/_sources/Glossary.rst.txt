@@ -9,6 +9,10 @@ While many terms have more than one definition. The definitions presented here a
 
 An area of computer science that deals with giving machines the ability to seem like they have human intelligence. Also, the power of a machine to copy intelligent human behavior.
 
+.. _bdm:
+
+**Business Decision Makers** often come with titles like CEO, COO, CFO, etc. However, anyone with budget control authority can be considered a decision maker. For more information `click here <https://snov.io/glossary/decision-makers/>`_. 
+
 .. _compliance:
 
 **Compliance** is the practice of following regulations set forth by corporate governance, industry organizations, and governments. These regulations set forth protocols for how sensitive data is collected, used, stored, and managed, among other requirements.
@@ -65,6 +69,11 @@ A **graph database** stores nodes and relationships instead of tables, or docume
 
 **JavaScript Object Notation (JSON)** is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
 
+.. _linked-data:
+
+Linked Data lies at the heart of what Semantic Web is all about: large scale integration of, and reasoning on, data on the Web. Almost all applications listed in, say collection of `Semantic Web Case Studies and Use Cases <https://www.w3.org/2001/sw/sweo/public/UseCases/>`_ are essentially based on the accessibility of, and integration of Linked Data at various level of complexities.
+
+
 .. _model-components:
 
 **Model Components** are defined as XML Schema `complexTypes <https://www.w3schools.com/xml/el_complextype.asp>`_ in the reference implementation. 
@@ -97,9 +106,13 @@ A **Reference Model** (RM) is an abstract framework or domain-specific ontology 
 
 **Semantic Interoperability** - Semantic interoperability denotes the ability of different applications and business partners to understand exchanged data in a similar way, implying a precise and unambiguous meaning of the exchanged information.
 
+.. _semweb:
+
+The **Semantic Web** is a proposed development of the World Wide Web in which data in web pages is structured and tagged in such a way that it can be read directly by computers. The same technologies may be applied to any data. `The W3C website has more details <https://www.w3.org/standards/semanticweb/>`_. 
+
 .. _sqldb:
 
-**SQL** stands for Structured Query Language. It's used for relational databases. A SQL database is a collection of tables that stores a specific set of structured data.
+**SQL databases** *SQL* stands for Structured Query Language. It's used for relational databases. A SQL database is a collection of tables that stores a specific set of structured data.
 
 .. _validation:
 
