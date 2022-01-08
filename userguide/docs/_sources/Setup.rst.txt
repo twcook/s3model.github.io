@@ -31,7 +31,7 @@ Install the `Jupyterlab <https://jupyterlab.readthedocs.io/en/stable/getting_sta
 
     conda install -c conda-forge jupyterlab
 
-Navigate to a convienent directory for installing the tutorial:: 
+Navigate to a convienent directory in the terminal, for installing the tutorial.
 
 **REMEMBER** this directory/folder. We certainly don't recommend putting these files in the root directory. If you can't think of a better place then do this in the *Documents* folder. 
 
