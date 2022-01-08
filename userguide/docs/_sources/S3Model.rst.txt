@@ -63,7 +63,25 @@ The context of the data at the capture point is of utmost importance. When we ex
 
 The use of :ref:`ontologies <ontologies>` to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from :ref:`domain experts <domain-experts>`. The Web Ontology Language :ref:`(*OWL*) <owl>` is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology :ref:`(*RDF*) <rdf>`.
 
-Globally useful ontologies such as those growing out of the :ref:`Semantic Web <semweb>` work are becoming more useful, stable and permanent. Some examples of these ontologies that can be used to express semantics in S3Model data models are; `Schema.org <https://schema.org/>`_, `BioPortal <https://bioportal.bioontology.org/>`_, `Simple Knowledge Organization System <https://www.w3.org/2004/02/skos/>`_, `Socially Interconnected Online Communities <http://sioc-project.org/>`_, `Good Relations <http://www.heppnetz.de/projects/goodrelations/>`_, `The Music Ontology <http://musicontology.com/>`_, `Open Energy Ontology <https://openenergy-platform.org/ontology/>`_, `The Business Ontology <https://www.globaluniversityalliance.org/research/business-ontology/>`_, and many other domain specific ontologies. The decision to build your own for internal use or use an industry standard is up to you. `Forbes published an article <https://www.forbes.com/sites/cognitiveworld/2019/05/07/ontologies-borrow-build-or-buy/>`_ on this process.  
+Globally useful ontologies such as those growing out of the :ref:`Semantic Web <semweb>` work are becoming more useful, stable and permanent. Some examples of these ontologies that can be used to express semantics in S3Model data models are:
+
+* `Schema.org <https://schema.org/>`_
+* `BioPortal <https://bioportal.bioontology.org/>`_
+* `Simple Knowledge Organization System <https://www.w3.org/2004/02/skos/>`_
+* `Socially Interconnected Online Communities <http://sioc-project.org/>`_
+* `Good Relations <http://www.heppnetz.de/projects/goodrelations/>`_
+* `The Music Ontology <http://musicontology.com/>`_
+* `Open Energy Ontology <https://openenergy-platform.org/ontology/>`_
+* `The Business Ontology <https://www.globaluniversityalliance.org/research/business-ontology/>`_
+
+ And many other domain specific ontologies. 
+ 
+ .. note::
+     
+     The reader may use their favorite search engine to discover existing ontologies for their chosen domain.
+
+
+ The decision to build your own for internal use or use an industry standard is up to you. `Forbes published an article <https://www.forbes.com/sites/cognitiveworld/2019/05/07/ontologies-borrow-build-or-buy/>`_ on this process.  
 
 
 More recently, there is a movement towards what is called `Web3 <https://web3.foundation/about/>`_. Web3 advances the concepts of the Semantic Web (Web 2.0) in order to decentralize content and enhance privacy, security, and control. S3Model is a perfect fit for Web3 due to the nature of decentralized data model definitions while still providing for sharability. 

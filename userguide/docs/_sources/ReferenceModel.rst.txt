@@ -9,26 +9,12 @@ Purpose
 
 The S3Model Reference Model :ref:`(RM) <RM>` is the foundation of :ref:`validation <validation>`.
 
-S3Model may be implemented in almost any programming or `data definition language <https://techterms.com/definition/ddl>`_. The reference implementation provided here is in `XML Schema <https://www.w3schools.com/xml/schema_intro.asp>`_ 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the canonical serialization format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.
+S3Model may be implemented in almost any programming or `data definition language <https://techterms.com/definition/ddl>`_. The reference implementation provided here is in `XML Schema <https://www.w3schools.com/xml/schema_intro.asp>`_ 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the :ref:`canonical serialization <canonical-serialization>` format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.
 
-The canonical RDF/XML serialization format can be converted to other RDF formats such as Turtle, N-Triples, JSON-LD, etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.
+The canonical RDF/XML serialization format can be converted to other RDF formats such as `Turtle <https://www.w3.org/2007/02/turtle/primer/>`_, `JSON-LD <https://json-ld.org/>`_, etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.
 
-The components of the RM are sufficient to model any datatype to include temporal, spatial, and ontological contexts. Not all of this functionality is required in all modeling situations. But they are available for those that need them.
+The components of the RM are sufficient to model any datatype to include `temporal <https://www.merriam-webster.com/dictionary/temporal>`_, `spatial <https://www.merriam-webster.com/dictionary/spatial>`_, and `ontological <https://www.merriam-webster.com/dictionary/ontological>`_ contexts. Not all of this functionality is required in all modeling situations. But they are available for those that need them.
 
-Cardinality
------------
-
-A minimum and maximum occurrences of each data element/attribute are assigned in the RM.
-
-For example, if a minimum occurrence is set to '1', this attribute is required in every data model.
-
-If the maximum occurrences are set to '1', there can never be more than one of these attributes in the data model.
-
-In some cases, the maximum occurrences may be unbounded, allowing any number of instances in the data.
-
-The hands-on, `Jupyter notebook exercises <https://s3model.com/userguide/docs/Setup.html>`_ cover determining and setting cardinality constraints.
-
-The complete documentation is available `here <https://s3model.com/specifications/docs/index.html>`_.
 
 Reference Model Overview
 ------------------------
@@ -42,3 +28,6 @@ S3Model allows for well-defined `reference ranges <https://www.testing.com/artic
 Beyond the expansion of semantics on the simple types, S3Model Data Models can contain models representing who or what organization participated in the data collection, or activity, described by the model. There are also facilities to capture `attestation <https://www.merriam-webster.com/dictionary/attestation>`_ of the data and downstream `auditing <https://www.merriam-webster.com/dictionary/audit>`_ records.  
 
 The Data Model also accommodates `metadata <https://techterms.com/definition/metadata>`_ that describes attributes about the creation of the model. Elements of the `Dublin Core Metadata Standard <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/>`_ are used to identify details such as; title, author, description, license information, relationship to other models, geographical or domain coverage, and a unique identifier (`CUID <https://github.com/ericelliott/cuid>`). 
+
+The complete S3Model documentation is available `here <https://s3model.com/specifications/docs/index.html>`_.
+

@@ -17,6 +17,11 @@ An area of computer science that deals with giving machines the ability to seem 
 
 **Business Decision Makers** often come with titles like CEO, COO, CFO, etc. However, anyone with budget control authority can be considered a decision maker. For more information `click here <https://snov.io/glossary/decision-makers/>`_. 
 
+.. _canonical-serialization:
+
+A **Canonical Serialization** is an instantiation of some information in a specific file format. Usually it is in a standardized format and adheres to a specification. The word canonical means it is considered the law for the subject at hand. In the context of S3Model, the XML Schema representing the reference model, means that any other implementation in any programming or data definition language must comply with the rules and constraints of the XML Schema implementation. 
+
+
 .. _compliance:
 
 **Compliance** is the practice of following regulations set forth by corporate governance, industry organizations, and governments. These regulations set forth protocols for how sensitive data is collected, used, stored, and managed, among other requirements.

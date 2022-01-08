@@ -2,7 +2,9 @@
 The Multi-Level Approach
 ========================
 
-This document describes the purpose and functionality of multi-level data modeling.
+This document describes the purpose and functionality of multi-level data modeling in the context of S3Model. There are other multi-level modeling approaches that allow for extensions to the core (reference) models. However, that approach immediately creates data models that are not interoperable.
+
+One example is the US Government sponsored `National Information Exchange Model <https://www.niem.gov/>`_ (NIEM).
 
 Overview
 --------
@@ -13,11 +15,13 @@ The general definition of a reference model is an abstract framework or domain-s
 
 In the context of S3Model, the `specifications <https://s3model.com/specifications/docs/index.html>`_ describe the abstract concepts that are then implemented in the `reference implementation <https://s3model.com/specifications/docs/rm/>`_ as an `XML Schema <https://www.w3schools.com/xml/schema_intro.asp>`_. A higher level ontology expressed in :ref:`OWL <owl>` is also included that links and defines the various `S3Model specific terms <https://s3model.com/specifications/docs/owl/>`_ from the Abstract Model. 
 
-A S3Model Data Model :ref:`(DM) <DM>` is built based upon :ref:`constraints <constraints>` placed on reference model components. In S3Model, we provide a reference model that is generalized, is not domain-specific, and derived data models can only use restriction. **No extensions are allowed in S3Model.** If the user finds it impossible to create a needed model using the :ref:`Model Components <model-components>` in the reference model then please file an issue here.
+A S3Model Data Model :ref:`(DM) <DM>` is built based upon :ref:`constraints <constraints>` placed on reference model components. In S3Model, we provide a reference model that is generalized, is not domain-specific, and derived data models can only use restriction. **No extensions are allowed in S3Model.** If the user finds it impossible to create a needed model using the :ref:`Model Components <model-components>` in the reference model then please file an `issue here <https://github.com/twcook/S3Model/issues>`_.
 
 The components defined in the reference model are `necessary and sufficient <https://www.txstate.edu/philosophy/resources/fallacy-definitions/Confusion-of-Necessary.html>`_. This definition then makes the reference model the foundation of a data :ref:`validation chain <validation-chain>`.
 
 Of course, necessary and sufficient is a very bold claim. Therefore S3Model is also built around never needing to migrate data from one version of the reference model to another. This safety net is central to the `value proposition <https://www.investopedia.com/terms/v/valueproposition.asp>`_ of building an information infrastructure based on the S3Model concepts. Simply put, even if there are future reference model versions, your data and your applications will only need to be changed if and when you choose. 
+
+Even then, you can use multiple versions of the XML Schema RM at one time due to the flexability of the XML ecosystem.
 
 The Core
 --------

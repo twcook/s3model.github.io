@@ -20,4 +20,6 @@ There are some great things about Jupyter notebooks and some drawbacks. Using S3
 
     The user must always run the cells in the sequence from top to bottom when executing the tutorials. Anything else is precarious. When experimenting with changing values in a cell, be sure to use the **Cell->Run All Above** option from the menu.
 
-For complete installation and setup instructions go to the :ref:`Tutorial Setup <setup>` page. 
+For complete installation and setup instructions go to the :ref:`Tutorial Setup <setup>` page. However, we strongly suggest the you continue with the rest of the chapters here before trying the tutorials.
+
+
