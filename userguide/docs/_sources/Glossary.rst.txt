@@ -4,6 +4,10 @@ Glossary
 
 While many terms have more than one definition. The definitions presented here are in the context of managing data, especially in the S3Model context.
 
+.. _abstract-model:
+
+An **Abstract Model** as defined in the field of software engineering and data modeling, an information model is usually an abstract, formal representation of entity types that may include their properties, relationships and the operations that can be performed on them. The entity types in the model may be kinds of real-world objects, such as devices in a network, or occurrences, or they may themselves be abstract, such as for the entities used in a billing system. Typically, they are used to model a constrained domain that can be described by a closed set of entity types, properties, relationships and operations.
+
 
 .. _ai:
 
@@ -71,7 +75,7 @@ A **graph database** stores nodes and relationships instead of tables, or docume
 
 .. _linked-data:
 
-Linked Data lies at the heart of what Semantic Web is all about: large scale integration of, and reasoning on, data on the Web. Almost all applications listed in, say collection of `Semantic Web Case Studies and Use Cases <https://www.w3.org/2001/sw/sweo/public/UseCases/>`_ are essentially based on the accessibility of, and integration of Linked Data at various level of complexities.
+**Linked Data** lies at the heart of what Semantic Web is all about: large scale integration of, and reasoning on, data on the Web. Almost all applications listed in, say collection of `Semantic Web Case Studies and Use Cases <https://www.w3.org/2001/sw/sweo/public/UseCases/>`_ are essentially based on the accessibility of, and integration of Linked Data at various level of complexities.
 
 
 .. _model-components:
