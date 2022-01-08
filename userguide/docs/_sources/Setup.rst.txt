@@ -4,6 +4,12 @@
 Tutorial Setup
 ==============
 
+* You **MUST** know how to find a terminal window on you computer.
+* You **MUST** understand how to use a *ZIP* file extractor.
+* You **MUST** know how to navigate directories/folders in your terminal.
+
+*If you do not know how to do these things there are tutorials available for all operating systems on the Internet.*
+
 * Install the prerequisites for the interactive sessions.
 
 Prerequisites
@@ -26,6 +32,9 @@ Install the `Jupyterlab <https://jupyterlab.readthedocs.io/en/stable/getting_sta
     conda install -c conda-forge jupyterlab
 
 Navigate to a convienent directory for installing the tutorial and issue this command::
+
+**REMEMBER** this directory/folder. We certainly don't recommend putting these files in the root directory. If you can't think of a better place then do this in the *Documents* folder. 
+
 
     conda create -p S3MTraining jupyterlab
 
