@@ -141,3 +141,12 @@ Follow all instructions.
 **Congratulations!**
 
 The user is now ready to explore the lessons using Jupyter notebooks, where the user will interactively learn how to build data models using the **S3Model** approach.
+
+.. note::
+
+    In case you accidentally close the terminal where you started the Jupyter server. You can resart it by:
+    
+     * Open a new terminal.
+     * Navigate to the *S3MTraining* directory. 
+     * Activate the environment with the command: *conda activate S3MTraining*
+     * Start Jupyter with the command: *jupyter notebook*.
