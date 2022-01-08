@@ -44,7 +44,9 @@ You will see a long list of *packages* to  be installed. A prompt will ask you t
 
 The above command creates a `conda environment <https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html>`_ named **S3MTraining**. 
 
-Activate the environment according to the instructions shown by Anaconda in the terminal window.
+Activate the environment::
+
+    conda activate S3MTraining   
 
 Change to the new directory::
 
