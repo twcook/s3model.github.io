@@ -51,6 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Ontology.html">The Ontology</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial Setup</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jupyter-notebook-examples">Jupyter notebook examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
@@ -89,7 +90,10 @@
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>To learn about the S3Model Reference Model using the Jupyter notebook exercises, the user will first need to install <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a> for their operating system. Be sure to use the version for <strong>Python 3.7 or later</strong>. Unless the user is an expert Python developer and can install the prerequisites manually, Anaconda is by far the best way to install the basic prerequisites for this tutorial. When installing Anaconda, the non-expert user should allow Anaconda to set the system Python interpreter during installation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Anaconda now offers to install the <em>VS Code</em> editor. Unless you already have a preferred text editor, this is a good choice.</p>
+</div>
 <p>Open a terminal window:</p>
 <p>On Windows, use an Anaconda Prompt terminal from the Anaconda menu. On Mac or Linux, use a terminal window. <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-navigator">Detailed instructions</a>.</p>
 <p>In the terminal window the prompt should start with <strong>(base)</strong>. Indicating that Anaconda has set the system wide Python environment.</p>
@@ -101,6 +105,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">p</span> <span class="n">S3MTraining</span> <span class="n">jupyterlab</span>
 </pre></div>
 </div>
+<p>You will see a long list of <em>packages</em> to  be installed. A prompt will ask you to confirm installation. Respond with a <em>y</em> and then the <em>Enter</em> key.</p>
 <p>The above command creates a <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html">conda environment</a> named <strong>S3MTraining</strong>.</p>
 <p>Activate the environment according to the instructions shown by Anaconda in the terminal window.</p>
 <p>Change to the new directory:</p>
@@ -111,18 +116,57 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">S3MPython</span>
 </pre></div>
 </div>
+<p>When the installation is complete, the last line in the terminal should be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Successfully</span> <span class="n">installed</span> <span class="n">S3MPython</span><span class="o">-</span><span class="p">(</span><span class="n">version</span> <span class="n">number</span><span class="p">)</span> <span class="ow">and</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">other</span> <span class="n">packages</span> <span class="n">installed</span><span class="o">.</span>
+</pre></div>
+</div>
 <p>Test the installation by starting the Jupyter Notebooks server:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
 </pre></div>
 </div>
-<p>Create a new notebook and enter the following code into the first cell:</p>
+<p>This command should open a new tab in your default web browser (Firefox, Chrome, Edge, etc.)</p>
+<p>Create a new notebook by clicking on the <em>New</em> button on the right side of the window.</p>
+<p>A menu will dropdown as shown here:</p>
+<img alt="_images/Jupyter_New_Notebook.png" src="_images/Jupyter_New_Notebook.png" />
+<p>From the menu select the <em>Python 3</em> option. This should open a new tab in your browser and the page should look like this:</p>
+<img alt="_images/Jupyter_New_Tab.png" src="_images/Jupyter_New_Tab.png" />
+<p>and enter the following code into the first cell:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">S3MPython.dm</span> <span class="kn">import</span> <span class="n">DMType</span>
 
 <span class="n">help</span><span class="p">(</span><span class="n">DMType</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>After running this cell, the elements and descriptions for the Data Model (DM) wrapper will be displayed.</p>
-<p>Select the Notebooks link to get the notebooks and instructions on installing them.</p>
+<p>It should look like this:</p>
+<img alt="_images/First_Cell.png" src="_images/First_Cell.png" />
+<p>Now click on the <em>Run</em> button in the menu.</p>
+<p>If all went well your window should have this display:</p>
+<img alt="_images/After_Run.png" src="_images/After_Run.png" />
+<p>The elements and descriptions for the Data Model (DM) wrapper will be displayed as shown above. Each model component has a help file that you can display in the same way.</p>
+<p><strong>Close this browser tab.</strong></p>
+</section>
+<section id="jupyter-notebook-examples">
+<h2>Jupyter notebook examples<a class="headerlink" href="#jupyter-notebook-examples" title="Permalink to this headline">¶</a></h2>
+<p>To download the examples go to the <a class="reference external" href="https://github.com/twcook/S3M_Python_Training_examples">Github repository</a>.</p>
+<p>Click on the green <em>Code</em> button on the right side of the page.</p>
+<img alt="_images/green_code.png" src="_images/green_code.png" />
+<p>A dropdown menu will appear.</p>
+<img alt="_images/download_zip.png" src="_images/download_zip.png" />
+<p>Select the <em>Download Zip</em> link. Download this file to any convienent location.</p>
+<p>Using your ZIP file extractor of choice:</p>
+<ul class="simple">
+<li><p>Open the <em>S3M_Python_Training_examples</em> folder.</p></li>
+<li><p>Extract the <em>examples</em> and <em>tests</em> folders into the <em>S3MTraining</em> folder created earlier.</p></li>
+</ul>
+<p>The <em>S3MTraining</em> folder should look similar to:</p>
+<img alt="_images/extracted.png" src="_images/extracted.png" />
+<p>In the original Jupyter Notebook tab:</p>
+<img alt="_images/Jupyter_home.png" src="_images/Jupyter_home.png" />
+<ul class="simple">
+<li><p>select the <em>examples</em> folder. If you do not see the folder. There is a <em>Refresh</em> button next to the <em>New</em> button that you used earlier.</p></li>
+<li><p>in the <em>examples</em> folder, select the <em>00. Getting Started.ipynb</em> file.</p></li>
+</ul>
+<img alt="_images/tutorial_start.png" src="_images/tutorial_start.png" />
+<p>Follow all instructions.</p>
 <p><strong>Congratulations!</strong></p>
 <p>The user is now ready to explore the lessons using Jupyter notebooks, where the user will interactively learn how to build data models using the <strong>S3Model</strong> approach.</p>
 </section>
@@ -140,7 +184,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 07, 2022.
+      <span class="lastupdated">Last updated on Jan 08, 2022.
       </span></p>
   </div>
 

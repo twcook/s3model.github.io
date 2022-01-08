@@ -123,6 +123,10 @@ The **Semantic Web** is a proposed development of the World Wide Web in which da
 
 **SQL databases** *SQL* stands for Structured Query Language. It's used for relational databases. A SQL database is a collection of tables that stores a specific set of structured data.
 
+.. _upper-ontology:
+
+An **upper ontology** (also known as a top-level ontology, upper model, or foundation ontology) is an ontology (in the sense used in information science) which consists of very general terms (such as "object", "property", "relation") that are common across all domains. An important function of an upper ontology is to support broad semantic interoperability among a large number of domain-specific ontologies by providing a common starting point for the formulation of definitions. Terms in the domain ontology are ranked under the terms in the upper ontology, e.g., the upper ontology classes are superclasses or supersets of all the classes in the domain ontologies.
+
 .. _validation:
 
 **Validation** means checking the accuracy and quality of source data before using, importing or otherwise processing data. Different types of validation can be performed depending on destination constraints or objectives. For example, you could use data validation to make sure a value is a number between 1 and 6, make sure a date occurs in the next 30 days, or make sure a text entry is less than 25 characters.

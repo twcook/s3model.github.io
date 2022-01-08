@@ -11,7 +11,9 @@ Prerequisites
 
 To learn about the S3Model Reference Model using the Jupyter notebook exercises, the user will first need to install `Anaconda <https://www.anaconda.com/products/individual>`_ for their operating system. Be sure to use the version for **Python 3.7 or later**. Unless the user is an expert Python developer and can install the prerequisites manually, Anaconda is by far the best way to install the basic prerequisites for this tutorial. When installing Anaconda, the non-expert user should allow Anaconda to set the system Python interpreter during installation. 
 
-Anaconda now offers to install the *VS Code* editor. Unless you already have a preferred text editor, this is a good choice.
+.. note::
+
+    Anaconda now offers to install the *VS Code* editor. Unless you already have a preferred text editor, this is a good choice.
 
 Open a terminal window: 
 
@@ -27,6 +29,9 @@ Navigate to a convienent directory for installing the tutorial and issue this co
 
     conda create -p S3MTraining jupyterlab
 
+
+You will see a long list of *packages* to  be installed. A prompt will ask you to confirm installation. Respond with a *y* and then the *Enter* key.
+
 The above command creates a `conda environment <https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/environments.html>`_ named **S3MTraining**. 
 
 Activate the environment according to the instructions shown by Anaconda in the terminal window.
@@ -39,19 +44,85 @@ Install the `S3Model Python <https://pypi.org/manage/project/S3MPython/releases/
 
     pip install S3MPython
 
+When the installation is complete, the last line in the terminal should be::
+
+    Successfully installed S3MPython-(version number) and a list of the other packages installed.
+
+
 Test the installation by starting the Jupyter Notebooks server::
 
  jupyter notebook
 
-Create a new notebook and enter the following code into the first cell::
+This command should open a new tab in your default web browser (Firefox, Chrome, Edge, etc.)
+
+
+Create a new notebook by clicking on the *New* button on the right side of the window. 
+
+A menu will dropdown as shown here:
+
+.. image:: _static/Jupyter_New_Notebook.png
+
+From the menu select the *Python 3* option. This should open a new tab in your browser and the page should look like this:
+
+.. image:: _static/Jupyter_New_Tab.png
+
+and enter the following code into the first cell::
 
  from S3MPython.dm import DMType
 
  help(DMType)
 
-After running this cell, the elements and descriptions for the Data Model (DM) wrapper will be displayed.
+It should look like this:
 
-Select the Notebooks link to get the notebooks and instructions on installing them.
+.. image:: _static/First_Cell.png
+
+Now click on the *Run* button in the menu.
+
+If all went well your window should have this display:
+
+.. image:: _static/After_Run.png
+
+The elements and descriptions for the Data Model (DM) wrapper will be displayed as shown above. Each model component has a help file that you can display in the same way. 
+
+**Close this browser tab.**
+
+
+Jupyter notebook examples
+-------------------------
+
+To download the examples go to the `Github repository <https://github.com/twcook/S3M_Python_Training_examples>`_.
+
+Click on the green *Code* button on the right side of the page.
+
+.. image:: _static/green_code.png
+
+A dropdown menu will appear.
+
+.. image:: _static/download_zip.png
+
+Select the *Download Zip* link. Download this file to any convienent location.
+
+Using your ZIP file extractor of choice:
+
+* Open the *S3M_Python_Training_examples* folder.
+* Extract the *examples* and *tests* folders into the *S3MTraining* folder created earlier.
+
+The *S3MTraining* folder should look similar to:
+
+.. image:: _static/extracted.png
+
+In the original Jupyter Notebook tab: 
+
+.. image:: _static/Jupyter_home.png
+
+* select the *examples* folder. If you do not see the folder. There is a *Refresh* button next to the *New* button that you used earlier.
+
+* in the *examples* folder, select the *00. Getting Started.ipynb* file. 
+
+.. image:: _static/tutorial_start.png
+
+Follow all instructions. 
+
 
 **Congratulations!**
 

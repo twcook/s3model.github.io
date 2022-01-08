@@ -50,11 +50,12 @@
 <li class="toctree-l1"><a class="reference internal" href="ReferenceModel.html">The Reference Model</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The Ontology</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#glossary-of-terms-in-the-ontology">Glossary of Terms in the Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#terms-in-the-ontology">Terms in the Ontology</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Setup.html">Tutorial Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
 </ul>
 
         </div>
@@ -83,16 +84,15 @@
              
   <section id="the-ontology">
 <h1>The Ontology<a class="headerlink" href="#the-ontology" title="Permalink to this headline">¶</a></h1>
-<p>The S3Model ontology is an upper ontology defining the components of the reference model and constraint models.</p>
+<p>The S3Model ontology is an <a class="reference internal" href="Glossary.html#upper-ontology"><span class="std std-ref">upper ontology</span></a> defining the components of the reference model and constraint models. This upper ontology supports the broad semantic interoperability across all S3Model data models.</p>
 <section id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
-<p>The S3Model ontology is quite simple but serves to connect model components in RDF stores.</p>
+<p>The S3Model ontology is quite simple but serves to connect model components in RDF graphs.</p>
 <p>The images below show the classes and object properties of the ontology.</p>
 <p>See the [technical documentation(<a class="reference external" href="https://s3model.com/specifications/docs/abstract_model.html">https://s3model.com/specifications/docs/abstract_model.html</a>) for definitions for each of the classes and properties.</p>
-<p>Further information is in the Advanced Course on using linked data.</p>
 </section>
-<section id="glossary-of-terms-in-the-ontology">
-<h2>Glossary of Terms in the Ontology<a class="headerlink" href="#glossary-of-terms-in-the-ontology" title="Permalink to this headline">¶</a></h2>
+<section id="terms-in-the-ontology">
+<h2>Terms in the Ontology<a class="headerlink" href="#terms-in-the-ontology" title="Permalink to this headline">¶</a></h2>
 <p><strong>CMC Core Model Component</strong> A component model contained in a reference model. A CMC represents a specific core type of component that further includes elements with base datatypes and other CMCs to define its structure.</p>
 <p><strong>CMS Core Model Symbol</strong> A CMS represents a CMC in instance data. In practice, it is usually substituted for by a Replaceable Model Symbol (RMS). This substitution is because constraints are expressed in a Replaceable Model Component (RMC) which is then represented by an RMS.</p>
 <p><strong>DataInstance</strong> A set of data items that report via the isInstanceOf property that it conforms to a DM. In this state, it has not been tested for validation.</p>
@@ -120,7 +120,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 06, 2022.
+      <span class="lastupdated">Last updated on Jan 08, 2022.
       </span></p>
   </div>
 

@@ -1,21 +1,20 @@
 The Ontology
 ============
 
-The S3Model ontology is an upper ontology defining the components of the reference model and constraint models.
+The S3Model ontology is an :ref:`upper ontology <upper-ontology>` defining the components of the reference model and constraint models. This upper ontology supports the broad semantic interoperability across all S3Model data models.
 
 Purpose
 -------
 
-The S3Model ontology is quite simple but serves to connect model components in RDF stores.
+The S3Model ontology is quite simple but serves to connect model components in RDF graphs.
 
 The images below show the classes and object properties of the ontology.
 
 See the [technical documentation(https://s3model.com/specifications/docs/abstract_model.html) for definitions for each of the classes and properties.
 
-Further information is in the Advanced Course on using linked data.
 
-Glossary of Terms in the Ontology
----------------------------------
+Terms in the Ontology
+---------------------
 
 **CMC Core Model Component** A component model contained in a reference model. A CMC represents a specific core type of component that further includes elements with base datatypes and other CMCs to define its structure.
 
