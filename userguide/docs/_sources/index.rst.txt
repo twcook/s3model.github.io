@@ -11,6 +11,10 @@ Shareable, Structured, Semantic Model (S3Model)
 The :ref:`Esperanto <esperanto>` of Information Management.
 
 
+.. note::
+    If you find errors, omissions or lack of clarity issues in this document please `file a report here <https://github.com/twcook/S3M_UserGuide/issues>`_.
+
+
 S3Model User Guide
 ==================
 

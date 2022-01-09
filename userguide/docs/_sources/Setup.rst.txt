@@ -4,7 +4,7 @@
 Tutorial Setup
 ==============
 
-* You **MUST** know how to find a terminal window on you computer.
+* You **MUST** know how to find a terminal window on your computer.
 * You **MUST** understand how to use a *ZIP* file extractor.
 * You **MUST** know how to navigate directories/folders in your terminal.
 
