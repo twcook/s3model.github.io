@@ -119,7 +119,7 @@ Select the *Download Zip* link. Download this file to any convienent location.
 Using your ZIP file extractor of choice:
 
 * Open the *S3M_Python_Training_examples* folder.
-* Extract the *examples* and *tests* folders into the *S3MTraining* folder created earlier.
+* Extract the files and folders into the *S3MTraining* folder created earlier.
 
 The *S3MTraining* folder should look similar to:
 
