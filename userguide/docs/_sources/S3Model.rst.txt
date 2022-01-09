@@ -65,6 +65,7 @@ The use of :ref:`ontologies <ontologies>` to define meaning across domains is gr
 
 Globally useful ontologies such as those growing out of the :ref:`Semantic Web <semweb>` work are becoming more useful, stable and permanent. Some examples of these ontologies that can be used to express semantics in S3Model data models are:
 
+* `Linked Open Vocabularies <https://lov.linkeddata.es/dataset/lov>`_ 
 * `Schema.org <https://schema.org/>`_
 * `BioPortal <https://bioportal.bioontology.org/>`_
 * `Simple Knowledge Organization System <https://www.w3.org/2004/02/skos/>`_

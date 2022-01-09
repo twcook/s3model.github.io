@@ -85,7 +85,7 @@ A **graph database** stores nodes and relationships instead of tables, or docume
 
 .. _model-components:
 
-**Model Components** are defined as XML Schema `complexTypes <https://www.w3schools.com/xml/el_complextype.asp>`_ in the reference implementation. 
+**Model Components** (MC) are defined as XML Schema `complexTypes <https://www.w3schools.com/xml/el_complextype.asp>`_ in the reference implementation. Each one has a unique ID and once defined they are immutable. The are reusable across Data Models (:ref:`DM`) in S3Model.
 
 .. _ontologies:
 
