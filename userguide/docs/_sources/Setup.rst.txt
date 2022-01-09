@@ -39,7 +39,7 @@ Navigate to a convienent directory in the terminal, for installing the tutorial.
 
 Issue this command in the terminal window::
 
-    conda create -p S3MTraining jupyterlab
+    conda create -n S3MTraining jupyterlab
 
 
 You will see a long list of *packages* to  be installed. A prompt will ask you to confirm installation. Respond with a *y* and then the *Enter* key.
