@@ -73,6 +73,37 @@ Test the installation by starting the Jupyter Notebooks server::
 
 This command should open a new tab in your default web browser (Firefox, Chrome, Edge, etc.)
 
+Get the examples
+----------------
+
+In a new browser tab, go to the `Github repository <https://github.com/twcook/S3M_Python_Training_examples>`_ to download the examples.
+
+Click on the green *Code* button on the right side of the page.
+
+.. image:: _static/green_code.png
+
+A dropdown menu will appear.
+
+.. image:: _static/download_zip.png
+
+Select the *Download Zip* link. Download this file to the *S3MTraining* directory.
+
+Using your ZIP file extractor of choice:
+
+* Open the *S3M_Python_Training_examples* folder in the ZIP extractor.
+* Extract the files and folders into the *S3MTraining* folder created earlier.
+
+The *S3MTraining* folder should look similar to:
+
+.. image:: _static/extracted.png
+
+
+Testing the installation
+------------------------
+
+In the original Jupyter Notebook browser tab: 
+
+.. image:: _static/Jupyter_home.png
 
 Create a new notebook by clicking on the *New* button on the right side of the window. 
 
@@ -102,36 +133,12 @@ If all went well your window should have this display:
 
 The elements and descriptions for the Data Model (DM) wrapper will be displayed as shown above. Each model component has a help file that you can display in the same way. 
 
-**Close this browser tab.**
+**Close this browser tab.** If you get a Warning that your changes won't be saved. Just click the *Leave* button.
 
 
 Jupyter notebook examples
 -------------------------
 
-To download the examples go to the `Github repository <https://github.com/twcook/S3M_Python_Training_examples>`_.
-
-Click on the green *Code* button on the right side of the page.
-
-.. image:: _static/green_code.png
-
-A dropdown menu will appear.
-
-.. image:: _static/download_zip.png
-
-Select the *Download Zip* link. Download this file to any convienent location.
-
-Using your ZIP file extractor of choice:
-
-* Open the *S3M_Python_Training_examples* folder.
-* Extract the files and folders into the *S3MTraining* folder created earlier.
-
-The *S3MTraining* folder should look similar to:
-
-.. image:: _static/extracted.png
-
-In the original Jupyter Notebook tab: 
-
-.. image:: _static/Jupyter_home.png
 
 * select the *examples* folder. If you do not see the folder. There is a *Refresh* button next to the *New* button that you used earlier.
 
