@@ -8,7 +8,7 @@ Shareable, Structured, Semantic Model (S3Model)
 ===============================================
 
 
-The :ref:`Esperanto <esperanto>` of Information Management.
+The `Esperanto <https://s3model.com/specifications/docs/glossary.html#esperanto>`_ of Information Management.
 
 
 .. note::
@@ -28,7 +28,6 @@ S3Model User Guide
    ReferenceModel
    Ontology
    Setup
-   Glossary
    LICENSE
 
 Indices and tables

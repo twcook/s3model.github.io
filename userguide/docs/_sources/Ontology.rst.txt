@@ -1,7 +1,7 @@
 The Ontology
 ============
 
-The S3Model ontology is an :ref:`upper ontology <upper-ontology>` defining the components of the reference model and constraint models. This upper ontology supports the broad semantic interoperability across all S3Model data models.
+The S3Model ontology is an `upper ontology <https://s3model.com/specifications/docs/glossary.html#upper-ontology>`_ defining the components of the reference model and constraint models. This upper ontology supports the broad semantic interoperability across all S3Model data models.
 
 Purpose
 -------

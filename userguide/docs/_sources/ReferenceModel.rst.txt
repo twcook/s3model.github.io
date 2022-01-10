@@ -7,9 +7,9 @@ This document defines the types and structures available.
 Purpose
 -------
 
-The S3Model Reference Model :ref:`(RM) <RM>` is the foundation of :ref:`validation <validation>`.
+The S3Model `Reference Model (RM) <https://s3model.com/specifications/docs/glossary.html#reference-model-rm>`_ is the foundation of `validation <https://s3model.com/specifications/docs/glossary.html#validation>`_.
 
-S3Model may be implemented in almost any programming or `data definition language <https://techterms.com/definition/ddl>`_. The reference implementation provided here is in `XML Schema <https://www.w3schools.com/xml/schema_intro.asp>`_ 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the :ref:`canonical serialization <canonical-serialization>` format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.
+S3Model may be implemented in almost any programming or `data definition language <https://techterms.com/definition/ddl>`_. The reference implementation provided here is in `XML Schema <https://www.w3schools.com/xml/schema_intro.asp>`_ 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the `canonical serialization <https://s3model.com/specifications/docs/glossary.html#canonical-serialization>`_ format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.
 
 The canonical RDF/XML serialization format can be converted to other RDF formats such as `Turtle <https://www.w3.org/2007/02/turtle/primer/>`_, `JSON-LD <https://json-ld.org/>`_, etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.
 
