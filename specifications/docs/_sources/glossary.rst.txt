@@ -116,6 +116,12 @@ Model Component (MC)
 --------------------
 The name comes from the fact that it is a complete XML Schema complexType that represents a simple concept and that it can be reused in any DM. This reuse is due to the use of CUIDs for the complexType name attribute. Since complexType names must begin with an alphabetic character, all S3Model RMC names start with the prefix 'mc-' followed by the CUID. This naming convention facilitates the association with public element names in instances since they reuse the CUID but have a prefix of 'ms-' (Model Symbol) in place of the 'mc-.' The use of a CUID allows the constraint on a reference model type to be reused many times in a DM with different parameters such as enumeration constraints. The semantics for a concept modeled as an MC is represented using Semantic Web technologies. The MC name is the subject in each of the *Subject, Predicate, Object* RDF statements.
 
+Multi-Level Healthcare Information Modeling (MLHIM)
+---------------------------------------------------
+
+The academic MLHIM project was hosted at `Universidade do Estado do Rio de Janeiro (UERJ) <https://www.uerj.br/>`_. The initial multi-level concepts were based on the `openEHR specifications <https://specifications.openehr.org/>`_. The project members addressed many of the short-comings in openEHR during the interations of MLHIM. However, MLHIM like openEHR was healthcare domain specific. Once the MLHIM project ended, a few members took the successes and developed S3Model as a domain independent solution to semantic interoperability.
+
+
 Ontology
 --------
 

@@ -1,42 +1,41 @@
-==============================
-S3Model Documentation Overview
-==============================
+===============================
+S3Model Specifications Overview
+===============================
 
 *Turning data into computable information*
 
 Release - 3.1.0
 
-**Copyright 2009 - 2018 Data Insights, Inc. - All Rights Reserved.**
+**Copyright 2009 - 2022, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook/>`_ - All Rights Reserved.**
 
 
 Acknowledgments
 ----------------
 
-We would like to thank all of the members of the `MLHIM <https://mlhim.org>`_ Technology Development Unit at UERJ,
-`INCT-MACC <http://macc.lncc.br/>`_ as well as `FAPERJ <http://www.faperj.br/>`_ for multiple direct and student grants in support of multi-level modeling and semantic interoperability efforts.
+We would like to thank all of the members of the Multi-Level Health Information Modeling (MLHIM) Technology Development Unit at `Universidade do Estado do Rio de Janeiro (UERJ) <https://www.uerj.br/>`_, `INCT-MACC <http://macc.lncc.br/>`_ as well as `FAPERJ <http://www.faperj.br/>`_ for multiple direct and student grants in support of multi-level modeling and semantic interoperability efforts.
 
 
 Error Reporting
 ---------------
 
-Please report all issues `here. <https://github.com/s3model/specifications/issues>`_
+Please report all issues `here. <https://github.com/twcook/S3Model_Specs/issues>`_
 
 
 Purpose & Scope
 ---------------
 *Keep everything as simple as possible; but no simpler. - Albert Einstein*
 
-The purpose of the S3Model project is to provide a free and openly available specification for
-implementation of a model first system for information exchange.
+The purpose of the `S3Model <https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model>`_` project is to provide a free and openly available specification for implementation of a model first system for information exchange within and across domains.
 
-The S3Model specifications are designed to provide computable semantic interoperability that is
+The S3Model specifications are designed to provide computable `semantic interoperability <https://s3model.com/specifications/docs/glossary.html#semantic-interoperability>`_` that is
 entirely independent of any implementation specific contexts. Therefore workflow, security,
 user access, and data persistence are all outside the scope of S3Model. However, S3Model does provide
-a facility for managing workflow and user access within the data instances.
+a facility for managing workflow and user access constraints within the data instances.
 
-Data Insights, Inc. has a growing number of implementation projects and tools that demonstrate
+The project has a growing number of implementation projects and tools that demonstrate
 this approach and enables interoperability across many contexts and domains.
-`Online courses are also available <http://datainsights.tech/training>`_.
+
+It is recommended that new comers read the `S3Model User Guide <https://s3model.com/userguide/docs/index.html>`_ and go through the brief tutorial.
 
 Conformance
 -----------
@@ -64,8 +63,7 @@ Availability
 
 The S3Model specifications, reference implementation, and tools are available from the `S3Model <https://s3model.com>`_ website.
 
-.. raw:: html
 
-  <p><a href="mailto:admin@datainsights.tech">Contact Us</a> for information and access to advanced model development tools.</p>
+  `Contact Us <https://www.linkedin.com/in/timothywaynecook/>`_ for information and access to advanced model development tools.
 
 *The ninety and nine are with dreams, content but the hope of the world made new, is the hundredth man who is grimly bent on making those dreams come true. - Edgar Alan Poe*

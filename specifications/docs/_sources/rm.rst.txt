@@ -2,9 +2,9 @@
 Reference Model
 ===============
 
-S3Model may be implemented in most (any?) programming or data definition language.
-The reference implementation is in XML Schema. Primarily due to the ubiquitous nature of XML and the compatibility with RDF/XML.
-Virtually all programming and data analysis languages can manipulate and validate XML content.
+`S3Model <https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model>`_ may be implemented in most programming or data definition languages.
+
+The reference implementation is in `XML Schema <https://s3model.com/specifications/docs/glossary.html#extensible-markup-language-xml>`_. Primarily due to the ubiquitous nature of XML and the compatibility with RDF/XML. Virtually all programming and data analysis languages can manipulate and validate XML content.
 
 For futher information about available serialization formats see `this comparison chart <https://en.wikipedia.org/wiki/Comparison_of_data_serialization_formats>`_.
 
@@ -12,7 +12,7 @@ For futher information about available serialization formats see `this compariso
 Assumed Types
 =============
 
-There are several types that are assumed to be supported by the underlying implementation technology. These assumed types are based on XML Schema Part 2 Datatypes. They should be available in your implementation language or add-on libraries. The names may or may not be exactly the same.
+There are several types that are assumed to be supported by the underlying implementation technology. These assumed types are based on `XML Schema Part 2 Datatypes <https://www.w3.org/TR/xmlschema-2/>`_. They should be available in your implementation language or add-on libraries. The names may or may not be exactly the same.
 
 -----------------
 Non-Ordered Types
@@ -170,9 +170,9 @@ Partial Date Types
 ------------------
 Support for partial dates is essential to avoid poor data quality. In order to provide for partial dates and times the following types are assumed to be available in the language or in a library.
 
-* Day – provide on the day of the month, 1 – 31
+* Day – provide the day of the month, 1 – 31
 * Month – provide only the month of the year, 1 – 12
-* Year – provide on the year,  CCYY
+* Year – provide only the year, YYYY; somestimes denote as CCYY
 * MonthDay – provide only the Month and the Day (no year)
 * YearMonth – provide only the Year and the Month (no day)
 
@@ -215,7 +215,7 @@ This is the root, encapsulating node of a Data Model. The data model wraps the d
 The data content is generally quite flat and consistent when compared to other approaches. This aids the ability to perform queries and explore the data by separating the structure of the document from the semantics of any given concept.
 
 
-**Model metadata** is information about the creation and usage of the data model. It is based on `Dublin Core <http://dublincore.org/>`_ definitons and includes:
+**Model metadata** is information about the creation and usage of the data model. It is based on `Dublin Core Metadata <http://dublincore.org/>`_ standards and definitons. The ones used in S3Model Data Models are:
 
 - *title* `A name given to the resource <http://purl.org/dc/terms/title>`_.
 - *creator* `An entity primarily responsible for making the resource <http://purl.org/dc/terms/creator>`_.
@@ -231,7 +231,7 @@ The data content is generally quite flat and consistent when compared to other a
 - *format* `The file format, physical medium, or dimensions of the resource <http://purl.org/dc/terms/format>`_.
 - *language* `A language of the resource <http://purl.org/dc/terms/language>`_.
 
-The precise structure and content of **Data Metadata** is designed by the data modeler within a generic framework of components. This data metadata informs data consumers about what the data means. The many contextual aspects of the existence and life-cycle of the data may be recorded.
+The precise structure and content of **Data Metadata** is designed by the data modeler within a generic framework of components. This metadata informs data consumers about what the data means. The many contextual aspects of the existence and life-cycle of the data may be recorded.
 
 The components are:
 

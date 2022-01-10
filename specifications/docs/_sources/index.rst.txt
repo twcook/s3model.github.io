@@ -2,14 +2,14 @@
 Shareable, Structured, Semantic Model (S3Model)
 ===============================================
 
-**The Esperanto of Information Management.**
+**The `Esperanto <https://s3model.com/specifications/docs/glossary.html#esperanto>`_ of Information Management.**
 
 Specifications
 ==============
 
 Release - 3.1.0
 
-*Copyright 2009 - 2019 Data Insights, Inc. - All Rights Reserved.*
+*Copyright 2009 - 2022 Timothy W. Cook - All Rights Reserved.*
 
 Contents:
 
