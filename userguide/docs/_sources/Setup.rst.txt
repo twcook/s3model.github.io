@@ -36,6 +36,13 @@ Navigate to a convienent directory in the terminal, for installing the tutorial.
 
     **REMEMBER** this directory/folder. We certainly don't recommend putting these files in the root directory. If you can't think of a better place then do this in the *Documents* folder. 
 
+Using the terminal window create a new subdirectory named, "S3MTraining"::
+
+    mkdir S3MTraining
+
+Change to the new directory::
+
+    cd S3MTraining
 
 Issue this command in the terminal window::
 
@@ -50,17 +57,14 @@ Activate the environment::
 
     conda activate S3MTraining   
 
-Change to the new directory::
-
-    cd S3MTraining
 
 Install the `S3Model Python <https://pypi.org/manage/project/S3MPython/releases/>`_ implementation with this command::
 
     pip install S3MPython
 
-When the installation is complete, the last line in the terminal should be::
+When the installation is complete, the last line in the terminal should be:
 
-    Successfully installed S3MPython-(version number) and a list of the other packages installed.
+    **Successfully installed S3MPython-(version number) and a list of the other packages installed.**
 
 
 Test the installation by starting the Jupyter Notebooks server::
