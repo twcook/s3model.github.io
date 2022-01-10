@@ -7,7 +7,7 @@ Publications, tutorials and presentations by the developers of S3Model and other
 
 Peer Reviewed
 -------------
-This is a partial list of peer-reviewed, published papers and other documents from the `Multi-Level Healthcare Information Modeling (MLHIM) <https://s3model.com/specifications/docs/glossary.html#ontology>`_ project. 
+This is a partial list of peer-reviewed, published papers and other documents from the `Multi-Level Healthcare Information Modeling (MLHIM) <https://s3model.com/specifications/docs/glossary.html#multi-level-healthcare-information-modeling-mlhim>`_ project. 
 
 
 * `Migration of a pre-hospital cardiology emergency system from data model to multilevel modeling <https://dl.acm.org/doi/abs/10.1145/2180796.2180801>`_
