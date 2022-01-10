@@ -6,7 +6,7 @@ S3Model Specifications Overview
 
 Release - 3.1.0
 
-**Copyright 2009 - 2022, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook/>`_ - All Rights Reserved.**
+Copyright 2009 - 2022, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook/>`_ - All Rights Reserved.
 
 
 Acknowledgments
@@ -25,9 +25,9 @@ Purpose & Scope
 ---------------
 *Keep everything as simple as possible; but no simpler. - Albert Einstein*
 
-The purpose of the `S3Model <https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model>`_` project is to provide a free and openly available specification for implementation of a model first system for information exchange within and across domains.
+The purpose of the `S3Model <https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model>`_ project is to provide a free and openly available specification for implementation of a model first system for information exchange within and across domains.
 
-The S3Model specifications are designed to provide computable `semantic interoperability <https://s3model.com/specifications/docs/glossary.html#semantic-interoperability>`_` that is
+The S3Model specifications are designed to provide computable `semantic interoperability <https://s3model.com/specifications/docs/glossary.html#semantic-interoperability>`_ that is
 entirely independent of any implementation specific contexts. Therefore workflow, security,
 user access, and data persistence are all outside the scope of S3Model. However, S3Model does provide
 a facility for managing workflow and user access constraints within the data instances.
