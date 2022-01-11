@@ -161,3 +161,8 @@ The user is now ready to explore the lessons using Jupyter notebooks, where the 
      * Navigate to the *S3MTraining* directory. 
      * Activate the environment with the command: *conda activate S3MTraining*
      * Start Jupyter with the command: *jupyter notebook*.
+
+**If you want to remove the S3MTraining environment** use these commands::
+    
+    conda deactivate
+    conda remove --name S3MTraining --all
