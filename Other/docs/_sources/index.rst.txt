@@ -1,0 +1,25 @@
+.. Other Implementations documentation master file, created by
+   sphinx-quickstart on Fri Jan 14 06:14:23 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Other Implementations's
+=======================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   java
+   javascript
+   ruby
+   lua
+   blockly
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
