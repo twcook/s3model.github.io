@@ -27,7 +27,7 @@ S3Model allows for well-defined `reference ranges <https://www.testing.com/artic
 
 Beyond the expansion of semantics on the simple types, S3Model Data Models can contain models representing who or what organization participated in the data collection, or activity, described by the model. There are also facilities to capture `attestation <https://www.merriam-webster.com/dictionary/attestation>`_ of the data and downstream `auditing <https://www.merriam-webster.com/dictionary/audit>`_ records.  
 
-The Data Model also accommodates `metadata <https://techterms.com/definition/metadata>`_ that describes attributes about the creation of the model. Elements of the `Dublin Core Metadata Standard <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/>`_ are used to identify details such as; title, author, description, license information, relationship to other models, geographical or domain coverage, and a unique identifier (`CUID <https://github.com/ericelliott/cuid>`). 
+The Data Model also accommodates `metadata <https://techterms.com/definition/metadata>`_ that describes attributes about the creation of the model. Elements of the `Dublin Core Metadata Standard <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/>`_ are used to identify details such as; title, author, description, license information, relationship to other models, geographical or domain coverage, and a unique identifier (`CUID <https://github.com/ericelliott/cuid>`_). 
 
 The complete S3Model documentation is available `here <https://s3model.com/specifications/docs/index.html>`_.
 

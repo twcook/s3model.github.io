@@ -3,7 +3,7 @@ License
 =======
 
 
-   Copyright 2009-2022, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook>`_`
+   Copyright 2009-2022, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook>`_
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

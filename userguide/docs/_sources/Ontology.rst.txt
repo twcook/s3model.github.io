@@ -10,7 +10,7 @@ The S3Model ontology is quite simple but serves to connect model components in R
 
 The images below show the classes and object properties of the ontology.
 
-See the [technical documentation(https://s3model.com/specifications/docs/abstract_model.html) for definitions for each of the classes and properties.
+See the `technical documentation <https://s3model.com/specifications/docs/abstract_model.html>`_ for definitions for each of the classes and properties.
 
 
 Terms in the Ontology

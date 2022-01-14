@@ -28,7 +28,7 @@ The Core
 
 The base of the S3Model ecosystem is a small `ontology <https://s3model.com/specifications/docs/glossary.html#web-ontology-language-owl>`_ that provides naming for the component types in models and data. The primary use of this ontology is in `linked data <https://s3model.com/specifications/docs/glossary.html#linked-data>`_ processing such as in RDF Graphs.
 
-The base of the S3Model validation chain is the `Reference Model (RM) <https://s3model.com/specifications/docs/glossary.html#reference-model-rm>`. The specifications provide guidelines for `conformance <https://s3model.com/specifications/docs/front.html#conformance>`_. Though the reference implementation is in XML Schema format, any chosen programming language may be used for development in real-world applications. Because of the ubiquity of XML tools from small businesses to global enterprises, the share-ability factor centers on XML Schema along with XML or JSON data instances.
+The base of the S3Model validation chain is the `Reference Model (RM) <https://s3model.com/specifications/docs/glossary.html#reference-model-rm>`_. The specifications provide guidelines for `conformance <https://s3model.com/specifications/docs/front.html#conformance>`_. Though the reference implementation is in XML Schema format, any chosen programming language may be used for development in real-world applications. Because of the ubiquity of XML tools from small businesses to global enterprises, the share-ability factor centers on XML Schema along with XML or JSON data instances.
 
 Tools that automatically generate the reference model classes from the XML Schema are available from `S3Model <https://s3model.com>`_. This approach is the basis for more extensive S3Model compliant applications research.
 
