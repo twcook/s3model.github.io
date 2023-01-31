@@ -4,8 +4,8 @@ Support, Publications & Social Media
 Publications, tutorials and presentations by the developers of S3Model and other interested parties that relate to S3Model.
 
 
-Peer Reviewed
--------------
+Peer Reviewed Papers
+--------------------
 
 See these Documents for the background research documents.
 
@@ -56,9 +56,16 @@ Presentations
 Videos
 ------
 
+These are very dated and will be replaced in 2023.
 `YouTube <https://www.youtube.com/watch?v=lbDJyng9cm0>`_
 
 
 Issues Reporting
 ----------------
 Please report all issues `here <https://github.com/twcook/S3Model/issues>`_.
+
+Social Media
+============
+
+**Twitter** - @S3Model  
+

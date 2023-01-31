@@ -36,9 +36,6 @@ rm_semantics_extractor.py
 Extracts the semantics from S3Model RM and creates RDF triples in RDF/XML named the same as the input file with a .rdf extension in place of the .xsd extension.
 
 
-
-
-
 Using the tools
 ---------------
 
@@ -48,10 +45,8 @@ Then in a terminal window execute:
 
 .. code-block:: sh
 
-    conda env create -f s3m_environment.yml
+    conda env create -f S3Model.yml
 
 Then follow the instructions to activate the environment.
-
-
 
 
