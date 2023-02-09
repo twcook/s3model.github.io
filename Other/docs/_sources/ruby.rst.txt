@@ -1,7 +1,0 @@
-===================
-Ruby Implementation
-===================
-
-*Pending*
-
-`Ruby website <https://www.ruby-lang.org/en/>`_
