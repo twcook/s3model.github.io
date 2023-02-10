@@ -2,7 +2,7 @@
 
 The reference implementation also provides a few simple tools in Python that can be used to manipulate and analyze the refernce model implementation and support files such as the ontology and RDF output.
 
-You will find them in the *scripts* subdirectory of the versioned RM. Ex: *RM/3_1_0/scripts*.
+You will find them in the *scripts* subdirectory of the versioned RM. Ex: *RM/4_0_0/scripts*.
 
 
 ## Using the tools

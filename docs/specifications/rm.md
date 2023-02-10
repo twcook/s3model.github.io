@@ -215,7 +215,7 @@ The reference implementation complexType descriptions. Click the word *Schema* t
 
 #### DMType
 
-[DMType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_DMType.html#DMType)
+[DMType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_DMType.html#DMType)
 
 **Derived from:** n/a
 
@@ -272,7 +272,7 @@ ______________________________________________________________________
 
 #### XdAnyType
 
-[XdAnyType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdAnyType.html#XdAnyType)
+[XdAnyType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdAnyType.html#XdAnyType)
 
 **Derived from:**  n/a
 
@@ -295,7 +295,7 @@ ______________________________________________________________________
 
 #### XdBooleanType
 
-[XdBooleanType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdBooleanType.html#XdBooleanType)
+[XdBooleanType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdBooleanType.html#XdBooleanType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -313,7 +313,7 @@ ______________________________________________________________________
 
 #### XdLinkType
 
-[XdLinkType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdLinkType.html#XdLinkType)
+[XdLinkType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdLinkType.html#XdLinkType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -335,7 +335,7 @@ ______________________________________________________________________
 
 #### XdStringType
 
-[XdStringType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdStringType.html#XdStringType)
+[XdStringType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdStringType.html#XdStringType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -353,7 +353,7 @@ ______________________________________________________________________
 
 #### XdFileType
 
-[XdFileType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdFileType.html#XdFileType)
+[XdFileType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdFileType.html#XdFileType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -384,7 +384,7 @@ ______________________________________________________________________
 
 #### XdOrderedType
 
-[XdOrderedType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdOrderedType.html#XdOrderedType)
+[XdOrderedType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdOrderedType.html#XdOrderedType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -401,7 +401,7 @@ ______________________________________________________________________
 
 #### XdOrdinalType
 
-[XdOrdinalType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdOrdinalType.html#XdOrdinalType)
+[XdOrdinalType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdOrdinalType.html#XdOrdinalType)
 
 **Derived from:** [XdOrderedType] by extension
 
@@ -434,7 +434,7 @@ ______________________________________________________________________
 
 #### XdQuantifiedType
 
-[XdQuantifiedType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdQuantifiedType.html#XdQuantifiedType)
+[XdQuantifiedType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdQuantifiedType.html#XdQuantifiedType)
 
 **Derived from:** [XdOrderedType] by extension
 
@@ -452,7 +452,7 @@ ______________________________________________________________________
 
 #### XdCountType
 
-[XdCountType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdCountType.html#XdCountType)
+[XdCountType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdCountType.html#XdCountType)
 
 **Derived from:** [XdQuantifiedType] by extension
 
@@ -468,7 +468,7 @@ ______________________________________________________________________
 
 #### XdQuantityType
 
-[XdQuantityType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdQuantityType.html#XdQuantityType)
+[XdQuantityType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdQuantityType.html#XdQuantityType)
 
 **Derived from:** [XdQuantifiedType] by extension
 
@@ -482,7 +482,7 @@ ______________________________________________________________________
 
 #### XdFloatType
 
-[XdFloatType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdFloatType.html#XdFloatType)
+[XdFloatType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdFloatType.html#XdFloatType)
 
 **Derived from:** [XdQuantifiedType] by extension
 
@@ -496,7 +496,7 @@ ______________________________________________________________________
 
 #### XdTemporalType
 
-[XdTemporalType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdTemporalType.html#XdTemporalType)
+[XdTemporalType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdTemporalType.html#XdTemporalType)
 
 **Derived from:** [XdOrderedType] by extension
 
@@ -522,7 +522,7 @@ ______________________________________________________________________
 
 #### XdIntervalType
 
-[XdIntervalType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdIntervalType.html#XdIntervalType)
+[XdIntervalType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdIntervalType.html#XdIntervalType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -536,7 +536,7 @@ ______________________________________________________________________
 
 #### InvlType
 
-[InvlType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_InvlType.html#InvlType)
+[InvlType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_InvlType.html#InvlType)
 
 **Derived from:** n/a
 
@@ -554,7 +554,7 @@ ______________________________________________________________________
 
 #### InvlUnits
 
-[InvlUnits Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_InvlUnits.html#InvlUnits)
+[InvlUnits Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_InvlUnits.html#InvlUnits)
 
 **Derived from:** n/a
 
@@ -570,7 +570,7 @@ ______________________________________________________________________
 
 #### ReferenceRangeType
 
-[ReferenceRangeType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ReferenceRangeType.html#ReferenceRangeType)
+[ReferenceRangeType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ReferenceRangeType.html#ReferenceRangeType)
 
 **Derived from:** [XdAnyType] by extension
 
@@ -586,7 +586,7 @@ ______________________________________________________________________
 
 #### AuditType
 
-[AuditType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_AuditType.html#AuditType)
+[AuditType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_AuditType.html#AuditType)
 
 **Derived from:** n/a
 
@@ -600,7 +600,7 @@ ______________________________________________________________________
 
 #### PartyType
 
-[PartyType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_PartyType.html#PartyType)
+[PartyType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_PartyType.html#PartyType)
 
 **Derived from:** n/a
 
@@ -614,7 +614,7 @@ ______________________________________________________________________
 
 #### AttestationType
 
-[AttestationType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_AttestationType.html#AttestationType)
+[AttestationType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_AttestationType.html#AttestationType)
 
 **Derived from:** n/a
 
@@ -628,7 +628,7 @@ ______________________________________________________________________
 
 #### ParticipationType
 
-[ParticipationType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ParticipationType.html#ParticipationType)
+[ParticipationType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ParticipationType.html#ParticipationType)
 
 **Derived from:** n/a
 
@@ -642,7 +642,7 @@ ______________________________________________________________________
 
 #### ExceptionalValueType
 
-[ExceptionalValueType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ExceptionalValueType.html#ExceptionalValueType)
+[ExceptionalValueType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ExceptionalValueType.html#ExceptionalValueType)
 
 **Derived from:** n/a
 
@@ -658,7 +658,7 @@ ______________________________________________________________________
 
 #### NIType
 
-[NIType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_NIType.html#NIType)
+[NIType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_NIType.html#NIType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -672,7 +672,7 @@ ______________________________________________________________________
 
 #### MSKType
 
-[MSKType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_MSKType.html#MSKType)
+[MSKType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_MSKType.html#MSKType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -688,7 +688,7 @@ ______________________________________________________________________
 
 #### INVType
 
-[INVType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_INVType.html#INVType)
+[INVType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_INVType.html#INVType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -702,7 +702,7 @@ ______________________________________________________________________
 
 #### DERType
 
-[DERType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_DERType.html#DERType)
+[DERType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_DERType.html#DERType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -716,7 +716,7 @@ ______________________________________________________________________
 
 #### UNCType
 
-[UNCType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_UNCType.html#UNCType)
+[UNCType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_UNCType.html#UNCType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -730,7 +730,7 @@ ______________________________________________________________________
 
 #### OTHType
 
-[OTHType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_OTHType.html#OTHType)
+[OTHType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_OTHType.html#OTHType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -744,7 +744,7 @@ ______________________________________________________________________
 
 #### NINFType
 
-[NINFType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_NINFType.html#NINFType)
+[NINFType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_NINFType.html#NINFType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -758,7 +758,7 @@ ______________________________________________________________________
 
 #### PINFType
 
-[PINFType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_PINFType.html#PINFType)
+[PINFType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_PINFType.html#PINFType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -772,7 +772,7 @@ ______________________________________________________________________
 
 #### UNKType
 
-[UNKType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_UNKType.html#UNKType)
+[UNKType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_UNKType.html#UNKType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -786,7 +786,7 @@ ______________________________________________________________________
 
 #### ASKRType
 
-[ASKRType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ASKRType.html#ASKRType)
+[ASKRType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ASKRType.html#ASKRType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -800,7 +800,7 @@ ______________________________________________________________________
 
 #### NASKType
 
-[NASKType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_NASKType.html#NASKType)
+[NASKType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_NASKType.html#NASKType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -814,7 +814,7 @@ ______________________________________________________________________
 
 #### QSType
 
-[QSType Schema](/rm/s3model_3_1_0_xsd_Complex_Type_s3m_QSType.html#QSType)
+[QSType Schema](/rm/s3model_4_0_0_xsd_Complex_Type_s3m_QSType.html#QSType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -828,7 +828,7 @@ ______________________________________________________________________
 
 #### TRCType
 
-[TRCType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_TRCType.html#TRCType)
+[TRCType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_TRCType.html#TRCType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -842,7 +842,7 @@ ______________________________________________________________________
 
 #### ASKUType
 
-[ASKUType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ASKUType.html#ASKUType)
+[ASKUType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ASKUType.html#ASKUType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -856,7 +856,7 @@ ______________________________________________________________________
 
 #### NAVType
 
-[NAVType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_NAVType.html#NAVType)
+[NAVType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_NAVType.html#NAVType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -870,7 +870,7 @@ ______________________________________________________________________
 
 #### NAType
 
-[NAType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_NAType.html#NAType)
+[NAType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_NAType.html#NAType)
 
 **Derived from:** [ExceptionalValueType] by restriction
 
@@ -884,7 +884,7 @@ ______________________________________________________________________
 
 #### ItemType
 
-[ItemType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ItemType.html#ItemType)
+[ItemType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ItemType.html#ItemType)
 
 **Derived from:** n/a
 
@@ -898,7 +898,7 @@ ______________________________________________________________________
 
 #### ClusterType
 
-[ClusterType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_ClusterType.html#ClusterType)
+[ClusterType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_ClusterType.html#ClusterType)
 
 **Derived from:** [ItemType] by extension
 
@@ -913,7 +913,7 @@ ______________________________________________________________________
 
 #### XdAdapterType
 
-[XdAdapterType Schema](rm/s3model_3_1_0_xsd_Complex_Type_s3m_XdAdapterType.html#XdAdapterType)
+[XdAdapterType Schema](rm/s3model_4_0_0_xsd_Complex_Type_s3m_XdAdapterType.html#XdAdapterType)
 
 **Derived from:** [ItemType] by extension
 
@@ -931,7 +931,7 @@ The reference implementation simpleType descriptions. These types do not have gl
 
 #### MagnitudeStatus
 
-[MagnitudeStatus Schema](rm/s3model_3_1_0_xsd_Simple_Type_s3m_MagnitudeStatus.html#MagnitudeStatus)
+[MagnitudeStatus Schema](rm/s3model_4_0_0_xsd_Simple_Type_s3m_MagnitudeStatus.html#MagnitudeStatus)
 
 **Derived from:** xs:string
 
