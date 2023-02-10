@@ -21,9 +21,10 @@ theme:
 
 nav:
     - Home: 'index.md'
-    - Reference Model: 'XSD/rm.md'
-    - Tools: 'Tools/tools.md'
-    - Contributing: 'Contributing.md'
+    - Specifications: 'specifications/specs.md'
+    - XML Schema: 'xsd/rm.md'
+    - Tools: 'tools/tools.md'
+    - Contributing: 'contributing.md'
     - Support: 'support.md'
     - Glossary: 'glossary.md'
     - License: 'LICENSE.md'

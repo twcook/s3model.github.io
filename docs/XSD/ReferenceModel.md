@@ -1,4 +1,4 @@
-# The Reference Model
+# The XML Schema Reference Model
 
 This document defines the types and structures available.
 
@@ -8,13 +8,13 @@ The S3Model [Reference Model (RM)](https://s3model.com/specifications/docs/gloss
 
 S3Model may be implemented in almost any programming or [data definition language](https://techterms.com/definition/ddl). The reference implementation provided here is in [XML Schema](https://www.w3schools.com/xml/schema_intro.asp) 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the [canonical serialization](https://s3model.com/specifications/docs/glossary.html#canonical-serialization) format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.
 
-The canonical RDF/XML serialization format can be converted to other RDF formats such as [Turtle](https://www.w3.org/2007/02/turtle/primer/), [JSON-LD](https://json-ld.org/), etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.
+The canonical RDF/XML serialization format can be converted to other RDF formats such as [Turtle](https://www.w3.org/2007/02/turtle/primer/), [JSON Schema](https://json-schema.org/), etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.
 
 The components of the RM are sufficient to model any datatype to include [temporal](https://www.merriam-webster.com/dictionary/temporal), [spatial](https://www.merriam-webster.com/dictionary/spatial), and [ontological](https://www.merriam-webster.com/dictionary/ontological) contexts. Not all of this functionality is required in all modeling situations. But they are available for those that need them.
 
 ## Reference Model Overview
 
-The [abstract reference model](https://s3model.com/specifications/docs/abstract_model.html) consists of a collection of components for defining common data elements for applications. A developer will consider strings, integers, decimals, etc. Additionally, more complex ideas such as files and links are accommodated. These structures all descend from a parent type similar to the "Any type" ([XdAnyType](https://s3model.com/specifications/docs/rm.html#xdanytype)) found in many programming languages.
+The [abstract reference model](./../specifications/abstract_model.html) consists of a collection of components for defining common data elements for applications. A developer will consider strings, integers, decimals, etc. Additionally, more complex ideas such as files and links are accommodated. These structures all descend from a parent type similar to the "Any type" ([XdAnyType](https://s3model.com/specifications/docs/rm.html#xdanytype)) found in many programming languages.
 
 The distinction is that in S3Model, the developer can provide for the application user to tag each data point with additional [semantic information](https://www.igi-global.com/dictionary/advanced-model-of-complex-information-system/41735) such as the beginning and ending times that a data value is valid. The time the data value was recorded and modified. The capability exists to add an Access Control flag for sensitive information. For missing or erroneous data, the reason it is in error may be added using Exceptional Value codes (expanded from [ISO 21090](https://www.iso.org/standard/35646.html)). Location data is often essential, for example, in air quality sensor data. Location data can be recorded as [latitude and longitude decimal values](http://wiki.gis.com/wiki/index.php/Decimal_degrees). These capabilities expand the meaning of the data points and transfer helpful context to the end-users of the data.
 
