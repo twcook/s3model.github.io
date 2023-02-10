@@ -19,6 +19,14 @@ An area of computer science that deals with giving machines the ability to seem 
 
 A *Canonical Serialization* is an instantiation of some information in a specific file format. Usually it is in a standardized format and adheres to a specification. The word canonical means it is considered the law for the subject at hand. In the context of S3Model, the XML Schema representing the reference model, means that any other implementation in any programming or data definition language must comply with the rules and constraints of the XML Schema implementation.
 
+## Coherence
+
+Coherence is a state or situation in which all the parts or ideas fit together well so that they form a united whole. In S3Model, we address:
+
+-   **syntactic coherence** in a structure composed of simple terms that make. sense constitute an expression that makes sense and has a unitary meaning, the DataModel.
+-   **temporal coherence** (aka. longitudinal coherence) is provided in S3Model by providing every data item in a DataModel the ability to express the time it began, the time it ended, the time it was recorded, and the last time it was modified. These may or may not apply to all data items.
+-   **semantic coherence** is available for each data item in a DataModel through the use of URIs pointing to a term in an ontology, controlled vocabulary, policy document, etc., that defines the specific meaning of the data item. 
+
 ## Compliance
 
 *Compliance* is the practice of following regulations set forth by corporate governance, industry organizations, and governments. These regulations set forth protocols for how sensitive data is collected, used, stored, and managed, among other requirements.
