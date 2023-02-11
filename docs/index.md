@@ -10,6 +10,8 @@ S3Model is the [Esperanto](https://s3model.com/specifications/docs/glossary.html
 
 **Sharable** == The data model author(s) can easily share their models using an industry standard format. The data consumer can easily import/implement this model into their systems.
 
+---
+
 ## Preface
 
 ### Goal:
@@ -24,7 +26,7 @@ Please report all issues [here.](https://github.com/twcook/S3Model/issues)
 This is the reference implementation of the S3Model Specifications and is fully in compliance with version 4.0.0 of the specifications.
 
 
-
+---
 
 ## Purpose
 

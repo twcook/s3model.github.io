@@ -166,6 +166,11 @@ A *validation chain* is a series of complimentary components that serve to perfo
 
 *XML* is a markup language expressed in a standard set of codes, or tags, that describes the text in a digital document. XML is a more flexible cousin of HTML, makes it possible to conduct complex business over the Internet.
 
+## XML Schema
+
+An XML Schema is itself an XML document and it describes the structure of an XML document.
+The XML Schema language is also referred to as XML Schema Definition (XSD).
+
 ## eXtensible Markup Language Database
 
 An XML database is a database that stores data in XML format. This type of database is suited for businesses with data in XML format and for situations where XML storage is a practical way to archive data, metadata and other digital resources.

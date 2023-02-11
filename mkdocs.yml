@@ -2,18 +2,38 @@ site_name: Shareable, Structured, Semantic Model (S3Model)
 copyright: 'Copyright 2009 - 2023 Timothy W. Cook - All Rights Reserved.'
 theme:
     name: material
+    language: en
     features:
       - navigation.instant
+      - navigation.tracking
       - navigation.tabs
       - navigation.tabs.sticky
       - navigation.top
       - navigation.footer
+      - toc.follow
     logo: images/SmallLogo.png
     favicon: images/favicon.ico
     palette:
-      scheme: slate
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+
       font:
-        text: Roboto
+        text: Ubuntu Regular 400
     highlightjs: true
     hljs_languages:
         - yaml
@@ -39,7 +59,7 @@ extra:
     - icon: fontawesome/brands/github 
       link: https://github.com/twcook
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/timothywaynecook
+      link: https://www.linkedin.com/groups/4756750/
     - icon: fontawesome/solid/paper-plane
       link: mailto:s3modeldata@gmail.com
   consent:
@@ -54,3 +74,10 @@ extra:
             
 markdown_extensions:
   - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
