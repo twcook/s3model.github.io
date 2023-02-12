@@ -1,5 +1,7 @@
 # Introduction and Installation
 
+Release 4.0.0 [CHANGES](./CHANGES.md)
+
 ## Purpose
 
 **S3MPython** is a Python implementation of the [S3Model](https://s3model.com) specifications.

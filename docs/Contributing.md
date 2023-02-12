@@ -88,16 +88,31 @@ available at [http://contributor-covenant.org/version/1/4][version]
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
 
+## Code/Documentation Development
 
-## Pull Request Process
+We use [SemVer](https://semver.org/) for versioning.
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
+Clone the repository to you local machine. Create a virtual environment using the *requirements-dev.txt* file.
+
+We welcome all feedback via the *Discussion* forum for repository. As stated at the top of this document. Each bug or feature request MUST have an issue filed against it.  
+
+[Request](mailto:s3modeldata@gmail.com?subject=Contributor Request) to be added as a Contributor. 
+
+### Documentation
+
+Documentation for all S3Model repositories are in the *docs* subdirectory of the repository. All documentation uses the [Mkdocs](https://www.mkdocs.org/) Markdown format with the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) theme. Documentation can be updated for any major version using a patch version change. 
+
+
+### Code Development
+
+ The next major release of each repository will have a *-dev* tag as part of the version name. For bug fixes, ensure there is an issue describing the problem. Create a new branch of the current dev branch and name it by appending *_issue_##*, where ## is the issue number.  
+
+
+### Pull Request Process
+
+1. Update the CHANGES.md with details of changes, this includes new environment variables, exposed ports, useful file locations and container parameters.
+2. Increase the version numbers in any examples files and the README.md to the new version that this
    Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you
-   do not have permission to do that, you may request the second reviewer to merge it for you.
-5. Be certain that the related version of S3MPython is correct in the README.md
+3. You may merge the Pull Request in once you have the sign-off, or if you do not have permission to do that, someone merge it for you.
+4. Be certain that the related version is correct in the README.md
 

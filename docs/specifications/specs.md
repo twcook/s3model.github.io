@@ -2,7 +2,7 @@
 
 *Turning data into computable information*
 
-Release - 4.0.0
+Release - 4.0.0   [CHANGES](./CHANGES.md)
 
 *Copyright 2009 - 2023, [Timothy W. Cook](https://www.linkedin.com/in/timothywaynecook/) - All Rights Reserved.*
 
