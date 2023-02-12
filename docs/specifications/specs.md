@@ -6,6 +6,10 @@ Release - 4.0.0
 
 *Copyright 2009 - 2023, [Timothy W. Cook](https://www.linkedin.com/in/timothywaynecook/) - All Rights Reserved.*
 
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://tools.ietf.org/html/bcp14), [RFC2119](https://tools.ietf.org/html/rfc2119), and [RFC8174](https://tools.ietf.org/html/rfc8174) when, and only when, they appear in all capitals, as shown here.
+
+
 ## Acknowledgments
 
 We would like to thank all of the members of the Multi-Level Health Information Modeling (MLHIM) Technology Development Unit at [Universidade do Estado do Rio de Janeiro (UERJ)](https://www.uerj.br/), [INCT-MACC](http://macc.lncc.br/) as well as [FAPERJ](http://www.faperj.br/) for multiple direct and student grants in support of multi-level modeling and semantic interoperability efforts.
@@ -16,14 +20,14 @@ We would like to thank all of the members of the Multi-Level Health Information 
 
 *Keep everything as simple as possible; but no simpler. - Albert Einstein*
 
-The purpose of the [S3Model](https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model) project is to provide a free and openly available specification for implementation of a model first system for information exchange within and across domains.
+The purpose of the [S3Model](../glossary.md#shareable-structured-semantic-model-s3model) project is to provide a free and openly available specification for implementation of a *model first* system for information exchange within and across domains.
 
 The S3Model specifications are designed to provide computable [semantic interoperability](https://s3model.com/specifications/docs/glossary.html#semantic-interoperability) that is entirely independent of any implementation specific contexts. Therefore workflow, security, user access, and data persistence are all outside the scope of S3Model. However, S3Model does provide a facility for managing workflow and user access constraints within the data instances.
 
 The project has a growing number of implementation projects and tools that demonstrate
 this approach and enables interoperability across many contexts and domains.
 
-It is recommended that new comers read the [S3Model User Guide](https://s3model.com/userguide/docs/index.html) and go through the brief tutorial.
+It is recommended that new comers read the [S3Model User Guide](../userguide/index.md) and go through the brief tutorial.
 
 ### Conformance
 
@@ -49,19 +53,22 @@ These specifications;
 
 The S3Model specifications, reference implementation, and tools are available from the [S3Model](https://s3model.com) website.
 
-> [Contact Us](https://www.linkedin.com/in/timothywaynecook/) for information and access to advanced model development tools.
+> [Contact Us](mailto:s3modeldata@gmail.com?subject=S3Model) for information and access to advanced model development tools.
 
 *The ninety and nine are with dreams, content but the hope of the world made new, is the hundredth man who is grimly bent on making those dreams come true. - Edgar Alan Poe*
 
 ### Error Reporting
 
-Please report all issues [here.](https://github.com/twcook/S3Model_Specs/issues)
+Please report all issues [here.](https://github.com/twcook/S3Model/issues)
 
 ---
 
 ## Abstract Model
 
-[S3Model](https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model) is by name as well as by definition and design a constraint-based multi-level modeling approach.  This approach means that there are multiple models with increasing specificity to get to the instance data point. S3Model is constraint-based which provides a complete syntactic validation path back to the reference model for the instance data. The semantic model is designed using the concepts of this multi-level model approach. Extensions to the reference model concepts are not allowed.
+[S3Model](../glossary.md#shareable-structured-semantic-model-s3model) is by name as well as by definition and design a constraint-based multi-level modeling approach.  This approach means that there are multiple models with increasing specificity to get to the instance data point. S3Model is constraint-based which provides a complete syntactic validation path back to the reference model for the instance data. The semantic model is designed using the concepts of this multi-level model approach. Extensions to the reference model concepts are not allowed.
+
+While these classes are considered the *abstract* concepts in S3Model, they are expressed in a concrete form in the file s3model.owl. 
+
 
 ### S3Model Ontology Classes
 

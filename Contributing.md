@@ -4,7 +4,6 @@ When contributing to this repository, please first discuss the change you wish t
 
 - [S3Model](https://github.com/twcook/S3Model/issues) issues for Specifications and XML Schema errors. 
 - [S3MPython](https://github.com/twcook/S3M_Python/issues) issues for the Python implementation.
-- [Python Examples Tutorial](https://github.com/twcook/S3M_Python_Training_examples/issues) issues for the Python examples/tutorial.
 - [User Guide](https://github.com/twcook/S3M_UserGuide/issues) issues for the User Guide.
 - [Tools](https://github.com/twcook/S3ModelTools/issues) issues for the S3M Tools.
 

@@ -44,7 +44,7 @@ nav:
     - Specifications: 'specifications/specs.md'
     - XML Schema: 'xsd/rm.md'
     - Tools: 'tools/tools.md'
-    - Contributing: 'contributing.md'
+    - Contributing: 'Contributing.md'
     - Support: 'support.md'
     - Glossary: 'glossary.md'
     - License: 'LICENSE.md'
@@ -81,3 +81,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - attr_list
+  - md_in_html

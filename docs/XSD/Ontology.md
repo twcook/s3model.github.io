@@ -4,11 +4,18 @@ The S3Model ontology is an [upper ontology](https://s3model.com/specifications/d
 
 ## Purpose
 
+
+![Ontology Hierarchy](../images/OntologyHierarchy.png){ align=left }
+
 The S3Model ontology is quite simple but serves to connect model components in RDF graphs.
 
-The images below show the classes and object properties of the ontology.
 
-See the [technical documentation](https://s3model.com/specifications/docs/abstract_model.html) for definitions for each of the classes and properties.
+This image shows the S3Model Ontology as displayed in the Protege Ontology tool.
+
+See the documentation below for definitions for each of the classes and properties.
+
+
+---
 
 ## Terms in the Ontology
 
