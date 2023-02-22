@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What is S3Model? &mdash; S3Model User Guide</title>
@@ -13,9 +13,8 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> User Guide
-            <img src="_static/SmallLogo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            User Guide
+              <img src="_static/SmallLogo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 RM 3.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -79,8 +82,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>What is S3Model?</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What is S3Model?</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/S3Model.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -91,17 +94,17 @@
            <div itemprop="articleBody">
              
   <section id="what-is-s3model">
-<h1>What is S3Model?<a class="headerlink" href="#what-is-s3model" title="Permalink to this headline">¶</a></h1>
+<h1>What is S3Model?<a class="headerlink" href="#what-is-s3model" title="Permalink to this heading">¶</a></h1>
 <p>The <strong>SHAREABLE-STRUCTURED-SEMANTIC MODEL</strong> <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#shareable-structured-semantic-model-s3model">(S3Model)</a> is a system based on a standardized reference model, to solve cross-domain <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#semantic-interoperability">semantic interoperability</a> with full data <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#validation">validation</a> and <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#compliance">compliance</a>. S3Model is <strong>not</strong> a data storage application. That said, the tools built around S3Model do create data in <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#extensible-markup-language-xml">XML</a>, <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#javascript-object-notation-json">JSON</a> or <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#resource-description-framework-rdf">RDF</a> and allow for storing data in <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#sql-database">SQL databases</a>, <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#extensible-markup-language-database">XML databases</a>, or <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#graph-database">graph databases</a>.</p>
 <section id="target-audience">
-<h2>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">¶</a></h2>
+<h2>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this heading">¶</a></h2>
 <p>The concepts, implementations and tools are intended for <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#business-decision-makers">business decision makers</a>, <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#domain-expert">domain experts</a>, <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#data-scientist">data scientists</a> and <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#data-analyst">data analysts</a>.</p>
 </section>
 <section id="the-current-problem-s">
-<h2>The Current Problem(s)<a class="headerlink" href="#the-current-problem-s" title="Permalink to this headline">¶</a></h2>
+<h2>The Current Problem(s)<a class="headerlink" href="#the-current-problem-s" title="Permalink to this heading">¶</a></h2>
 <p>Current data modeling and processing approaches do not allow for machine-processable context to be associated with the data at the point of capture to supply downstream analysts with sufficient contextual information to make fully qualified decisions. A lot of manual analysis, reflection, investigation, and time consuming meetings are required to figure out the real meaning of the data points.</p>
 <section id="data-analysis">
-<h3>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h3>
+<h3>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this heading">¶</a></h3>
 <p>Most data used in data analysis, machine learning, and <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#artificial-intelligence-ai">Artificial Intelligence (AI)</a> applications require manual cleaning and processing. At best, a bespoke pipeline will be created for each use case.</p>
 <p>A data analyst typically goes through these steps:</p>
 <ol class="arabic simple">
@@ -119,7 +122,7 @@
 <p><strong>S3Model</strong> helps application developers solve these issues by providing a more robust approach to data modeling, then providing the ability to share these <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#computable-models">computable models</a> across an organization, an industry, or with the public at large.</p>
 </section>
 <section id="data-science">
-<h3>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h3>
+<h3>Data Science<a class="headerlink" href="#data-science" title="Permalink to this heading">¶</a></h3>
 <p>Data scientists use probability, statistics, mathematics, and computer science to predict outcomes from complex systems. A data scientist will typically be more involved with designing <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#data-modeling">data modeling</a> processes, creating algorithms and <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#predictive-model">predictive models</a>. Therefore, data scientists may spend more time designing tools, automation systems, and data frameworks than analyzing data.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -129,9 +132,9 @@
 </section>
 </section>
 <section id="the-solution">
-<h2>The Solution<a class="headerlink" href="#the-solution" title="Permalink to this headline">¶</a></h2>
+<h2>The Solution<a class="headerlink" href="#the-solution" title="Permalink to this heading">¶</a></h2>
 <section id="data-analysis-science">
-<h3>Data Analysis/Science<a class="headerlink" href="#data-analysis-science" title="Permalink to this headline">¶</a></h3>
+<h3>Data Analysis/Science<a class="headerlink" href="#data-analysis-science" title="Permalink to this heading">¶</a></h3>
 <p>The context of the data at the capture point is of utmost importance. When we extract <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#contextual">contextual</a> meaning from data, it empowers us to make better decisions. When the capture context is unknown, it can easily lead to poor or improper analysis results.</p>
 <p>The use of <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#ontology">ontologies</a> to define meaning across domains is growing. These ontologies are typically built by, or with, direct input from <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#domain-expert">domain experts</a>. The <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#web-ontology-language-owl">Web Ontology Language (*OWL*)</a> is often used to instantiate and exchange an ontology. The Resource Description Framework may also express an ontology <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#resource-description-framework-rdf">(*RDF*)</a>.</p>
 <p>Globally useful ontologies such as those growing out of the <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#semantic-web">Semantic Web</a> work are becoming more useful, stable and permanent. Some examples of these ontologies that can be used to express semantics in S3Model data models are:</p>
@@ -157,7 +160,7 @@
 <p>More recently, there is a movement towards what is called <a class="reference external" href="https://web3.foundation/about/">Web3</a>. Web3 advances the concepts of the Semantic Web (Web 2.0) in order to decentralize content and enhance privacy, security, and control. S3Model is a perfect fit for Web3 due to the nature of decentralized data model definitions while still providing for sharability.</p>
 </section>
 <section id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>S3Model provides a means to add context to data in a machine-processable and human-readable manner.</p></li>
 <li><p>S3Model provides a consistent data structure to ease query processing across multiple information domains.</p></li>
@@ -181,7 +184,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 14, 2022.
+      <span class="lastupdated">Last updated on Feb 21, 2023.
       </span></p>
   </div>
 

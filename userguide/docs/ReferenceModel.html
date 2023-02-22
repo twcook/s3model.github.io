@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Reference Model &mdash; S3Model User Guide</title>
@@ -13,9 +13,8 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> User Guide
-            <img src="_static/SmallLogo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            User Guide
+              <img src="_static/SmallLogo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 RM 3.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -70,8 +73,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>The Reference Model</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The Reference Model</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/ReferenceModel.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,17 +85,17 @@
            <div itemprop="articleBody">
              
   <section id="the-reference-model">
-<h1>The Reference Model<a class="headerlink" href="#the-reference-model" title="Permalink to this headline">¶</a></h1>
+<h1>The Reference Model<a class="headerlink" href="#the-reference-model" title="Permalink to this heading">¶</a></h1>
 <p>This document defines the types and structures available.</p>
 <section id="purpose">
-<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this heading">¶</a></h2>
 <p>The S3Model <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#reference-model-rm">Reference Model (RM)</a> is the foundation of <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#validation">validation</a>.</p>
 <p>S3Model may be implemented in almost any programming or <a class="reference external" href="https://techterms.com/definition/ddl">data definition language</a>. The reference implementation provided here is in <a class="reference external" href="https://www.w3schools.com/xml/schema_intro.asp">XML Schema</a> 1.0. Due to the ubiquitous nature of XML Schema and the compatibility with RDF/XML, we chose XML as the <a class="reference external" href="https://s3model.com/specifications/docs/glossary.html#canonical-serialization">canonical serialization</a> format. Virtually all programming and data analysis languages can manipulate and validate XML content. XML content is easily imported into SQL databases, converted to JSON, or other formats.</p>
 <p>The canonical RDF/XML serialization format can be converted to other RDF formats such as <a class="reference external" href="https://www.w3.org/2007/02/turtle/primer/">Turtle</a>, <a class="reference external" href="https://json-ld.org/">JSON-LD</a>, etc., as required for local operations and usage. A host of tools and online resources are available for these conversions.</p>
 <p>The components of the RM are sufficient to model any datatype to include <a class="reference external" href="https://www.merriam-webster.com/dictionary/temporal">temporal</a>, <a class="reference external" href="https://www.merriam-webster.com/dictionary/spatial">spatial</a>, and <a class="reference external" href="https://www.merriam-webster.com/dictionary/ontological">ontological</a> contexts. Not all of this functionality is required in all modeling situations. But they are available for those that need them.</p>
 </section>
 <section id="reference-model-overview">
-<h2>Reference Model Overview<a class="headerlink" href="#reference-model-overview" title="Permalink to this headline">¶</a></h2>
+<h2>Reference Model Overview<a class="headerlink" href="#reference-model-overview" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference external" href="https://s3model.com/specifications/docs/abstract_model.html">abstract reference model</a> consists of a collection of components for defining common data elements for applications. A developer will consider strings, integers, decimals, etc. Additionally, more complex ideas such as files and links are accommodated. These structures all descend from a parent type similar to the “Any type” (<a class="reference external" href="https://s3model.com/specifications/docs/rm.html#xdanytype">XdAnyType</a>) found in many programming languages.</p>
 <p>The distinction is that in S3Model, the developer can provide for the application user to tag each data point with additional <a class="reference external" href="https://www.igi-global.com/dictionary/advanced-model-of-complex-information-system/41735">semantic information</a> such as the beginning and ending times that a data value is valid. The time the data value was recorded and modified. The capability exists to add an Access Control flag for sensitive information. For missing or erroneous data, the reason it is in error may be added using Exceptional Value codes (expanded from <a class="reference external" href="https://www.iso.org/standard/35646.html">ISO 21090</a>). Location data is often essential, for example, in air quality sensor data. Location data can be recorded as <a class="reference external" href="http://wiki.gis.com/wiki/index.php/Decimal_degrees">latitude and longitude decimal values</a>. These capabilities expand the meaning of the data points and transfer helpful context to the end-users of the data.</p>
 <p>S3Model allows for well-defined <a class="reference external" href="https://www.testing.com/articles/laboratory-test-reference-ranges/">reference ranges</a> for ordered types such as decimals, integers, floats, and temporals.</p>
@@ -114,7 +117,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2009 - 2022, Timothy W. Cook.
-      <span class="lastupdated">Last updated on Jan 14, 2022.
+      <span class="lastupdated">Last updated on Feb 21, 2023.
       </span></p>
   </div>
 
