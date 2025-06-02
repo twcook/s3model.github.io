@@ -7,7 +7,7 @@ Shareable, Structured, Semantic Model (S3Model)
 Specifications
 ==============
 
-Release - 3.1.0
+Release - 4.0.0
 
 *Copyright 2009 - 2025 Timothy W. Cook - All Rights Reserved.*
 

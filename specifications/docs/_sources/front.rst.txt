@@ -4,7 +4,7 @@ S3Model Specifications Overview
 
 *Turning data into computable information*
 
-Release - 3.1.0
+Release - 4.0.0
 
 Copyright 2009 - 2025, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook/>`_ - All Rights Reserved.
 
