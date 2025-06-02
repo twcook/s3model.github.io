@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3Model.com - Coming Soon</title>
+    <style>
+        /* Basic Reset & Font */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #F4F6F8; /* Light Background */
+            color: #4A4A4A; /* Dark Text */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Header Section */
+        .header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .logo-container img {
+            height: 70px; /* Adjust as needed */
+            margin-right: 15px;
+        }
+
+        .logo-container .brand-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #4A4A4A; /* Dark Text from logo */
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            color: #3D6DB3; /* Primary Blue */
+            margin-top: 5px;
+        }
+
+        /* Main Content Section */
+        .main-content h1 {
+            font-size: 2.2em;
+            color: #3D6DB3; /* Primary Blue */
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .coming-soon {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #5DBB63; /* Accent Green */
+            margin-bottom: 30px;
+        }
+
+        /* Placeholder for Future Sections/Links */
+        .future-sections {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .future-sections h2 {
+            font-size: 1.4em;
+            color: #4A4A4A;
+            margin-bottom: 15px;
+        }
+
+        .future-sections ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .future-sections li {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            color: #4A4A4A;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto; /* Pushes footer to the bottom */
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="images/s3m_logo.png" alt="S3Model Logo">
+                <span class="brand-name">S3Model.com</span>
+            </div>
+            <p class="tagline">Shareable - Structured - Semantic</p>
+        </header>
+
+        <main class="main-content">
+            <h1>Pioneering the Future of Data Intelligence</h1>
+            <p>S3Model.com is dedicated to transforming how data is understood, validated, and utilized across all domains. We are building tools to create intelligent, interoperable data out of complexity.</p>
+            
+            <div class="coming-soon">
+                Our new platform, S3Model Studio, is Coming Soon!
+            </div>
+            
+            <p>Stay tuned for a revolutionary way to manage and leverage your data assets.</p>
+
+            <div class="future-sections">
+                <h2>Future Platform Features Will Include:</h2>
+                <ul>
+                    <li>Model Studio</li>
+                    <li>Training Resources</li>
+                    <li>Comprehensive Documentation</li>
+                    <li>User Accounts (Sign Up / Login)</li>
+                    <li>And much more...</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> S3Model.com. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple script to set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
