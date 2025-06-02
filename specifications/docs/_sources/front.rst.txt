@@ -6,7 +6,7 @@ S3Model Specifications Overview
 
 Release - 3.1.0
 
-Copyright 2009 - 2022, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook/>`_ - All Rights Reserved.
+Copyright 2009 - 2025, `Timothy W. Cook <https://www.linkedin.com/in/timothywaynecook/>`_ - All Rights Reserved.
 
 
 Acknowledgments
