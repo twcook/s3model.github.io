@@ -6,11 +6,11 @@
   xmlns:s3m="https://www.s3model.com/ns/s3m/"
   targetNamespace="https://www.s3model.com/ns/s3m/"> 
   <xs:annotation>
-    <xs:documentation xml:lang="en-us">This work is Copyright 2016 - 2023 Timothy W. Cook, All Rights Reserved. 
+    <xs:documentation xml:lang="en-us">This work is Copyright 2016 - 2025 Timothy W. Cook, All Rights Reserved. 
       This is the Shareable, Structured, Semantic Model (S3Model) reference model (RM) implementation in XML Schema. 
       The S3Model RM consists of the core datatypes and structures for domain concept models, called Data Models (DMs). 
       The DMs are composed of Model Components (MCs) that are expressed as constraints on the RM components. 
-      For the core semantics see the accompanying file s3model.owl. 
+      For the core semantics see the accompanying file s3model_4_0_0.owl. 
    </xs:documentation>
     <xs:appinfo>
       <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd">
@@ -53,10 +53,10 @@
         <xs:annotation>
           <xs:documentation xml:lang="en-us">Access Control Tag. If this is used it must contain a valid term from the Access Control System linked to by the containing Data Model.</xs:documentation>
           <xs:appinfo>
-            <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/label">
+            <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/act">
               <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType"/>
               <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-              <rdfs:label xml:lang="en-us">label</rdfs:label>
+              <rdfs:label xml:lang="en-us">act</rdfs:label>
               <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>              
               <rdfs:comment xml:lang="en-us">Access Control Tag. If this is used it must contain a valid term from the Access Control System linked to by the containing Data Model.</rdfs:comment>
             </rdf:Description>
@@ -161,7 +161,6 @@
         <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAny">
           <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>
           <s3m:isCMSOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType"/>
-          <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>                                           
         </rdf:Description>
       </xs:appinfo>
     </xs:annotation>
@@ -302,7 +301,7 @@
             <xs:annotation>
               <xs:documentation xml:lang="en-us">A required term, normally drawn from a vocabulary or ontology such as the OBO RO.</xs:documentation>
               <xs:appinfo>
-                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkTyperelation">
+                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType/relation">
                   <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType"/>
                   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                   <rdfs:label xml:lang="en-us">relation</rdfs:label>                  
@@ -316,7 +315,7 @@
             <xs:annotation>
               <xs:documentation xml:lang="en-us">A URI where the definition of the relation element term can be found. Normally points to an ontology such as the OBO RO http://purl.obolibrary.org/obo/ro.owl</xs:documentation>
               <xs:appinfo>
-                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkTyperelation-uri">
+                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType/relation-uri">
                   <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType"/>
                   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
                   <rdfs:label xml:lang="en-us">relation-uri</rdfs:label>                  
@@ -378,7 +377,7 @@
             <xs:annotation>
               <xs:documentation xml:lang="en-us">Optional indicator of the localised language in which this data-type is written. Used when the language used here is different from the enclosing Data Model.</xs:documentation>
               <xs:appinfo>
-                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringTypexdstring-language">
+                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType/xdstring-language">
                   <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType"/>
                   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
                   <rdfs:label xml:lang="en-us">xdstring-language</rdfs:label>                  
@@ -808,7 +807,7 @@
                 <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType/accuracy">
                   <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType"/>
                   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-                  <rdfs:label xml:lang="en-us">symbol</rdfs:label>                  
+                  <rdfs:label xml:lang="en-us">accuracy</rdfs:label>                  
                   <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>                  
                   <rdfs:comment xml:lang="en-us">Accuracy of the value in the magnitude attribute in the range 0% to (+/-)100%. A value of 0 means that the accuracy is unknown.</rdfs:comment>
                 </rdf:Description>
@@ -992,21 +991,21 @@
 
   <xs:complexType name="XdFloatType">
     <xs:annotation>
-      <xs:documentation xml:lang="en-us">Quantified type representing specific a value as a floating point (64 bit) number and optional units. This is a xsd:double.</xs:documentation>
+      <xs:documentation xml:lang="en-us">Quantified type representing specific a value as a floating point (32 bit) number and optional units. This is a xsd:float.</xs:documentation>
       <xs:appinfo>
         <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFloatType">
           <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/docs/4_0_0/s3model_4_0_0_xsd_Complex_Type_s3m_XdFloatType.html#XdFloatType"/>
           <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType"/>
           <rdfs:label xml:lang="en-us">XdFloatType</rdfs:label>
           <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMC"/>          
-          <rdfs:comment xml:lang="en-us">Quantified type representing specific a value as a floating point (64 bit) number and optional units. This is a xsd:double.</rdfs:comment>
+          <rdfs:comment xml:lang="en-us">Quantified type representing specific a value as a floating point (32 bit) number and optional units. This is a xsd:float.</rdfs:comment>
         </rdf:Description>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="s3m:XdQuantifiedType">
         <xs:sequence>
-          <xs:element maxOccurs="1" minOccurs="0" name="xdfloat-value" type="xs:double">
+          <xs:element maxOccurs="1" minOccurs="0" name="xdfloat-value" type="xs:float">
             <xs:annotation>
               <xs:documentation xml:lang="en-us">Float value. This type accepts several "special" values: positive zero (0), negative zero (-0) (which is greater than positive 0 but less than any negative value), infinity (INF) (which is greater than any value), negative infinity (-INF) (which is less than any float, and "not a number" (NaN)</xs:documentation>
               <xs:appinfo>
@@ -1044,6 +1043,66 @@
         <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFloat">
           <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>
           <s3m:isCMSOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFloatType"/>
+          <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>                                           
+        </rdf:Description>
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="XdDoubleType">
+    <xs:annotation>
+      <xs:documentation xml:lang="en-us">Quantified type representing specific a value as a 64 bit number and optional units. This is a xsd:double.</xs:documentation>
+      <xs:appinfo>
+        <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType">
+          <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/docs/4_0_0/s3model_4_0_0_xsd_Complex_Type_s3m_XdDoubleType.html#XdDoubleType"/>
+          <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType"/>
+          <rdfs:label xml:lang="en-us">XdDoubleType</rdfs:label>
+          <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMC"/>          
+          <rdfs:comment xml:lang="en-us">Quantified type representing specific a value as a 64 bit number and optional units. This is a xsd:double.</rdfs:comment>
+        </rdf:Description>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="s3m:XdQuantifiedType">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="xddouble-value" type="xs:double">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">Double value. This type accepts several "special" values: positive zero (0), negative zero (-0) (which is greater than positive 0 but less than any negative value), infinity (INF) (which is greater than any value), negative infinity (-INF) (which is less than any float, and "not a number" (NaN)</xs:documentation>
+              <xs:appinfo>
+                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType/xddouble-value">
+                  <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType"/>
+                  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                  <rdfs:label xml:lang="en-us">xddouble-value</rdfs:label>                  
+                  <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>                  
+                  <rdfs:comment xml:lang="en-us">Double value.</rdfs:comment>
+                </rdf:Description>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="xddouble-units" type="s3m:XdStringType">
+            <xs:annotation>
+              <xs:documentation xml:lang="en-us">The name or type of the value. May or may not come from a standardized vocabulary.</xs:documentation>
+              <xs:appinfo>
+                <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType/xddouble-units">
+                  <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType"/>
+                  <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType"/>
+                  <rdfs:label xml:lang="en-us">xddouble-units</rdfs:label>                  
+                  <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType"/>                  
+                  <rdfs:comment xml:lang="en-us">The name or type of the double value. May or may not come from a standardized vocabulary.</rdfs:comment>
+                </rdf:Description>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XdDouble" substitutionGroup="s3m:XdAny" type="s3m:XdDoubleType">
+    <xs:annotation>
+      <xs:appinfo>
+        <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDouble">
+          <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>
+          <s3m:isCMSOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType"/>
           <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>                                           
         </rdf:Description>
       </xs:appinfo>
@@ -1172,7 +1231,7 @@
                   <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType"/>
                   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
                   <rdfs:label xml:lang="en-us">xdtemporal-month-day</rdfs:label>                  
-                  <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#gMpnthDay"/>                  
+                  <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#gMonthDay"/>                  
                   <rdfs:comment xml:lang="en-us">Represents whole calendar days that recur at the same point in each calendar year, or that occur in some arbitrary calendar year. (Obviously, days beyond 28 cannot occur in all Februaries; 29 is nonetheless permitted.)</rdfs:comment>
                 </rdf:Description>
               </xs:appinfo>
@@ -1212,6 +1271,30 @@
       </xs:appinfo>
     </xs:annotation>
   </xs:element>
+
+<xs:complexType name="InvlType">
+  <xs:annotation>
+    <xs:documentation xml:lang="en-us">In the DM, the modeler creates two restrictions on this complexType. One for the 'lower' value and one for the 'upper' value. Both restrictions will have the same element choice and the value is 'fixed' on each representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the xsi:nil='true' attribute. maxOccurs and minOccurs must be set to 1, in the parent CMC.</xs:documentation>
+    <xs:appinfo>
+      <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlType">
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/docs/4_0_0/s3model_4_0_0_xsd_Complex_Type_s3m_InvlTypehtml#InvlType"/>
+        <rdfs:label xml:lang="en-us">InvlType</rdfs:label>
+        <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMC"/>
+        <rdfs:comment xml:lang="en-us">In the data model, the modeler creates two restrictions on this complexType. One for the 'lower' value and one for the 'upper' value. Both restrictions will have the same element choice and the value is 'fixed' on each representing the lower and upper value range boundary. The value may be set to NULL (unbounded) by using the xsi:nil='true' attribute. maxOccurs and minOccurs must be set to 1, in the parent CMC.</rdfs:comment>
+      </rdf:Description>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:choice maxOccurs="1" minOccurs="1">
+    <xs:element name="invl-int" type="xs:integer" nillable="true"/>
+    <xs:element name="invl-decimal" type="xs:decimal" nillable="true"/>
+    <xs:element name="invl-float" type="xs:float" nillable="true"/>
+    <xs:element name="invl-double" type="xs:double" nillable="true"/>
+    <xs:element name="invl-date" type="xs:date" nillable="true"/>
+    <xs:element name="invl-time" type="xs:time" nillable="true"/>
+    <xs:element name="invl-dateTime" type="xs:dateTime" nillable="true"/>
+    <xs:element name="invl-duration" type="xs:duration" nillable="true"/>
+  </xs:choice>
+</xs:complexType>
 
   <xs:complexType name="XdIntervalType">
     <xs:annotation>
@@ -1321,9 +1404,9 @@
               <xs:appinfo>
                 <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/interval-units">
                   <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType"/>
-                  <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#IntervalUnits"/>
+                  <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits"/>
                   <rdfs:label xml:lang="en-us">interval-units</rdfs:label>                  
-                  <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#IntervalUnits"/>                  
+                  <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits"/>                  
                   <rdfs:comment xml:lang="en-us">Defines an optional units for this Interval.</rdfs:comment>
                 </rdf:Description>
               </xs:appinfo>
@@ -1367,6 +1450,8 @@
             <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits/units-name">
               <rdfs:label xml:lang="en-us">units-name</rdfs:label>                  
               <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>                  
+                  <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits"/>
+                  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
               <rdfs:comment xml:lang="en-us">A string representing the units of the interval.</rdfs:comment>
             </rdf:Description>
           </xs:appinfo>
@@ -1377,8 +1462,10 @@
           <xs:documentation xml:lang="en-us">A URI to the definition of the units value.</xs:documentation>
           <xs:appinfo>
             <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits/units-uri">
-              <rdfs:label xml:lang="en-us">units-name</rdfs:label>                  
+              <rdfs:label xml:lang="en-us">units-uri</rdfs:label>                  
               <rdf:type rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>                  
+                  <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits"/>
+                  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
               <rdfs:comment xml:lang="en-us">A URI to the definition of the units value.</rdfs:comment>
             </rdf:Description>
           </xs:appinfo>
@@ -1526,7 +1613,7 @@
               <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType"/>
               <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType"/>
               <rdfs:label xml:lang="en-us">location</rdfs:label>                  
-              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdClusterType"/>                  
+              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType"/>                  
               <rdfs:comment xml:lang="en-us">Location information of the particular site/facility within an organisation which handled the item.</rdfs:comment>
             </rdf:Description>
           </xs:appinfo>
@@ -1625,7 +1712,7 @@
               <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PartyType"/>
               <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType"/>
               <rdfs:label xml:lang="en-us">party-details</rdfs:label>                  
-              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdClusterType"/>                  
+              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType"/>                  
               <rdfs:comment xml:lang="en-us">A structured element for details about the party.</rdfs:comment>
             </rdf:Description>
           </xs:appinfo>
@@ -1890,7 +1977,7 @@
       <xs:appinfo>
         <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValueType">
           <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/docs/4_0_0/s3model_4_0_0_xsd_Complex_Type_s3m_ExceptionalValueType.html#ExceptionalValueType"/>
-          <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model/Exception"/>
+          <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model/ExceptionalValueType"/>
           <rdfs:label xml:lang="en-us">ExceptionalValueType</rdfs:label>
           <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMC"/>                    
           <rdfs:comment xml:lang="en-us">Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range. The element ev-name is fixed in restricted types to a descriptive string. The subtypes defined in the reference model are considered sufficiently generic to be
@@ -2038,9 +2125,9 @@
         <xs:annotation>
           <xs:documentation xml:lang="en-us">Derived : An actual value may exist, but it must be derived from the provided information; usually an expression is provided directly.</xs:documentation>
           <xs:appinfo>
-            <rdf:Description rdf:about="DERType">
+            <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DERType">
               <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/docs/4_0_0/s3model_4_0_0_xsd_Complex_Type_s3m_DERType.html#DERType"/>
-              <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValue"/>
+              <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValueType"/>
               <rdfs:label xml:lang="en-us">DERType</rdfs:label>
               <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMC"/>                        
               <rdfs:comment xml:lang="en-us">Derived : An actual value may exist, but it must be derived from the provided information; usually an expression is provided directly.</rdfs:comment>
@@ -2058,8 +2145,8 @@
     <xs:annotation>
       <xs:appinfo>
         <rdf:Description rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DER">
-          <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValue"/>
-          <s3m:isCMSOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DERType"/>
+          <rdfs:subClassOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValueType"/>
+          <s3m:isCMSOf rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DER"/>
           <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model/CMS"/>                                           
         </rdf:Description>
       </xs:appinfo>
@@ -2795,7 +2882,7 @@
               <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType"/>
               <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType"/>
               <rdfs:label xml:lang="en-us">audits</rdfs:label>                  
-              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAuditType"/>                  
+              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType"/>                  
               <rdfs:comment xml:lang="en-us">List of audits from the system of original commit of information forming the content, or from a conversion gateway which has processed this data.</rdfs:comment>
             </rdf:Description>
           </xs:appinfo>
@@ -2809,7 +2896,7 @@
               <rdfs:domain rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType"/>
               <rdfs:range rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType"/>
               <rdfs:label xml:lang="en-us">attestation</rdfs:label>                  
-              <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAttestationType"/>                  
+          <rdf:type rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType"/>                  
               <rdfs:comment xml:lang="en-us">Attestation record of an instance of data.</rdfs:comment>
             </rdf:Description>
           </xs:appinfo>

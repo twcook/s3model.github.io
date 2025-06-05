@@ -1,0 +1,1138 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:s3m="https://www.s3model.com/ns/s3m/"
+         xml:base="https://www.s3model.com/ns/s3m/">
+
+    <owl:Ontology rdf:about="https://www.s3model.com/ns/s3m/s3model_4_0_0.owl">
+        <owl:versionIRI rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.owl"/>
+        <owl:versionInfo xml:lang="en">4.0.0</owl:versionInfo>
+        <rdfs:label xml:lang="en">S3Model OWL Ontology - Release 4.0.0</rdfs:label>
+        <rdfs:comment xml:lang="en">Canonical OWL representation of the S3Model (Shareable, Structured, Semantic Model) Reference Model version 4.0.0, corresponding to s3model_4_0_0.xsd.</rdfs:comment>
+        <dc:title xml:lang="en">S3Model OWL Ontology - Release 4.0.0</dc:title>
+        <dc:creator xml:lang="en">Timothy W. Cook</dc:creator>
+        <dc:rights xml:lang="en">Copyright 2016 - 2025 Timothy W. Cook, All Rights Reserved.</dc:rights>
+        <dc:source rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/docs/4_0_0/index.html/"/>
+    </owl:Ontology>
+
+    <owl:Class rdf:about="XdAnyType">
+        <rdfs:label xml:lang="en">XdAnyType</rdfs:label>
+        <rdfs:comment xml:lang="en">Serves as the common ancestor of all eXtended data-types (Xd*) in S3Model. This class is declared abstract in the XSD, meaning it's intended to be specialized by other types rather than directly instantiated in its abstract form.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasLabel">
+        <rdfs:label xml:lang="en">has label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive name of this datatype model. Provides the semantic 'name' for the model. Replaces what would be a global XML element name or class name in conventional modeling.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasAccessControlTag">
+        <rdfs:label xml:lang="en">has access control tag</rdfs:label>
+        <rdfs:comment xml:lang="en">Access Control Tag. If this is used it must contain a valid term from the Access Control System linked to by the containing Data Model.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/act"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasExceptionalValue">
+        <rdfs:label xml:lang="en">has exceptional value</rdfs:label>
+        <rdfs:comment xml:lang="en">In an invalid instance, the application can indicate here why data is missing or invalid.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="ExceptionalValueType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValue"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="hasValidTimeBegin">
+        <rdfs:label xml:lang="en">has valid time begin</rdfs:label>
+        <rdfs:comment xml:lang="en">Valid Time Begin. If present this must be a valid datetime including timezone. It is used to indicate the beginning time that information is considered valid.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/vtb"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasValidTimeEnd">
+        <rdfs:label xml:lang="en">has valid time end</rdfs:label>
+        <rdfs:comment xml:lang="en">Valid Time End. If present this must be a valid date-time including timezone. It is used to indicate the ending time that information is considered valid or the time the information expired or will expire.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/vte"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTimeRecorded">
+        <rdfs:label xml:lang="en">has time recorded</rdfs:label>
+        <rdfs:comment xml:lang="en">Time Recorded. If present this must be a valid date-time. It is used to indicate the actual date and time the data was recorded.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/tr"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTimeModified">
+        <rdfs:label xml:lang="en">has time modified</rdfs:label>
+        <rdfs:comment xml:lang="en">Time Modified. If present this must be a valid date-time stamp. It is used to indicate the actual date and time the data was last changed.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/modified"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasLatitude">
+        <rdfs:label xml:lang="en">has latitude</rdfs:label>
+        <rdfs:comment xml:lang="en">Latitude in decimal format. Value range -90.000000 to 90.000000.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/latitude"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasLongitude">
+        <rdfs:label xml:lang="en">has longitude</rdfs:label>
+        <rdfs:comment xml:lang="en">Longitude in decimal format. Value range -180.000000 to 180.000000.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAnyType"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAnyType/longitude"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdBooleanType">
+        <rdfs:label xml:lang="en">XdBooleanType</rdfs:label>
+        <rdfs:comment xml:lang="en">An enumerated type which represents boolean decisions, such as true/false or yes/no answers. It extends XdAnyType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdBooleanType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasTrueValue">
+        <rdfs:label xml:lang="en">has true value</rdfs:label>
+        <rdfs:comment xml:lang="en">A string that represents a boolean True in the implementation. These are constrained by a set of enumerations in the CM.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdBooleanType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdBooleanType/true-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFalseValue">
+        <rdfs:label xml:lang="en">has false value</rdfs:label>
+        <rdfs:comment xml:lang="en">A string that represents a boolean False in the implementation. These are constrained by a set of enumerations in the CM.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdBooleanType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdBooleanType/false-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdStringType">
+        <rdfs:label xml:lang="en">XdStringType</rdfs:label>
+        <rdfs:comment xml:lang="en">A type representing a string of characters. It extends XdAnyType and typically holds a single string value.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasStringLanguage">
+        <rdfs:label xml:lang="en">has string language</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional indicator of the localised language in which this data-type is written. Used when the language used here is different from the enclosing Data Model. Corresponds to the 'xdstring-language' element in XdStringType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdStringType"/>
+        <rdfs:range rdf:resource="xsd:language"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType/xdstring-language"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasStringValue">
+        <rdfs:label xml:lang="en">has string value</rdfs:label>
+        <rdfs:comment xml:lang="en">The actual string content for an instance of XdStringType. This corresponds to the 'value' element within XdStringType in the S3Model XSD.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdStringType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdStringType/xdstring-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdLinkType">
+        <rdfs:label xml:lang="en">XdLinkType</rdfs:label>
+        <rdfs:comment xml:lang="en">Used to specify a Universal Resource Identifier and the nature of the link. It extends XdAnyType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasLinkValue">
+        <rdfs:label xml:lang="en">has link value</rdfs:label>
+        <rdfs:comment xml:lang="en">A dereferenceable (or not) URL to another CMC or other model-like entity. Corresponds to the 'link' element in XdLinkType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdLinkType"/>
+        <rdfs:range rdf:resource="xsd:anyURI"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType/link"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasRelation">
+        <rdfs:label xml:lang="en">has relation</rdfs:label>
+        <rdfs:comment xml:lang="en">A required term, normally drawn from a vocabulary or ontology, describing the nature of the link. Corresponds to the 'relation' element in XdLinkType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdLinkType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType/relation"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasRelationUri">
+        <rdfs:label xml:lang="en">has relation URI</rdfs:label>
+        <rdfs:comment xml:lang="en">A URI where the definition of the relation term can be found. Corresponds to the 'relation-uri' element in XdLinkType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdLinkType"/>
+        <rdfs:range rdf:resource="xsd:anyURI"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdLinkType/relation-uri"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdFileType">
+        <rdfs:label xml:lang="en">XdFileType</rdfs:label>
+        <rdfs:comment xml:lang="en">A type to use for encapsulated content (aka. files) for image, audio and other media types with a defined MIME type. It extends XdAnyType and provides a choice of embedding the content or using a URL.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasFileSize">
+        <rdfs:label xml:lang="en">has file size</rdfs:label>
+        <rdfs:comment xml:lang="en">Original size in bytes of unencoded encapsulated data. Corresponds to the 'size' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/size"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileEncoding">
+        <rdfs:label xml:lang="en">has file encoding</rdfs:label>
+        <rdfs:comment xml:lang="en">Name of character encoding scheme in which this value is encoded. Corresponds to the 'encoding' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/encoding"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileLanguage">
+        <rdfs:label xml:lang="en">has file language</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional indicator of the localised language of the content. Corresponds to the 'xdfile-language' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:language"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/xdfile-language"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileFormalism">
+        <rdfs:label xml:lang="en">has file formalism</rdfs:label>
+        <rdfs:comment xml:lang="en">Name of the formalism or syntax used to inform an application regarding a candidate parser to use on the content. Corresponds to the 'formalism' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/formalism"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileMediaType">
+        <rdfs:label xml:lang="en">has file media type</rdfs:label>
+        <rdfs:comment xml:lang="en">Media (MIME) type of the original media-content. Corresponds to the 'media-type' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/media-type"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileCompressionType">
+        <rdfs:label xml:lang="en">has file compression type</rdfs:label>
+        <rdfs:comment xml:lang="en">Compression/archiving mime-type. Corresponds to the 'compression-type' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/compression-type"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileHashResult">
+        <rdfs:label xml:lang="en">has file hash result</rdfs:label>
+        <rdfs:comment xml:lang="en">Hash function result of the 'media-content'. Corresponds to the 'hash-result' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/hash-result"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileHashFunction">
+        <rdfs:label xml:lang="en">has file hash function</rdfs:label>
+        <rdfs:comment xml:lang="en">Hash function used to compute hash-result. Corresponds to the 'hash-function' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/hash-function"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileAltText">
+        <rdfs:label xml:lang="en">has file alt text</rdfs:label>
+        <rdfs:comment xml:lang="en">Text to display in lieu of multimedia display or execution. Corresponds to the 'alt-txt' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/alt-txt"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasFileURI">
+        <rdfs:label xml:lang="en">has file URI</rdfs:label>
+        <rdfs:comment xml:lang="en">URI reference to electronic information stored outside the record. Corresponds to the 'uri' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:anyURI"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/uri"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasMediaContent">
+        <rdfs:label xml:lang="en">has media content</rdfs:label>
+        <rdfs:comment xml:lang="en">The content, if stored locally (typically base64 encoded). Corresponds to the 'media-content' element in XdFileType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFileType"/>
+        <rdfs:range rdf:resource="xsd:base64Binary"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFileType/media-content"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdOrderedType">
+        <rdfs:label xml:lang="en">XdOrderedType</rdfs:label>
+        <rdfs:comment xml:lang="en">Abstract type defining the concept of ordered values, which includes ordinals as well as true quantities. It extends XdAnyType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdOrderedType"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="hasReferenceRange">
+        <rdfs:label xml:lang="en">has reference range</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional list of ReferenceRanges for this value in its particular measurement context. Corresponds to the 'ReferenceRange' element in XdOrderedType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdOrderedType"/>
+        <rdfs:range rdf:resource="ReferenceRangeType"/> 
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdOrderedType/range"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="hasNormalStatus">
+        <rdfs:label xml:lang="en">has normal status</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional normal status indicator of value with respect to normal range for this value. Corresponds to the 'normal-status' element in XdOrderedType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdOrderedType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdOrderedType/normal-status"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdOrdinalType">
+        <rdfs:label xml:lang="en">XdOrdinalType</rdfs:label>
+        <rdfs:comment xml:lang="en">Models rankings and scores where there is implied ordering but no implication that the distance between each value is constant. It extends XdOrderedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdOrderedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdOrdinalType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasOrdinalValue">
+        <rdfs:label xml:lang="en">has ordinal value</rdfs:label>
+        <rdfs:comment xml:lang="en">The decimal value representing the position in the ordered enumeration. Corresponds to the 'ordinal' element in XdOrdinalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdOrdinalType"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdOrdinalType/ordinal"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasOrdinalSymbol">
+        <rdfs:label xml:lang="en">has ordinal symbol</rdfs:label>
+        <rdfs:comment xml:lang="en">The coded textual representation of the value in the enumeration. Corresponds to the 'symbol' element in XdOrdinalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdOrdinalType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdOrdinalType/symbol"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdQuantifiedType">
+        <rdfs:label xml:lang="en">XdQuantifiedType</rdfs:label>
+        <rdfs:comment xml:lang="en">Abstract type defining the concept of true quantified values, i.e. values which are not only ordered, but which have a precise magnitude. It extends XdOrderedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdOrderedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasMagnitudeStatus">
+        <rdfs:label xml:lang="en">has magnitude status</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional status of magnitude. Corresponds to the 'magnitude-status' element in XdQuantifiedType. The allowed values are defined in the MagnitudeStatus simple type in the XSD: equal, less_than, greater_than, less_than_or_equal, greater_than_or_equal, approximate.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdQuantifiedType"/>
+        <rdfs:range rdf:resource="xsd:string"/> 
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType/magnitude-status"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasError">
+        <rdfs:label xml:lang="en">has error</rdfs:label>
+        <rdfs:comment xml:lang="en">Error margin of measurement, indicating error in the recording method or instrument (+/- %). A logical value of 0 indicates 100% accuracy, i.e. no error. Corresponds to the 'error' element in XdQuantifiedType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdQuantifiedType"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType/error"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasAccuracy">
+        <rdfs:label xml:lang="en">has accuracy</rdfs:label>
+        <rdfs:comment xml:lang="en">Accuracy of the value in the magnitude attribute in the range 0% to (+/-)100%. A value of 0 means that the accuracy is unknown. Corresponds to the 'accuracy' element in XdQuantifiedType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdQuantifiedType"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantifiedType/accuracy"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="MagnitudeStatus">
+        <rdfs:label xml:lang="en">MagnitudeStatus</rdfs:label>
+        <rdfs:comment xml:lang="en">Provides a general indication of the accuracy of the magnitude expressed in the XdQuantified subtypes. Should be used to inform users and not for decision support uses.
+            Allowed values (from XSD enumeration):
+            - equal: magnitude is a point value
+            - less_than: value is less than the magnitude
+            - greater_than: value is greater than the magnitude
+            - less_than_or_equal: value is less than or equal to the magnitude
+            - greater_than_or_equal: value is greater than or equal to the magnitude
+            - approximate: value is the approximately the magnitude
+        </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#MagnitudeStatus"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="XdCountType">
+        <rdfs:label xml:lang="en">XdCountType</rdfs:label>
+        <rdfs:comment xml:lang="en">Countable quantities. Used for countable types such as pregnancies and steps. It extends XdQuantifiedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdQuantifiedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdCountType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasCountValue">
+        <rdfs:label xml:lang="en">has count value</rdfs:label>
+        <rdfs:comment xml:lang="en">Integer value of the counted items. Corresponds to the 'xdcount-value' element in XdCountType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdCountType"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdCountType/xdcount-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasCountUnits">
+        <rdfs:label xml:lang="en">has count units</rdfs:label>
+        <rdfs:comment xml:lang="en">The name or type of the items counted. Examples are cigarettes, drinks, pregnancies, episodes, widgets, etc. May or may not come from a standard terminology. Corresponds to the 'xdcount-units' element in XdCountType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdCountType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdCountType/xdcount-units"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="XdQuantityType">
+        <rdfs:label xml:lang="en">XdQuantityType</rdfs:label>
+        <rdfs:comment xml:lang="en">Quantified type representing specific quantities, i.e. quantities expressed as a magnitude and units. It extends XdQuantifiedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdQuantifiedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantityType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasQuantityValue">
+        <rdfs:label xml:lang="en">has quantity value</rdfs:label>
+        <rdfs:comment xml:lang="en">Numeric decimal value of the quantity. Corresponds to the 'xdquantity-value' element in XdQuantityType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdQuantityType"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantityType/xdquantity-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasQuantityUnits">
+        <rdfs:label xml:lang="en">has quantity units</rdfs:label>
+        <rdfs:comment xml:lang="en">The name or type of the quantity. Examples are 'kg', 'mmHg'. Should come from a standard terminology. Corresponds to the 'xdquantity-units' element in XdQuantityType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdQuantityType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdQuantityType/xdquantity-units"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="XdFloatType">
+        <rdfs:label xml:lang="en">XdFloatType</rdfs:label>
+        <rdfs:comment xml:lang="en">Quantified type representing a specific value as a floating point (32 bit) number and optional units. This corresponds to an xsd:float. It extends XdQuantifiedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdQuantifiedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFloatType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasFloatValue">
+        <rdfs:label xml:lang="en">has float value</rdfs:label>
+        <rdfs:comment xml:lang="en">Float value. This type accepts several "special" values: positive zero (0), negative zero (-0), infinity (INF), negative infinity (-INF), and "not a number" (NaN). Corresponds to the 'xdfloat-value' element in XdFloatType (xsd:float).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFloatType"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFloatType/xdfloat-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasFloatUnits">
+        <rdfs:label xml:lang="en">has float units</rdfs:label>
+        <rdfs:comment xml:lang="en">The name or type of the float value. May or may not come from a standardized vocabulary. Corresponds to the 'xdfloat-units' element in XdFloatType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdFloatType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdFloatType/xdfloat-units"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="XdDoubleType">
+        <rdfs:label xml:lang="en">XdDoubleType</rdfs:label>
+        <rdfs:comment xml:lang="en">Quantified type representing a specific value as a 64 bit floating point number and optional units. This corresponds to an xsd:double. It extends XdQuantifiedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdQuantifiedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasDoubleValue">
+        <rdfs:label xml:lang="en">has double value</rdfs:label>
+        <rdfs:comment xml:lang="en">Double value. This type accepts several "special" values: positive zero (0), negative zero (-0), infinity (INF), negative infinity (-INF), and "not a number" (NaN). Corresponds to the 'xddouble-value' element in XdDoubleType (xsd:double).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdDoubleType"/>
+        <rdfs:range rdf:resource="xsd:double"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType/xddouble-value"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasDoubleUnits">
+        <rdfs:label xml:lang="en">has double units</rdfs:label>
+        <rdfs:comment xml:lang="en">The name or type of the double value. May or may not come from a standardized vocabulary. Corresponds to the 'xddouble-units' element in XdDoubleType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdDoubleType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdDoubleType/xddouble-units"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="XdTemporalType">
+        <rdfs:label xml:lang="en">XdTemporalType</rdfs:label>
+        <rdfs:comment xml:lang="en">Type defining the concept of date and time types. Must be constrained in Data Models to be one or more of the specific temporal elements. It extends XdOrderedType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdOrderedType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalDate">
+        <rdfs:label xml:lang="en">has temporal date</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a calendar date. Corresponds to the 'xdtemporal-date' element in XdTemporalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:date"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-date"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalTime">
+        <rdfs:label xml:lang="en">has temporal time</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a time of day. Corresponds to the 'xdtemporal-time' element in XdTemporalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:time"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-time"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalDateTime">
+        <rdfs:label xml:lang="en">has temporal date time</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a specific instant in time, including date and time. Corresponds to the 'xdtemporal-datetime' element in XdTemporalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-datetime"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalDay">
+        <rdfs:label xml:lang="en">has temporal day</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a day of the month (e.g., the 15th day). Corresponds to the 'xdtemporal-day' element in XdTemporalType (xsd:gDay).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:gDay"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-day"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalMonth">
+        <rdfs:label xml:lang="en">has temporal month</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a month of the year (e.g., November). Corresponds to the 'xdtemporal-month' element in XdTemporalType (xsd:gMonth).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:gMonth"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-month"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalYear">
+        <rdfs:label xml:lang="en">has temporal year</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a calendar year. Corresponds to the 'xdtemporal-year' element in XdTemporalType (xsd:gYear).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:gYear"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-year"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalYearMonth">
+        <rdfs:label xml:lang="en">has temporal year month</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a specific month in a specific year (e.g., November 2023). Corresponds to the 'xdtemporal-year-month' element in XdTemporalType (xsd:gYearMonth).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:gYearMonth"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-year-month"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalMonthDay">
+        <rdfs:label xml:lang="en">has temporal month day</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a specific day in a specific month, recurring each year (e.g., November 15th). Corresponds to the 'xdtemporal-month-day' element in XdTemporalType (xsd:gMonthDay).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:gMonthDay"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-month-day"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasTemporalDuration">
+        <rdfs:label xml:lang="en">has temporal duration</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents a duration of time. Corresponds to the 'xdtemporal-duration' element in XdTemporalType (xsd:duration).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdTemporalType"/>
+        <rdfs:range rdf:resource="xsd:duration"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdTemporalType/xdtemporal-duration"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasUnitsName">
+        <rdfs:label xml:lang="en">has units name</rdfs:label>
+        <rdfs:comment xml:lang="en">A string representing the units of the interval. Corresponds to the 'units-name' element in InvlUnitsType.</rdfs:comment>
+        <rdfs:domain rdf:resource="InvlUnitsType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits/units-name"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasUnitsUri">
+        <rdfs:label xml:lang="en">has units URI</rdfs:label>
+        <rdfs:comment xml:lang="en">A URI to the definition of the units value. Corresponds to the 'units-uri' element in InvlUnitsType.</rdfs:comment>
+        <rdfs:domain rdf:resource="InvlUnitsType"/>
+        <rdfs:range rdf:resource="xsd:anyURI"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits/units-uri"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="XdIntervalType">
+        <rdfs:label xml:lang="en">XdIntervalType</rdfs:label>
+        <rdfs:comment xml:lang="en">Generic type defining an interval (i.e. range) of comparable types. An interval is a contiguous subrange of a comparable base type. It extends XdAnyType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasLowerBoundValue">
+        <rdfs:label xml:lang="en">has lower bound value</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the lower value of the interval. The specific datatype is defined in the model instance (DM). Corresponds to the 'lower' element in XdIntervalType. XSD type is xs:anyType, with appinfo suggesting structure from s3m:InvlType (defined in the XSD).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="rdfs:Literal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/lower"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasUpperBoundValue">
+        <rdfs:label xml:lang="en">has upper bound value</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines the upper value of the interval. The specific datatype is defined in the model instance (DM). Corresponds to the 'upper' element in XdIntervalType. XSD type is xs:anyType, with appinfo suggesting structure from s3m:InvlType (defined in the XSD).</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="rdfs:Literal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/upper"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="isLowerBoundIncluded">
+        <rdfs:label xml:lang="en">is lower bound included</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates if the lower value of the interval is inclusive. Corresponds to the 'lower-included' element in XdIntervalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/lower-included"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="isUpperBoundIncluded">
+        <rdfs:label xml:lang="en">is upper bound included</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates if the upper value of the interval is inclusive. Corresponds to the 'upper-included' element in XdIntervalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/upper-included"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="isLowerBounded">
+        <rdfs:label xml:lang="en">is lower bounded</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates if the lower value of the interval is bounded (i.e., not open towards negative infinity). Corresponds to the 'lower-bounded' element in XdIntervalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/lower-bounded"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="isUpperBounded">
+        <rdfs:label xml:lang="en">is upper bounded</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates if the upper value of the interval is bounded (i.e., not open towards positive infinity). Corresponds to the 'upper-bounded' element in XdIntervalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/upper-bounded"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasIntervalUnits">
+        <rdfs:label xml:lang="en">has interval units</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines an optional units for this Interval. Corresponds to the 'interval-units' element in XdIntervalType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdIntervalType"/>
+        <rdfs:range rdf:resource="InvlUnitsType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdIntervalType/interval-units"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="ReferenceRangeType">
+        <rdfs:label xml:lang="en">ReferenceRangeType</rdfs:label>
+        <rdfs:comment xml:lang="en">Defines a named range to be associated with any ORDERED datatype. Each such range is sensitive to the context. It extends XdAnyType.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ReferenceRangeType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasRangeDefinition">
+        <rdfs:label xml:lang="en">has range definition</rdfs:label>
+        <rdfs:comment xml:lang="en">Term whose value indicates the meaning of this range, e.g. 'normal', 'critical', 'therapeutic' etc. Corresponds to the 'definition' element in ReferenceRangeType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ReferenceRangeType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ReferenceRangeType/definition"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasRangeInterval">
+        <rdfs:label xml:lang="en">has range interval</rdfs:label>
+        <rdfs:comment xml:lang="en">The data range for this reference range. Corresponds to the 'interval' element in ReferenceRangeType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ReferenceRangeType"/>
+        <rdfs:range rdf:resource="XdIntervalType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ReferenceRangeType/interval"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="isNormalRange">
+        <rdfs:label xml:lang="en">is normal range</rdfs:label>
+        <rdfs:comment xml:lang="en">True if this reference range defines values that are considered to be normal in the context of the value in the definition element. Corresponds to the 'is-normal' element in ReferenceRangeType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ReferenceRangeType"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ReferenceRangeType/is-normal"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="AuditType">
+        <rdfs:label xml:lang="en">AuditType</rdfs:label>
+        <rdfs:comment xml:lang="en">AuditType provides a mechanism to identify the who/where/when tracking of instances as they move from system to system. Corresponds to the s3m:AuditType complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasAuditLabel">
+        <rdfs:label xml:lang="en">has audit label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive name of this datatype model. Provides the semantic 'name' for the model. Replaces what would be XML element name or class name in conventional modeling. Corresponds to the 'label' element in AuditType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AuditType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasSystemId">
+        <rdfs:label xml:lang="en">has system ID</rdfs:label>
+        <rdfs:comment xml:lang="en">Identifier of systems which created or handled the information item. 'Systems' can also be defined as an individual application or a data repository in which the data was manipulated. Corresponds to the 'system-id' element in AuditType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AuditType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType/system-id"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasSystemUser">
+        <rdfs:label xml:lang="en">has system user</rdfs:label>
+        <rdfs:comment xml:lang="en">User(s) who created, committed, forwarded or otherwise handled the item. Corresponds to the 'system-user' element in AuditType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AuditType"/>
+        <rdfs:range rdf:resource="PartyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType/system-user"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasAuditLocation">
+        <rdfs:label xml:lang="en">has audit location</rdfs:label>
+        <rdfs:comment xml:lang="en">Location information of the particular site/facility within an organisation which handled the item. Corresponds to the 'location' element in AuditType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AuditType"/>
+        <rdfs:range rdf:resource="ClusterType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType/location"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="hasAuditTimestamp">
+        <rdfs:label xml:lang="en">has audit timestamp</rdfs:label>
+        <rdfs:comment xml:lang="en">Timestamp of handling the item. Corresponds to the 'timestamp' element in AuditType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AuditType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AuditType/timestamp"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="PartyType">
+        <rdfs:label xml:lang="en">PartyType</rdfs:label>
+        <rdfs:comment xml:lang="en">Description of a party, including an optional external link to data for this party in a demographic or other identity management system. Corresponds to the s3m:PartyType complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PartyType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasPartyLabel">
+        <rdfs:label xml:lang="en">has party label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive name of this datatype model. Provides the semantic 'name' for the model. Replaces what would be XML element name or class name in conventional modeling. Corresponds to the 'label' element in PartyType.</rdfs:comment>
+        <rdfs:domain rdf:resource="PartyType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PartyType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasPartyName">
+        <rdfs:label xml:lang="en">has party name</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional human-readable name (in String form). Corresponds to the 'party-name' element in PartyType.</rdfs:comment>
+        <rdfs:domain rdf:resource="PartyType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PartyType/party-name"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasPartyRef">
+        <rdfs:label xml:lang="en">has party reference</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional reference to more detailed demographic or identification information for this party, in an external system. Corresponds to the 'party-ref' element in PartyType.</rdfs:comment>
+        <rdfs:domain rdf:resource="PartyType"/>
+        <rdfs:range rdf:resource="XdLinkType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PartyType/party-ref"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasPartyDetails">
+        <rdfs:label xml:lang="en">has party details</rdfs:label>
+        <rdfs:comment xml:lang="en">A structured element for details about the party. Corresponds to the 'party-details' element in PartyType.</rdfs:comment>
+        <rdfs:domain rdf:resource="PartyType"/>
+        <rdfs:range rdf:resource="ClusterType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PartyType/party-details"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="AttestationType">
+        <rdfs:label xml:lang="en">AttestationType</rdfs:label>
+        <rdfs:comment xml:lang="en">Record an attestation by a party of the DM content. The type of attestation is recorded by the reason attribute, which my be coded. Corresponds to the s3m:AttestationType complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasAttestationLabel">
+        <rdfs:label xml:lang="en">has attestation label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive name of this datatype model. Provides the semantic 'name' for the model. Replaces what would be XML element name or class name in conventional modeling. Corresponds to the 'label' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasAttestationView">
+        <rdfs:label xml:lang="en">has attestation view</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional visual representation of content attested e.g. screen image. Corresponds to the 'view' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="XdFileType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/view"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasAttestationProof">
+        <rdfs:label xml:lang="en">has attestation proof</rdfs:label>
+        <rdfs:comment xml:lang="en">Proof of attestation such as an GPG signature. Corresponds to the 'proof' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="XdFileType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/proof"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasAttestationReason">
+        <rdfs:label xml:lang="en">has attestation reason</rdfs:label>
+        <rdfs:comment xml:lang="en">Reason of this attestation. Usually coded from a standardized vocabulary. Corresponds to the 'reason' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/reason"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasCommitter">
+        <rdfs:label xml:lang="en">has committer</rdfs:label>
+        <rdfs:comment xml:lang="en">Identity of person who committed the item. Corresponds to the 'committer' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="PartyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/committer"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="hasCommittedTimestamp">
+        <rdfs:label xml:lang="en">has committed timestamp</rdfs:label>
+        <rdfs:comment xml:lang="en">Timestamp of committal of the item. Corresponds to the 'committed' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/committed"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="isPending">
+        <rdfs:label xml:lang="en">is pending</rdfs:label>
+        <rdfs:comment xml:lang="en">True if this attestation is outstanding; 'false' means it has been completed. Corresponds to the 'pending' element in AttestationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="AttestationType"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#AttestationType/pending"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="ParticipationType">
+        <rdfs:label xml:lang="en">ParticipationType</rdfs:label>
+        <rdfs:comment xml:lang="en">Model of a participation of a Party (any Actor or Role) in an activity. Used to represent any participation of a Party in some activity, which is not explicitly in the model, e.g. assisting nurse. Can be used to record past or future participations. Corresponds to the s3m:ParticipationType complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasParticipationLabel">
+        <rdfs:label xml:lang="en">has participation label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive name of this datatype model. Provides the semantic 'name' for the model. Replaces what would be XML element name or class name in conventional modeling. Corresponds to the 'label' element in ParticipationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ParticipationType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasPerformer">
+        <rdfs:label xml:lang="en">has performer</rdfs:label>
+        <rdfs:comment xml:lang="en">The id and possibly demographic system link of the party that represents the primary provider of services in the activity. Corresponds to the 'performer' element in ParticipationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ParticipationType"/>
+        <rdfs:range rdf:resource="PartyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType/performer"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasFunction">
+        <rdfs:label xml:lang="en">has function</rdfs:label>
+        <rdfs:comment xml:lang="en">The function of the performer in this participation. In some applications this might be called a Role. Corresponds to the 'function' element in ParticipationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ParticipationType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType/function"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasMode">
+        <rdfs:label xml:lang="en">has mode</rdfs:label>
+        <rdfs:comment xml:lang="en">The mode of the performer / activity interaction, e.g. present, by telephone, by email etc. If the participation is by device or software it may contain a protocol standard or interface definition. Corresponds to the 'mode' element in ParticipationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ParticipationType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType/mode"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="hasStartTime">
+        <rdfs:label xml:lang="en">has start time</rdfs:label>
+        <rdfs:comment xml:lang="en">The beginning datetime when the participation took place. Corresponds to the 'start' element in ParticipationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ParticipationType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType/start"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasEndTime">
+        <rdfs:label xml:lang="en">has end time</rdfs:label>
+        <rdfs:comment xml:lang="en">The ending datetime when the participation took place. Corresponds to the 'end' element in ParticipationType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ParticipationType"/>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ParticipationType/end"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="ItemType">
+        <rdfs:label xml:lang="en">ItemType</rdfs:label>
+        <rdfs:comment xml:lang="en">The abstract parent of ClusterType and XdAdapterType structural representation types. Corresponds to the s3m:ItemType complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ItemType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="ClusterType">
+        <rdfs:label xml:lang="en">ClusterType</rdfs:label>
+        <rdfs:comment xml:lang="en">The grouping component, which may contain further instances of itself or any eXtended datatype, in an ordered list. This can serve as the root component for arbitrarily complex structures. It extends ItemType. Corresponds to the s3m:ClusterType complexType in the XSD.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="ItemType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasClusterLabel">
+        <rdfs:label xml:lang="en">has cluster label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive subject line for this group of CMCs. Corresponds to the 'label' element in ClusterType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ClusterType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasItems">
+        <rdfs:label xml:lang="en">has items</rdfs:label>
+        <rdfs:comment xml:lang="en">List of ItemTypes which may be XdAdapterTypes and/or ClusterTypes. Corresponds to the 'Items' element in ClusterType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ClusterType"/>
+        <rdfs:range rdf:resource="ItemType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ClusterType/Items"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="XdAdapterType">
+        <rdfs:label xml:lang="en">XdAdapterType</rdfs:label>
+        <rdfs:comment xml:lang="en">The leaf variant of Item, to which any XdAnyType subtype instance is attached for use in a Cluster. It extends ItemType. Corresponds to the s3m:XdAdapterType complexType in the XSD.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="ItemType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAdapterType"/>
+    </owl:Class>
+
+    <owl:ObjectProperty rdf:about="hasXdAdapterValue">
+        <rdfs:label xml:lang="en">has XdAdapter value</rdfs:label>
+        <rdfs:comment xml:lang="en">Data value type of this leaf. By rule, there must only be one XdAnyType subtype defined here. The unbounded occurrences is allowed so that the DM can specify how many repetitions may occur in the instance. Corresponds to the 'XdAdapter-value' element in XdAdapterType.</rdfs:comment>
+        <rdfs:domain rdf:resource="XdAdapterType"/>
+        <rdfs:range rdf:resource="XdAnyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#XdAdapterType/XdAdapter-value"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="DMType">
+        <rdfs:label xml:lang="en">DMType</rdfs:label>
+        <rdfs:comment xml:lang="en">This is the root node of a Data Model (DM). Corresponds to the s3m:DMType complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasDMLabel">
+        <rdfs:label xml:lang="en">has DM label</rdfs:label>
+        <rdfs:comment xml:lang="en">Descriptive name of this datatype model. Provides the semantic 'name' for the model. Replaces what would be XML element name, column name or class name in other modeling paradigms. Corresponds to the 'label' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/label"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasDMLanguage">
+        <rdfs:label xml:lang="en">has DM language</rdfs:label>
+        <rdfs:comment xml:lang="en">Mandatory indicator of the localised language in which this DM is written. The value space of language is the set of all strings that are valid language identifiers as defined [RFC 3066]. Corresponds to the 'dm-language' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="xsd:language"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/dm-language"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasDMEncoding">
+        <rdfs:label xml:lang="en">has DM encoding</rdfs:label>
+        <rdfs:comment xml:lang="en">Name of character set encoding in which text values in this DM are encoded. Default is utf-8. Corresponds to the 'dm-encoding' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/dm-encoding"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="hasCurrentState">
+        <rdfs:label xml:lang="en">has current state</rdfs:label>
+        <rdfs:comment xml:lang="en">The current state according to the state machine / workflow engine identified in the workflow element. Corresponds to the 'current-state' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/current-state"/>
+    </owl:DatatypeProperty>
+
+    <owl:ObjectProperty rdf:about="hasData">
+        <rdfs:label xml:lang="en">has data</rdfs:label>
+        <rdfs:comment xml:lang="en">The data structure of the model. Corresponds to the 'Item' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="ItemType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/data"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasSubject">
+        <rdfs:label xml:lang="en">has subject</rdfs:label>
+        <rdfs:comment xml:lang="en">Id of human subject of the data, e.g.: • subject of record (patient, customer, etc.) • a family member • another clinically relevant person. Corresponds to the 'subject' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="PartyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/subject"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasProvider">
+        <rdfs:label xml:lang="en">has provider</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional identification of the source of the information, which might be: • a patient • a patient agent, e.g. parent, guardian • a clinician • a technician • a device or software. Corresponds to the 'provider' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="PartyType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/provider"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasParticipations">
+        <rdfs:label xml:lang="en">has participations</rdfs:label>
+        <rdfs:comment xml:lang="en">List of other participations in the data. Corresponds to the 'Participation' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="ParticipationType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/participations"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasProtocol">
+        <rdfs:label xml:lang="en">has protocol</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional external identifier of protocol used when collecting the data. This could be a clinical guideline, an operations protocol,etc. Corresponds to the 'protocol' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="XdStringType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/protocol"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasWorkflow">
+        <rdfs:label xml:lang="en">has workflow</rdfs:label>
+        <rdfs:comment xml:lang="en">Identifier of externally held workflow engine (state machine) data for this workflow execution. Corresponds to the 'workflow' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="XdLinkType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/workflow"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasAccessControlSystem">
+        <rdfs:label xml:lang="en">has access control system</rdfs:label>
+        <rdfs:comment xml:lang="en">Identifier of an externally held access control system. This URI can be an ontology, vocabulary or descriptive document URI link. Corresponds to the 'acs' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="XdLinkType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/acs"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasAudits">
+        <rdfs:label xml:lang="en">has audits</rdfs:label>
+        <rdfs:comment xml:lang="en">List of audits from the system of original commit of information forming the content, or from a conversion gateway which has processed this data. Corresponds to the 'Audit' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="AuditType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/audit"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasAttestation">
+        <rdfs:label xml:lang="en">has attestation</rdfs:label>
+        <rdfs:comment xml:lang="en">Attestation record of an instance of data. Corresponds to the 'attestation' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="AttestationType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/attestation"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="hasDMLinks">
+        <rdfs:label xml:lang="en">has DM links</rdfs:label>
+        <rdfs:comment xml:lang="en">Optional link(s) to other locatable structures or external entities. Corresponds to the 'XdLink' element in DMType.</rdfs:comment>
+        <rdfs:domain rdf:resource="DMType"/>
+        <rdfs:range rdf:resource="XdLinkType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DMType/links"/>
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="InvlUnitsType">
+        <rdfs:label xml:lang="en">Interval Units Type</rdfs:label>
+        <rdfs:comment xml:lang="en">Specifies the units for an interval, consisting of a units name and a URI for the definition of the units. Corresponds to the s3m:InvlUnits complexType in the XSD.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#InvlUnits"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="ExceptionalValueType">
+        <rdfs:label xml:lang="en">ExceptionalValueType</rdfs:label>
+        <rdfs:comment xml:lang="en">Subtypes are used to indicate why a value is missing (Null) or is outside a measurable range.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValueType"/>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="hasEvName">
+        <rdfs:label xml:lang="en">has exceptional value name</rdfs:label>
+        <rdfs:comment xml:lang="en">A short title or phrase for the exceptional type value. This name is fixed in specific subtypes of ExceptionalValueType (e.g., 'No Information' for NI). Corresponds to the 'ev-name' element in ExceptionalValueType.</rdfs:comment>
+        <rdfs:domain rdf:resource="ExceptionalValueType"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ExceptionalValueType/ev-name"/>
+    </owl:DatatypeProperty>
+
+    <owl:Class rdf:about="NI">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">No Information</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents the concept of 'No Information'. This is a positive assertion that no information is available.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#NIType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="INV">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Invalid</rdfs:label>
+        <rdfs:comment xml:lang="en">The value as represented in the instance is not a member of the set of permitted data values in the constrained value domain of a variable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#INVType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="DER">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Derived</rdfs:label>
+        <rdfs:comment xml:lang="en">An actual value may exist, but it must be derived from the provided information; usually an expression is provided directly.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#DERType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="MSK">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Masked</rdfs:label>
+        <rdfs:comment xml:lang="en">The value is masked. This is used when the data is available but not displayed due to privacy or security reasons.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#MSKType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="ASKR">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Asked and Refused</rdfs:label>
+        <rdfs:comment xml:lang="en">Information was sought but refused to be provided (e.g., patient was asked but refused to answer).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ASKRType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="ASKU">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Asked But Unknown</rdfs:label>
+        <rdfs:comment xml:lang="en">The information was sought, but it is not known.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#ASKUType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="NA">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Not Applicable</rdfs:label>
+        <rdfs:comment xml:lang="en">No proper value is applicable in this context e.g.,the number of cigarettes smoked per day by a non-smoker subject.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#NAType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="NAV">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Temporarily Unavailable</rdfs:label>
+        <rdfs:comment xml:lang="en">The value is temporarily unavailable.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#NAVType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="NASK">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Not Asked</rdfs:label>
+        <rdfs:comment xml:lang="en">The information was not sought.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#NASKType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="NINF">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Negative Infinity</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents negative infinity for numbers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#NINFType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="PINF">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Positive Infinity</rdfs:label>
+        <rdfs:comment xml:lang="en">Represents positive infinity for numbers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#PINFType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="TRC">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Trace</rdfs:label>
+        <rdfs:comment xml:lang="en">A quantity so small it cannot be measured.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#TRCType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="QS">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Sufficient Quantity</rdfs:label>
+        <rdfs:comment xml:lang="en">The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#QSType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="UNC">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Unencoded</rdfs:label>
+        <rdfs:comment xml:lang="en">The value is unencoded or not representable in the current system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#UNCType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="OTH">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Other</rdfs:label>
+        <rdfs:comment xml:lang="en">The exceptional value is other than those specified.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#OTHType"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="UNK">
+        <rdfs:subClassOf rdf:resource="ExceptionalValueType"/>
+        <rdfs:label xml:lang="en">Unknown</rdfs:label>
+        <rdfs:comment xml:lang="en">The value is unknown.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.s3model.com/ns/s3m/s3model_4_0_0.xsd#UNKType"/>
+    </owl:Class>
+
+</rdf:RDF>
