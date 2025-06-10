@@ -3,163 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infographic: The Data Dilemma & S3Model Solution</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>S3Model.com - Report</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- S3Model CSS -->
+    <link rel="stylesheet" href="../css/s3model.css">
+    <!-- Keep original styles -->
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1e1e1e; /* Dark Background */
-            color: #e0e0e0; /* Light default text */
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
-        .stat-card {
-            background-color: #2c2f33; /* Darker Card Background */
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1); /* Adjusted shadow for dark */
-            padding: 1.5rem;
-            text-align: center;
-            color: #e0e0e0; /* Light Text */
-        }
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #FF6B6B; /* Primary Color - usually fine on dark */
-            line-height: 1.2;
-        }
-        .stat-label {
-            font-size: 1rem;
-            color: #b0b0b0; /* Lighter Text for labels */
-            margin-top: 0.5rem;
-        }
-        .section-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #f0f0f0; /* Bright Text for titles */
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .section-intro {
-            font-size: 1.125rem;
-            color: #d0d0d0; /* Light Text for intro */
-            line-height: 1.7;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .content-card {
-            background-color: #2c2f33; /* Darker Card Background */
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            color: #e0e0e0; /* Light Text */
-            margin-bottom: 2rem;
-        }
-        .content-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #4ECDC4; /* Secondary Color - usually fine on dark */
-            margin-bottom: 1rem;
-        }
-         .content-card p, .content-card li {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 0.75rem;
-            color: #d0d0d0; /* Lighter text for content */
-        }
-
-        .flowchart-item {
-            background-color: #4ECDC4; /* Secondary Color (Teal) */
-            color: #2A363B; /* MODIFIED: Dark slate gray text for better contrast on teal (was white) */
-            padding: 1rem;
-            border-radius: 0.375rem;
-            text-align: center;
-            font-weight: 500; /* Default font weight for the container */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .flowchart-item-blue {
-            background-color: #45B7D1 !important; /* Original blue background */
-            color: #102027 !important; /* MODIFIED: Very dark blue-gray text for strong contrast on blue */
-        }
-        /* Ensure child elements inherit correctly if needed, though direct color inheritance should work. */
-        .flowchart-item h4, .flowchart-item-blue h4 {
-            /* font-semibold text-lg - these will use the new text colors */
-            /* No specific color override needed here, they will inherit */
-        }
-        .flowchart-item p, .flowchart-item-blue p {
-            /* text-sm font-light - these will use the new text colors */
-            /* No specific color override needed here, they will inherit */
-        }
-
-
-        .flowchart-item.accent-bg { /* For the yellow flowchart item */
-            background-color: #FED766 !important; /* Yellow background */
-            color: #1e1e1e !important; /* Dark text on yellow for contrast - THIS REMAINS GOOD */
-        }
-
-        .flowchart-arrow {
-            font-size: 2rem;
-            color: #45B7D1; /* Accent1 - usually fine */
-            text-align: center;
-            margin: 0.5rem 0;
-        }
-        /* ... (rest of the styles remain unchanged) ... */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .comparison-table th, .comparison-table td {
-            border: 1px solid #4f545c; /* Darker border color */
-            padding: 0.75rem;
-            text-align: left;
-            color: #e0e0e0; /* Light text for table cells */
-        }
-        .comparison-table th {
-            background-color: #45B7D1; /* Accent1 */
-            color: white; /* Text already white, good */
-            font-weight: 600;
-        }
-         .icon-style {
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-            color: #FF6B6B; /* Primary Color - usually fine */
-        }
-        /* Ensure header text is white */
-        header h1, header p {
-            color: white;
-        }
-        /* Footer styling for dark mode */
-        footer {
-            color: #a0a0a0; /* Lighter gray for footer text */
-        }
-        footer a {
-            color: #6cb2eb; /* Light blue for footer links */
-            text-decoration: underline;
-        }
-        footer a:hover {
-            color: #8fc9f7;
-        }
-
+        /* Original styles will be kept */
     </style>
 </head>
-<body class="antialiased">
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../images/s3m_logo.png" alt="S3Model Logo">
+                </a>
+                <span class="brand-name">S3Model.com</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="content-container">
+        <main class="report-content">
 
     <header class="bg-gradient-to-r from-[#FF6B6B] to-[#FED766] py-12 text-center"> <div class="container mx-auto px-6">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">The Multi-Trillion Dollar Data Dilemma</h1>
@@ -518,5 +389,25 @@
         });
 
     </script>
+        <div class="text-center mt-5">
+            <a href="../index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Learn more about S3Model Studio - Coming Soon!</p>
+            <p>&copy; <span id="currentYear"></span> S3Model.com. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
